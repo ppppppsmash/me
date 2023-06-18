@@ -22,7 +22,9 @@ export default function RootLayout({
         <link href='https://https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css' rel='stylesheet' />
       </Head>
       <body className={inter.className}>
-        {children}
+        <main className='flex min-h-screen flex-col items-center justify-between'>
+          {children}
+        </main>
       </body>
     </html>
   )
