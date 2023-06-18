@@ -1,9 +1,11 @@
+import Head from 'next/head'
+import { Metadata } from 'next'
 import './globals.css'
 import { Inter } from 'next/font/google'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'KUROSAWA',
   description: 'KUROSAWAのポートフォリオ',
 }
@@ -15,7 +17,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang='ja'>
-      <body className={inter.className}>{children}</body>
+      <Head>
+        <link href='https://fonts.cdnfonts.com/css/sf-pro-display' rel='stylesheet' />
+        <link href='https://https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css' rel='stylesheet' />
+      </Head>
+      <body className={inter.className}>
+        {children}
+      </body>
     </html>
   )
 }
