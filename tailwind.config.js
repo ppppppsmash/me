@@ -12,7 +12,24 @@ module.exports = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      animation: {
+        'slide-in': 'slideIn 0.35s ease-in-out 0.5s forwards'
+      },
+      keyframes: {
+        slideIn: {
+          '0%': {
+            opacity: 0,
+            transform: 'translateY(20px)'
+          },
+          '100%': {
+            opacity: 100,
+            transform: 'translateY(0)'
+          }
+        }
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwindcss-animation-delay')
+  ],
 }
