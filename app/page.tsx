@@ -1,5 +1,6 @@
 import { PROFILE } from '@/constants'
 import Image from 'next/image'
+import Nav from '../components/Nav'
 
 export default function Home() {
   return (
@@ -24,6 +25,8 @@ export default function Home() {
         ))}
         
       </ul>
+
+      <Nav next={{ label: 'About', href: '/about' }} />
     </div>
   )
 }

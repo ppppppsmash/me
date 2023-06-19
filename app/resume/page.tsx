@@ -1,8 +1,8 @@
 import { INFO } from '@/constants'
 import Image from 'next/image'
-import Nav from '../../components/Nav'
+import Nav from '@/components/Nav'
 
-export default function About() {
+export default function Resume() {
   return (
     <div className='w-full h-[100vh]'>
       <div className='p-4'>
