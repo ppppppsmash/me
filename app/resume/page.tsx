@@ -1,4 +1,4 @@
-import { INFO } from '@/constants'
+import { INFO, RESUME, SUB_RESUME } from '@/constants'
 import Image from 'next/image'
 import Nav from '@/components/Nav'
 
@@ -6,27 +6,77 @@ export default function Resume() {
   return (
     <div className='w-full h-[100vh]'>
       <div className='p-4'>
-      <h1 className='text-[2.5rem] animate-slide-in'>About.</h1>
-      <h2 className='text-[1.8rem] mt-8 animate-slide-in'>Me</h2>
+      <h1 className='text-[2.5rem] animate-slide-in'>Resume.</h1>
+      <h2 className='text-[1.8rem] mt-8 animate-slide-in'>職歴</h2>
         <ul className='mt-4 ml-1'>
-        {INFO.map((info, index) => (
+        {RESUME.map((resume, index) => (
           <li
-            key={info.label}
+            key={resume.name}
             className={`leading-normal my-4 animate-slide-in animation-delay-${index*100+1300}`}
           >
-            <span>
-              {info.label}
-              <br />
-              {info.value}
-            </span>
+            <p className='text-[1.25rem] font-bold'>{resume.name}</p>
+            <p className='text-[1rem] font-bold'>{resume.job}</p>
+            <p className='mt-2'>{resume.date}</p>
+            <a
+              href={resume.url}
+              target='_blank'
+              rel='noreferrer'
+              className='mt-2 no-underline'
+            >
+              {resume.url}
+            </a>
+
+            <ul className='mt-4 list-none grid grid-cols-1'>
+              {resume.services.map((service, index) => (
+                <li key={service.title}>
+                  <a
+                    href={service.url}
+                    target='_blank'
+                    rel='noreferrer'
+                    className='h-full no-underline'
+                  >
+                    <img
+                      className='w-full h-full object-cover aspect-auto'
+                      src={service.image}
+                      alt={service.title}
+                      width={1200}
+                      height={600}
+                      decoding='async'
+                    />
+                  </a>
+                </li>
+              ))}
+            </ul>
           </li>
         ))}
+        </ul>
+
+        <h2 className=''>副業 / お手伝い</h2>
+        <ul className='mt-4 list-none grid grid-cols-2 gap-2'>
+          {SUB_RESUME.map((service, index) => (
+            <li key={index}>
+              <a
+                href={service.url}
+                target='_blank'
+                rel='noreferrer'
+                className='h-full no-underline'
+              >
+                <img
+                  className='w-full h-full object-cover aspect-auto'
+                  src={service.image}
+                  alt={service.title}
+                  width={1200}
+                  height={630}
+                  decoding='async'
+                />
+              </a>
+            </li>
+          ))}
         </ul>
       </div>
 
       <Nav
-        prev={{ label: 'Home', href: '/' }}
-        next={{ label: 'Resume', href: '/resume' }}
+        prev={{ label: 'About', href: '/about' }}
       />
     </div>
   )
