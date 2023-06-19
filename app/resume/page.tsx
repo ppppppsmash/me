@@ -4,7 +4,7 @@ import Nav from '@/components/Nav'
 
 export default function Resume() {
   return (
-    <div className='w-full h-[100vh]'>
+    <div className='w-full max-w-[1000px] h-[100vh]'>
       <div className='p-4'>
       <h1 className='text-[2.5rem] animate-slide-in'>Resume.</h1>
       <h2 className='text-[1.8rem] mt-8 animate-slide-in'>職歴</h2>
@@ -33,7 +33,7 @@ export default function Resume() {
                     href={service.url}
                     target='_blank'
                     rel='noreferrer'
-                    className='h-full no-underline'
+                    className={`h-full no-underline animate-slide-in animation-delay-${index*100+1300}`}
                   >
                     <img
                       className='w-full h-full object-cover aspect-auto'
@@ -59,7 +59,7 @@ export default function Resume() {
                 href={service.url}
                 target='_blank'
                 rel='noreferrer'
-                className='h-full no-underline'
+                className={`h-full no-underline animate-slide-in animation-delay-${index*100+1300}`}
               >
                 <img
                   className='w-full h-full object-cover aspect-auto'

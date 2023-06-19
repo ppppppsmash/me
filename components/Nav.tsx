@@ -13,7 +13,7 @@ interface Props {
 export default function Nav({ prev, next}: Props) {
   return (
     <nav className='w-full backdrop-blur-lg fixed left-0 bottom-0 '>
-      <ul>
+      <ul className='w-full p-4 pb-5 list-none flex items-center'>
         <li>
           {prev !=null && (
             <Link

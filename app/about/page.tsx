@@ -4,7 +4,7 @@ import Nav from '../../components/Nav'
 
 export default function About() {
   return (
-    <div className='w-full h-[100vh]'>
+    <div className='w-full max-w-[1000px] h-[100vh]'>
       <div className='p-4'>
       <h1 className='text-[2.5rem] animate-slide-in'>About.</h1>
       <h2 className='text-[1.8rem] mt-8 animate-slide-in'>Me</h2>
