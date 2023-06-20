@@ -1,38 +1,83 @@
+'use client'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
+import { GrHomeOption, GrUser, GrNote } from 'react-icons/gr'
+import { SiGithub, SiInstagram } from 'react-icons/si'
 
-interface LinkProps {
-  label: string
-  href: string
-}
+export const MENUS = [
+  {
+    icon: <GrHomeOption />,
+    label: 'Home',
+    href: '/'
+  },
+  {
+    icon: <GrUser />,
+    label: 'About',
+    href: '/about'
+  },
+  {
+    icon: <GrNote />,
+    label: 'Resume',
+    href: '/resume'
+  },
+  { id: 'hr' },
+  {
+    icon: <SiGithub />,
+    label: 'Github',
+    href: 'https://github.com/ppppppsmash'
+  },
+  {
+    icon: <SiInstagram />,
+    label: 'Instagram',
+    href: 'https://instagram.com/_dyermaker?igshid=OGQ5ZDc2ODk2ZA=='
+  }
+]
 
-interface Props {
-  prev: LinkProps
-  next: LinkProps
-}
 
-export default function Nav({ prev, next}: Props) {
+export default function Nav() {
+  const router = useRouter()
+  const navigation = (e: React.MouseEvent<HTMLButtonElement>) => {
+    const href = e.currentTarget.dataset.href
+    if (href == null) {
+      return
+    }
+
+    if (href.startsWith('https')) {
+      window.open(href, '_blank')
+      return
+    }
+
+    router.push(href)
+  }
+
   return (
-    <nav className='w-full backdrop-blur-lg fixed left-0 bottom-0 '>
-      <ul className='w-full p-4 pb-5 list-none flex items-center'>
+    <nav className='fixed left-1/2 bottom-20 w-8/12 max-w-[500px] rounded-full 
+    bg-white bg-opacity-20 opacity-0 h-[58px] animate-slide-in-sec -translate-x-1/2
+      translate-y-6 backdrop-blur-3xl backdrop-saturate-200 backdrop-brightness-100'>
+      <ul className='w-full h-full p-4 pb-5 list-none flex gap-8
+      items-center justify-start overflow-x-scroll overflow-y-hidden'>
+        {MENUS.map((menu, index) => {
+          if (menu.id === 'hr') {
+            return (
+              <li key={index}>|</li>
+            )
+          }
+
+          return (
+            <li key={index}>
+              <button
+                className='w-[40px] h-[40px] bg-transparent border-0
+                  rounded-lg grid place-items-center focus-visible'
+                tabIndex={0}
+                data-href={menu.href}
+                onClick={navigation}
+              >
+                {menu.icon}
+              </button>
+            </li>
+          )
+        })}
         <li>
-          {prev !=null && (
-            <Link
-              href={prev.href}
-              className='text-sm no-underline flex items-center gap-2'
-            >
-              {prev.label}
-            </Link>
-          )}
-        </li>
-        <li>
-          {next !=null && (
-            <Link
-              href={next.href}
-              className='text-sm no-underline flex items-center gap-2'
-            >
-              {next.label}
-            </Link>
-          )}
         </li>
       </ul>
     </nav>
