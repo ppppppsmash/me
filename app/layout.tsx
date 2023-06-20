@@ -2,6 +2,7 @@ import Head from 'next/head'
 import { Metadata } from 'next'
 import './globals.css'
 import { Inter } from 'next/font/google'
+import Nav from '@/components/Nav'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -29,6 +30,7 @@ export default function RootLayout({
         <link href='https://https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css' rel='stylesheet' />
       </Head>
       <body className={inter.className}>
+        <Nav />
         <main className='flex min-h-screen flex-col items-center justify-between'>
           {children}
         </main>

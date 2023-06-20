@@ -13,7 +13,8 @@ module.exports = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
       animation: {
-        'slide-in': 'slideIn 0.35s ease-in-out 0.5s forwards'
+        'slide-in': 'slideIn 0.35s ease-in-out 0.5s forwards',
+        'slide-in-sec': 'slideInSec 0.35s ease-in-out 0.5s forwards'
       },
       keyframes: {
         slideIn: {
@@ -24,6 +25,16 @@ module.exports = {
           '100%': {
             opacity: 100,
             transform: 'translateY(0)'
+          }
+        },
+        slideInSec: {
+          '0%': {
+            opacity: 0,
+            transform: 'translateY(-50%, 20px)'
+          },
+          '100%': {
+            opacity: 100,
+            transform: 'translateY(-50%, 0)'
           }
         }
       },

@@ -1,6 +1,4 @@
 import { INFO } from '@/constants'
-import Image from 'next/image'
-import Nav from '../../components/Nav'
 
 export default function About() {
   return (
@@ -23,11 +21,6 @@ export default function About() {
         ))}
         </ul>
       </div>
-
-      <Nav
-        prev={{ label: 'Home', href: '/' }}
-        next={{ label: 'Resume', href: '/resume' }}
-      />
     </div>
   )
 }

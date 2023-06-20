@@ -1,6 +1,4 @@
 import { INFO, RESUME, SUB_RESUME } from '@/constants'
-import Image from 'next/image'
-import Nav from '@/components/Nav'
 
 export default function Resume() {
   return (
@@ -74,10 +72,6 @@ export default function Resume() {
           ))}
         </ul>
       </div>
-
-      <Nav
-        prev={{ label: 'About', href: '/about' }}
-      />
     </div>
   )
 }
