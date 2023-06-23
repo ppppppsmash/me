@@ -4,9 +4,11 @@ export const PROFILE = [
 ]
 
 export const INFO = [
-  { label: '名前', value: '黒澤新(Kurosawa Arata)' },
+  { label: '名前', value: '黒澤 新(Kurosawa Arata) 帰化申請中' },
+  { label: '出身', value: '中国' },
   { label: '生年月日', value: '1990/09/10' },
-  { label: '居住地', value: '神奈川県' }
+  { label: '居住地', value: '神奈川県' },
+  { label: '興味', value: '日本文化、テレビゲーム、映画、おもちゃ、JAZZ' },
 ]
 
 export const TECH = [
