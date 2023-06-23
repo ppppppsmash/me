@@ -1,6 +1,5 @@
 'use client'
 import Link from 'next/link'
-import { useRouter } from 'next/navigation'
 import { GrHomeOption, GrUser, GrNote } from 'react-icons/gr'
 import { SiGithub, SiInstagram } from 'react-icons/si'
 
@@ -35,21 +34,6 @@ export const MENUS = [
 
 
 export default function Nav() {
-  const router = useRouter()
-  const navigation = (e: React.MouseEvent<HTMLButtonElement>) => {
-    const href = e.currentTarget.dataset.href
-    if (href == null) {
-      return
-    }
-
-    if (href.startsWith('https')) {
-      window.open(href, '_blank')
-      return
-    }
-
-    router.push(href)
-  }
-
   return (
     <nav className='fixed left-1/2 bottom-20 w-full max-w-[500px] rounded-full z-50
     bg-white bg-opacity-10 opacity-0 h-[58px] animate-slide-in-sec -translate-x-1/2
@@ -65,15 +49,15 @@ export default function Nav() {
 
           return (
             <li key={index}>
-              <button
-                className='w-[40px] h-[40px] bg-[#232323] border-0 cursor-pointer
-                  rounded-full grid place-items-center focus-visible hover:scale-[1.1]'
-                tabIndex={0}
-                data-href={menu.href}
-                onClick={navigation}
+              <Link
+              className='w-[40px] h-[40px] bg-[#232323] border-0 cursor-pointer
+              rounded-full grid place-items-center focus-visible hover:scale-[1.1]'
+                href={{pathname: menu.href}}
+                target={menu.href?.startsWith('https://') ? '_blank' : '_self' }
+                rel={menu.href?.startsWith('https://') ? 'noreferrer' : undefined }
               >
                 {menu.icon}
-              </button>
+              </Link>
             </li>
           )
         })}
