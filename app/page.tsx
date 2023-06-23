@@ -8,7 +8,7 @@ export default function Home() {
       transform -translate-x-1/2 translate-[calc(-50%-20px)] py-8 before:content
       before:absolute before:top-0 before:-left-[50px] before:w-[108%]
       before:h-full before:border-white before:border-[1px] before:rounded'>
-        Kurosawa's <br />Portfolio
+        Kurosawa&#39;s <br />Portfolio
       </h1>
     </div>
   )
