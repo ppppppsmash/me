@@ -30,11 +30,11 @@ module.exports = {
         slideInSec: {
           '0%': {
             opacity: 0,
-            transform: 'translateY(-50%, 20px)'
+            transform: 'translate(-50%, calc(-50% - 20px))'
           },
           '100%': {
             opacity: 1,
-            transform: 'translateY(-50%, 0)'
+            transform: 'translate(-50%, -50%)'
           }
         }
       },

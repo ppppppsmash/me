@@ -9,6 +9,15 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'KUROSAWA',
   description: 'KUROSAWAのポートフォリオ',
+  authors: { name: 'KUROSAWA ARATA'},
+  openGraph: {
+    type: 'website',
+    locale: 'ja_JP',
+    url: 'localhost',
+    siteName: 'Kurosawa\'s portfolio',
+    title: 'Kurosawa',
+    images: 'https://xxx.png'
+  },
   robots: {
     index: false,
     follow: false
