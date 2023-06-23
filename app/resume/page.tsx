@@ -4,13 +4,13 @@ export default function Resume() {
   return (
     <div className='w-full max-w-[1000px] h-[100vh]'>
       <div className='p-4'>
-      <h1 className='text-[2.5rem] animate-slide-in'>Resume.</h1>
-      <h2 className='text-[1.8rem] mt-8 animate-slide-in'>職歴</h2>
+      <h1 className='text-[2.5rem] translate-y-10 animate-slide-in'>Resume.</h1>
+      <h2 className='text-[1.8rem] mt-8 translate-y-10 animate-slide-in'>職歴</h2>
         <ul className='mt-4 ml-1'>
         {RESUME.map((resume, index) => (
           <li
             key={resume.name}
-            className={`leading-normal my-4 animate-slide-in animation-delay-${index*100+1300}`}
+            className={`leading-normal my-4 translate-y-10 animate-slide-in animation-delay-${index*100+1300}`}
           >
             <p className='text-[1.25rem] font-bold'>{resume.name}</p>
             <p className='text-[1rem] font-bold'>{resume.job}</p>

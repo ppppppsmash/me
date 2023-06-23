@@ -51,8 +51,8 @@ export default function Nav() {
   }
 
   return (
-    <nav className='fixed left-1/2 bottom-20 w-8/12 max-w-[500px] rounded-full 
-    bg-white bg-opacity-20 opacity-0 h-[58px] animate-slide-in-sec -translate-x-1/2
+    <nav className='fixed left-1/2 bottom-20 w-full max-w-[500px] rounded-full z-50
+    bg-white bg-opacity-10 opacity-0 h-[58px] animate-slide-in-sec -translate-x-1/2
       translate-y-6 backdrop-blur-3xl backdrop-saturate-200 backdrop-brightness-100'>
       <ul className='w-full h-full p-4 pb-5 list-none flex gap-8
       items-center justify-start overflow-x-scroll overflow-y-hidden'>
@@ -66,8 +66,8 @@ export default function Nav() {
           return (
             <li key={index}>
               <button
-                className='w-[40px] h-[40px] bg-transparent border-0
-                  rounded-lg grid place-items-center focus-visible'
+                className='w-[40px] h-[40px] bg-[#232323] border-0 cursor-pointer
+                  rounded-full grid place-items-center focus-visible hover:scale-[1.1]'
                 tabIndex={0}
                 data-href={menu.href}
                 onClick={navigation}

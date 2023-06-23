@@ -23,7 +23,7 @@ module.exports = {
             transform: 'translateY(20px)'
           },
           '100%': {
-            opacity: 100,
+            opacity: 1,
             transform: 'translateY(0)'
           }
         },
@@ -33,7 +33,7 @@ module.exports = {
             transform: 'translateY(-50%, 20px)'
           },
           '100%': {
-            opacity: 100,
+            opacity: 1,
             transform: 'translateY(-50%, 0)'
           }
         }
