@@ -1,4 +1,5 @@
 import { INFO, RESUME, SUB_RESUME } from '@/constants'
+import Image from 'next/image'
 
 export default function Resume() {
   return (
@@ -35,7 +36,7 @@ export default function Resume() {
                     className={`opacity-0 h-full no-underline animate-slide-in`}
                     style={{animationDelay: `${index*0.1+2.5}s`}}
                   >
-                    <img
+                    <Image
                       className='w-full h-full object-cover aspect-auto rounded-md'
                       src={service.image}
                       alt={service.title}
@@ -62,7 +63,7 @@ export default function Resume() {
                 className={`opacity-0 h-full no-underline animate-slide-in`}
                 style={{animationDelay: `${index*0.1+2.5}s`}}
               >
-                <img
+                <Image
                   className='w-full h-full object-cover aspect-auto rounded-md'
                   src={service.image}
                   alt={service.title}
