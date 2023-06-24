@@ -35,7 +35,7 @@ export const MENUS = [
 
 export default function Nav() {
   return (
-    <nav className='fixed px-2 left-1/2 bottom-2 w-11/12 sm:w-full max-w-[500px] rounded-full z-50
+    <nav className='fixed px-2 left-1/2 bottom-0 w-11/12 sm:w-full max-w-[500px] rounded-full z-50
     bg-slate-100 bg-opacity-20 opacity-0 h-[58px] animate-slide-in-sec -translate-x-1/2
       translate-y-6 backdrop-blur-3xl backdrop-saturate-200 backdrop-brightness-100'>
       <ul className='w-full h-full p-5 pb-5 list-none flex gap-8

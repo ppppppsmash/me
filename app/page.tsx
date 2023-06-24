@@ -16,7 +16,7 @@ export default function Home() {
             style={{ left: "calc(-50% - 187px)" }}
           />
         <h1 className='text-[2.5rem] translate-y-5 animate-slide-in-sec font-bold
-        absolute top-1/2 min-w-[165px] opacity-0
+        absolute top-1/2 min-w-[165px] opacity-0 pr-2
         transform -translate-x-1/2 translate-[calc(-50%-20px)] py-8 before:content
         before:absolute before:top-0 before:-left-[50px] before:w-full
         before:h-full before:border-white before:border-[1px] before:rounded'>
