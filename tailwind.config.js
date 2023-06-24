@@ -36,6 +36,14 @@ module.exports = {
             opacity: 1,
             transform: 'translate(-50%, -50%)'
           }
+        },
+        dashedLine: {
+          '0%': {
+            opacirty: 1
+          },
+          '100%': {
+            opacity: 0
+          }
         }
       },
     },
