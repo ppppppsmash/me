@@ -12,7 +12,7 @@ export default function About() {
             <Image
               className='opacity-0 translate-y-10 animate-slide-in'
               style={{animationDelay: '1.2s'}}
-              src='/profile_me.png'
+              src='https://res.cloudinary.com/df2xdrnvc/image/upload/v1687621120/dev-blogs/profile_me_cfmjmz.png'
               width={300}
               height={100}
               alt='kurosawa'
