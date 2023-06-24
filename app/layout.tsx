@@ -40,7 +40,8 @@ export default function RootLayout({
       </Head>
       <body className={inter.className}>
         <Nav />
-        <main className='flex min-h-screen flex-col items-center justify-between'>
+        <main className='flex min-h-screen flex-col items-center
+        justify-between bg-[url("/grid.svg")]'>
           {children}
         </main>
       </body>

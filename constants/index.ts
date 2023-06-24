@@ -4,7 +4,7 @@ export const PROFILE = [
 ]
 
 export const INFO = [
-  { label: '名前', value: '黒澤 新(Kurosawa Arata) 帰化申請中' },
+  { label: '名前', value: 'Liming Pei / 黒澤 新(Kurosawa Arata) 帰化申請中' },
   { label: '出身', value: '中国' },
   { label: '生年月日', value: '1990/09/10' },
   { label: '居住地', value: '神奈川県' },
