@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 export default function Resume() {
   return (
-    <div className='w-full max-w-[1000px] h-[100vh]'>
+    <div className='w-full max-w-[800px] h-[100vh]'>
       <div className='p-4'>
       <h1 className='text-[2.5rem] opacity-0 translate-y-10 animate-slide-in'>Resume.</h1>
       <h2 className='text-[1.8rem] opacity-0 mt-8 translate-y-10 animate-slide-in'>職歴</h2>
