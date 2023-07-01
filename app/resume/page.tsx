@@ -1,13 +1,61 @@
-import { INFO, RESUME, SUB_RESUME } from '@/constants'
+import { INFO, RESUME, SKILL, SUB_RESUME } from '@/constants'
 import Image from 'next/image'
+import { AiOutlineHtml5 } from 'react-icons/ai'
+import { DiCss3 } from  'react-icons/di'
+import { BsFiletypeScss } from 'react-icons/bs'
+import { TbBrandJavascript, TbBrandTypescript, TbBrandPython, TbBrandDjango } from 'react-icons/tb'
+import { FaPhp, FaAws, FaVuejs, FaReact } from 'react-icons/fa'
+import { SiTailwindcss, SiNextdotjs } from 'react-icons/si'
+
+export const SKILL_ICONS = [
+  <AiOutlineHtml5 size={24} />,
+  <DiCss3 size={24} />,
+  <BsFiletypeScss size={24} />,
+  <TbBrandJavascript size={24} />,
+  <FaPhp size={24} />,
+  <SiTailwindcss size={24} />,
+  <TbBrandTypescript size={24} />,
+  <FaAws size={24} />,
+  <FaVuejs size={24} />,
+  <FaReact size={24} />,
+  <SiNextdotjs size={24} />,
+  <TbBrandPython size={24} />,
+  <TbBrandDjango size={24} />,
+]
 
 export default function Resume() {
   return (
     <div className='w-full max-w-[800px] h-[100vh]'>
       <div className='p-4'>
       <h1 className='text-[2.5rem] opacity-0 translate-y-10 animate-slide-in'>Resume.</h1>
-      <h2 className='text-[1.8rem] opacity-0 mt-8 translate-y-10 animate-slide-in'>職歴</h2>
+      <h2 className='text-[1.8rem] opacity-0 mt-8 translate-y-10 animate-slide-in'>Skill</h2>
+      <div className='flex justify-center gap-2'>
         <ul className='mt-4 ml-1'>
+          {SKILL_ICONS.map((icon, index) => (
+            <li
+              key={index}
+              className={`leading-normal opacity-0 my-4 translate-y-10 animate-slide-in`}
+              style={{animationDelay: `${index*0.1+2.5}s`}}
+            >
+              {icon}
+            </li>
+          ))}
+        </ul>
+        <ul className='mt-4 ml-1'>
+          {SKILL.map((skill, index) => (
+            <li
+              key={index}
+              className={`leading-normal opacity-0 my-4 translate-y-10 animate-slide-in`}
+              style={{animationDelay: `${index*0.1+2.5}s`}}
+            >
+              <p className='text-[1rem]'>
+                {skill}
+              </p>
+            </li>
+          ))}
+        </ul>
+      </div>
+        {/* <ul className='mt-4 ml-1'>
         {RESUME.map((resume, index) => (
           <li
             key={resume.name}
@@ -50,9 +98,9 @@ export default function Resume() {
             </ul>
           </li>
         ))}
-        </ul>
+        </ul> */}
 
-        <h2 className=''>副業 / お手伝い</h2>
+        <h2 className='mt-8 opacity-0 translate-y-10 animate-slide-in'>実績 / お手伝い</h2>
         <ul className='mt-4 list-none grid grid-cols-2 gap-4'>
           {SUB_RESUME.map((service, index) => (
             <li key={index}>

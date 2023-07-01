@@ -17,15 +17,18 @@ export const HOBBY = [
   { label: '音楽', value: 'The Rolling Stones / Led Zepplin' }
 ]
 
-export const TECH = [
+export const SKILL = [
   'HTML',
   'CSS',
+  'SCSS',
   'JavaScript',
   'PHP',
+  'Tailwindcss',
   'TypeScript',
   'AWS',
   'Vue.js',
   'React.js',
+  'Nest.js',
   'Python',
   'Django'
 ]
