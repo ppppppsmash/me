@@ -7,20 +7,46 @@ import { TbBrandJavascript, TbBrandTypescript, TbBrandPython, TbBrandDjango } fr
 import { FaPhp, FaAws, FaVuejs, FaReact } from 'react-icons/fa'
 import { SiTailwindcss, SiNextdotjs } from 'react-icons/si'
 
-export const SKILL_ICONS = [
-  <AiOutlineHtml5 size={24} />,
-  <DiCss3 size={24} />,
-  <BsFiletypeScss size={24} />,
-  <TbBrandJavascript size={24} />,
-  <FaPhp size={24} />,
-  <SiTailwindcss size={24} />,
-  <TbBrandTypescript size={24} />,
-  <FaAws size={24} />,
-  <FaVuejs size={24} />,
-  <FaReact size={24} />,
-  <SiNextdotjs size={24} />,
-  <TbBrandPython size={24} />,
-  <TbBrandDjango size={24} />,
+const SKILL_ICONS = [
+  {
+    icon: <AiOutlineHtml5 size={24} />,
+  },
+  {
+    icon: <DiCss3 size={24} />,
+  },
+  {
+    icon: <BsFiletypeScss size={24} />,
+  },
+  {
+    icon: <TbBrandJavascript size={24} />,
+  },
+  {
+    icon: <FaPhp size={24} />,
+  },
+  {
+    icon: <SiTailwindcss size={24} />,
+  },
+  {
+    icon: <TbBrandTypescript size={24} />,
+  },
+  {
+    icon: <FaAws size={24} />,
+  },
+  {
+    icon: <FaVuejs size={24} />,
+  },
+  {
+    icon: <FaReact size={24} />,
+  },
+  {
+    icon: <SiNextdotjs size={24} />,
+  },
+  {
+    icon: <TbBrandPython size={24} />,
+  },
+  {
+    icon: <TbBrandDjango size={24} />,
+  }
 ]
 
 export default function Resume() {
@@ -31,13 +57,13 @@ export default function Resume() {
       <h2 className='text-[1.8rem] opacity-0 mt-8 translate-y-10 animate-slide-in'>Skill</h2>
       <div className='flex justify-center gap-2'>
         <ul className='mt-4 ml-1'>
-          {SKILL_ICONS.map((icon, index) => (
+          {SKILL_ICONS.map((icons_list, index) => (
             <li
               key={index}
               className={`leading-normal opacity-0 my-4 translate-y-10 animate-slide-in`}
               style={{animationDelay: `${index*0.1+2.5}s`}}
             >
-              {icon}
+              {icons_list.icon}
             </li>
           ))}
         </ul>
