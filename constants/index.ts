@@ -75,15 +75,27 @@ export const RESUME = [
   }
 ]
 
+// export const SUB_RESUME = [
+//   {
+//     title: '恒佳株式会社',
+//     url: 'https://koukaltd.co.jp/',
+//     image: 'https://placehold.jp/600x400.png'
+//   },
+//   {
+//     title: 'Himalaya合同会社',
+//     url: 'https://airdome-with-sanity.vercel.app/',
+//     image: 'https://placehold.jp/600x400.png'
+//   }
+// ]
 export const SUB_RESUME = [
   {
     title: '恒佳株式会社',
-    url: 'https://koukaltd.co.jp/',
+    url: '/resume',
     image: 'https://placehold.jp/600x400.png'
   },
   {
     title: 'Himalaya合同会社',
-    url: 'https://new-himalaya.com/',
+    url: '/resume',
     image: 'https://placehold.jp/600x400.png'
   }
 ]

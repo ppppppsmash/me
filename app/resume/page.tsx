@@ -52,7 +52,7 @@ const SKILL_ICONS = [
 export default function Resume() {
   return (
     <div className='w-full max-w-[800px] md:h-[100vh]'>
-      <div className='p-4 pb-24'>
+      <div className='p-4 pb-[170px]'>
       <h1 className='text-[2.5rem] opacity-0 translate-y-10 animate-slide-in'>Resume.</h1>
       <h2 className='text-[1.8rem] opacity-0 mt-8 translate-y-10 animate-slide-in'>Skill</h2>
       <div className='flex justify-center gap-2'>
