@@ -1,21 +1,24 @@
 'use client'
 import Link from 'next/link'
 import { GrHomeOption, GrUser, GrNote } from 'react-icons/gr'
+import { AiOutlineHome } from 'react-icons/ai'
+import { BiUser } from 'react-icons/bi'
+import { RiStickyNote2Line } from 'react-icons/ri'
 import { SiGithub, SiInstagram } from 'react-icons/si'
 
 export const MENUS = [
   {
-    icon: <GrHomeOption />,
+    icon: <AiOutlineHome />,
     label: 'Home',
     href: '/'
   },
   {
-    icon: <GrUser />,
+    icon: <BiUser />,
     label: 'About',
     href: '/about'
   },
   {
-    icon: <GrNote />,
+    icon: <RiStickyNote2Line />,
     label: 'Resume',
     href: '/resume'
   },
@@ -50,7 +53,7 @@ export default function Nav() {
           return (
             <li key={index}>
               <Link
-              className='w-[40px] h-[40px] bg-[#232323] border-0 cursor-pointer
+              className='w-[40px] h-[40px] bg-[#232323] border-0 cursor-pointer text-white
               rounded-full grid place-items-center focus-visible hover:scale-[1.1]'
                 href={{pathname: menu.href}}
                 target={menu.href?.startsWith('https://') ? '_blank' : '_self' }
