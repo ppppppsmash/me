@@ -8,7 +8,13 @@ export const INFO = [
   { label: '出身', value: '中国' },
   { label: '生年月日', value: '1990/09/10' },
   { label: '居住地', value: '神奈川県' },
-  { label: '興味', value: '日本文化、テレビゲーム、映画、おもちゃ、JAZZ' },
+]
+
+export const HOBBY = [
+  { label: '映画', value: '七人の侍 キッズ・リターン etc.' },
+  { label: 'テレビゲーム', value: 'ドラクエ ダークソウル etc.' },
+  { label: 'おもちゃ', value: 'ソフビ トランスフォーマー 超合金魂 etc.' },
+  { label: '音楽', value: 'The Rolling Stones / Led Zepplin' }
 ]
 
 export const TECH = [
