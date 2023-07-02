@@ -61,7 +61,7 @@ export default function Resume() {
             <li
               key={index}
               className={`leading-normal opacity-0 my-4 translate-y-10 animate-slide-in`}
-              style={{animationDelay: `${index*0.1+2.5}s`}}
+              style={{animationDelay: `${index*0.1+1}s`}}
             >
               {icons_list.icon}
             </li>
@@ -72,7 +72,7 @@ export default function Resume() {
             <li
               key={index}
               className={`leading-normal opacity-0 my-4 translate-y-10 animate-slide-in`}
-              style={{animationDelay: `${index*0.1+2.5}s`}}
+              style={{animationDelay: `${index*0.1+1}s`}}
             >
               <p className='text-[1rem]'>
                 {skill}
