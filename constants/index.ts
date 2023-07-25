@@ -90,12 +90,12 @@ export const RESUME = [
 export const SUB_RESUME = [
   {
     title: '恒佳株式会社',
-    url: '/resume',
-    image: 'https://placehold.jp/600x400.png'
+    url: 'https://koukaltd.co.jp/',
+    image: '/images/kouka.png'
   },
   {
     title: 'Himalaya合同会社',
-    url: '/resume',
-    image: 'https://placehold.jp/600x400.png'
+    url: 'https://www.new-himalaya.com/',
+    image: '/images/himalaya.png'
   }
 ]
