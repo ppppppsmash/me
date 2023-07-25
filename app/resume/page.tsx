@@ -129,7 +129,10 @@ export default function Resume() {
         <h2 className='mt-8 opacity-0 translate-y-10 animate-slide-in'>実績 / お手伝い</h2>
         <ul className='mt-4 list-none grid grid-cols-2 gap-4'>
           {SUB_RESUME.map((service, index) => (
-            <li key={index}>
+            <li
+              className='hover:scale-[1.04] z-50'
+              key={index}
+            >
               <a
                 href={service.url}
                 target='_blank'
