@@ -98,5 +98,10 @@ export const SUB_RESUME = [
     title: 'Himalaya合同会社',
     url: 'https://www.new-himalaya.com/',
     image: '/images/himalaya.png'
+  },
+  {
+    title: '8-Bit風アンケート',
+    url: 'https://game-tournament-survey.vercel.app/',
+    image: '/images/survey.png'
   }
 ]
