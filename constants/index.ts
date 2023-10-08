@@ -8,6 +8,7 @@ export const INFO = [
   { label: '出身', value: '中国' },
   { label: '生年月日', value: '1990/09/10' },
   { label: '居住地', value: '神奈川県' },
+  { label: '最近の状態', value: '帰化申請中、新しい名前「黒沢 新」に決めました。I Love Japan' }
 ]
 
 export const HOBBY = [
