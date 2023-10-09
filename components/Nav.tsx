@@ -31,7 +31,7 @@ export const MENUS = [
   {
     icon: <SiInstagram />,
     label: 'Instagram',
-    href: 'https://instagram.com/_dyermaker?igshid=OGQ5ZDc2ODk2ZA=='
+    href: 'https://instagram.com/_dyermaker?igshid=MzMyNGUyNmU2YQ%3D%3D&utm_source=qr'
   }
 ]
 
