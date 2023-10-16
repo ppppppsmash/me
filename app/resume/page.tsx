@@ -91,6 +91,7 @@ export default function Resume() {
                 description={service.description}
                 skill={service.skill}
                 infra={service.infra}
+                url={service.url}
               />
               <li
                 className='hover:scale-[1.04] transition duration-300 z-40
