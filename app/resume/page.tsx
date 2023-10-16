@@ -93,7 +93,8 @@ export default function Resume() {
                 infra={service.infra}
               />
               <li
-                className='hover:scale-[1.04] transition duration-300 z-40'
+                className='hover:scale-[1.04] transition duration-300 z-40
+                  group-hover:opacity-25'
                 key={index}
               >
                 <a

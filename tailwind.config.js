@@ -17,7 +17,8 @@ module.exports = {
       },
       animation: {
         'slide-in': 'slideIn 0.35s ease-in-out 0.5s forwards',
-        'slide-in-sec': 'slideInSec 0.35s ease-in-out 0.5s forwards'
+        'slide-in-sec': 'slideInSec 0.35s ease-in-out 0.5s forwards',
+        'scale-up-center': 'scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000)  both'
       },
       keyframes: {
         slideIn: {
@@ -46,6 +47,14 @@ module.exports = {
           },
           '100%': {
             opacity: 0
+          }
+        },
+        'scale-up-center': {
+          '0%': {
+            transform: 'scale(.5)'
+          },
+          to: {
+            transform: 'scale(1)'
           }
         }
       },
