@@ -6,6 +6,7 @@ import { BsFiletypeScss } from 'react-icons/bs'
 import { TbBrandJavascript, TbBrandTypescript, TbBrandPython, TbBrandDjango } from 'react-icons/tb'
 import { FaPhp, FaAws, FaVuejs, FaReact } from 'react-icons/fa'
 import { SiTailwindcss, SiNextdotjs } from 'react-icons/si'
+import HoverCard from '@/components/HoverCard'
 
 const SKILL_ICONS = [
   {
@@ -85,27 +86,34 @@ export default function Resume() {
         <h2 className='mt-8 opacity-0 translate-y-10 animate-slide-in'>実績 / お手伝い</h2>
         <ul className='mt-4 list-none grid grid-cols-2 gap-4'>
           {SUB_RESUME.map((service, index) => (
-            <li
-              className='hover:scale-[1.04] transition duration-300 z-50'
-              key={index}
-            >
-              <a
-                href={service.url}
-                target='_blank'
-                rel='noreferrer'
-                className={`opacity-0 h-full no-underline animate-slide-in`}
-                style={{animationDelay: `${index*0.1+2.5}s`}}
+            <div className='relative group'>
+              <HoverCard
+                description={service.description}
+                skill={service.skill}
+                infra={service.infra}
+              />
+              <li
+                className='hover:scale-[1.04] transition duration-300 z-40'
+                key={index}
               >
-                <Image
-                  className='w-full h-full object-cover aspect-auto rounded-md'
-                  src={service.image}
-                  alt={service.title}
-                  width={1200}
-                  height={630}
-                  decoding='async'
-                />
-              </a>
-            </li>
+                <a
+                  href={service.url}
+                  target='_blank'
+                  rel='noreferrer'
+                  className={`opacity-0 h-full no-underline animate-slide-in`}
+                  style={{animationDelay: `${index*0.1+2.5}s`}}
+                >
+                  <Image
+                    className='w-full h-full object-cover aspect-auto rounded-md'
+                    src={service.image}
+                    alt={service.title}
+                    width={1200}
+                    height={630}
+                    decoding='async'
+                  />
+                </a>
+              </li>
+            </div>
           ))}
         </ul>
       </div>

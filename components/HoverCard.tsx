@@ -12,10 +12,13 @@ export default function HoverCard({
   infra
 }: WORK_INFO) {
   return (
-    <div>
-      <p>{ description }</p>
-      <p>{ skill }</p>
-      <p>{ infra }</p>
+    <div
+      className='absolute -top-40 bg-white text-gray-800 rounded-md z-50
+        p-6 shadow-md hidden group-hover:block text-sm'
+    >
+      <p className='mb-2'>背景：{ description }</p>
+      <p className='mb-2'>技術：{ skill }</p>
+      <p className='mb-2'>インフラ：{ infra }</p>
     </div>
   )
 }
