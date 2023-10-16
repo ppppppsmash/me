@@ -86,7 +86,10 @@ export default function Resume() {
         <h2 className='mt-8 opacity-0 translate-y-10 animate-slide-in'>実績 / お手伝い</h2>
         <ul className='mt-4 list-none grid grid-cols-2 gap-4'>
           {SUB_RESUME.map((service, index) => (
-            <div className='relative group'>
+            <div
+              className='relative group'
+              key={index}
+            >
               <HoverCard
                 description={service.description}
                 skill={service.skill}
@@ -96,7 +99,6 @@ export default function Resume() {
               <li
                 className='hover:scale-[1.04] transition duration-300 z-40
                   group-hover:opacity-25'
-                key={index}
               >
                 <a
                   href={service.url}
@@ -109,8 +111,8 @@ export default function Resume() {
                     className='w-full h-full object-cover aspect-auto rounded-md'
                     src={service.image}
                     alt={service.title}
-                    width={1200}
-                    height={630}
+                    width={800}
+                    height={400}
                     decoding='async'
                   />
                 </a>

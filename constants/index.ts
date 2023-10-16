@@ -100,5 +100,21 @@ export const SUB_RESUME = [
     description: 'ゲーム会用のファミコン風アンケート',
     skill: 'Nuxt.js(v3.0) + Tailwindcss + Nes.css + Google App Script',
     infra: 'Vercel'
-  }
+  },
+  {
+    title: 'ページ計測Webアプリ',
+    url: 'https://page-speed-measurement-nextapp-oclbewqdfa-an.a.run.app/',
+    image: '/images/psi.png',
+    description: 'page speed insigthsのAPIを利用してページ速度を計測するアプリ。 テスト用アカウント： admin / admin',
+    skill: 'Next.js(v13.0) + Tailwindcss + Nest.js + MySQL',
+    infra: 'Cloud Build + Cloud Run + CloudSQL + Cloud Secret Manager'
+  },
+  {
+    title: '個人ブログ',
+    url: 'https://next-sanity-six-sooty.vercel.app/',
+    image: '/images/blog.png',
+    description: 'Sanity CMSを利用する個人ブログ',
+    skill: 'Next.js(v13.0) + Tailwindcss + Sanity + Tailwindcss',
+    infra: 'Vercel'
+  },
 ]
