@@ -84,7 +84,7 @@ export default function Resume() {
       </div>
 
         <h2 className='mt-8 opacity-0 translate-y-10 animate-slide-in'>実績 / お手伝い</h2>
-        <ul className='mt-4 list-none grid grid-cols-2 gap-4'>
+        <ul className='mt-4 list-none grid sm:grid-cols-2 gap-4'>
           {SUB_RESUME.map((service, index) => (
             <div
               className='relative group'
@@ -98,7 +98,7 @@ export default function Resume() {
               />
               <li
                 className='hover:scale-[1.04] transition duration-300 z-40
-                  group-hover:opacity-25'
+                  group-hover:opacity-25 mt-6 sm:mt-0'
               >
                 <a
                   href={service.url}

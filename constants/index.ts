@@ -8,13 +8,14 @@ export const INFO = [
   { label: '出身', value: '中国' },
   { label: '生年月日', value: '1990/09/10' },
   { label: '居住地', value: '神奈川県' },
-  { label: '最近の状態', value: '帰化申請中、新しい名前「黒沢 新」に決めました。I Love Japan' }
+  { label: '最近の状態', value: '帰化申請中、新しい名前「黒沢 新」に決めました' },
+  { label: '', value: 'I love my Japanese wife, I love Japan' }
 ]
 
 export const HOBBY = [
-  { label: '映画', value: '七人の侍 キッズ・リターン etc.' },
-  { label: 'テレビゲーム', value: 'ドラクエ ダークソウル etc.' },
-  { label: 'おもちゃ', value: 'ソフビ トランスフォーマー 超合金魂 etc.' },
+  { label: '映画', value: '七人の侍、キッズ・リターン、冷たい熱帯魚 etc.' },
+  { label: 'テレビゲーム', value: 'ドラクエ、クロノトリガー、ダークソウル etc.' },
+  { label: 'おもちゃ', value: 'ソフビ、トランスフォーマー、超合金魂 etc.' },
   { label: '音楽', value: 'The Rolling Stones / Led Zepplin' }
 ]
 
