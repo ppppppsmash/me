@@ -19,7 +19,8 @@ export default function HoverCard({
   return (
     <div
       className='absolute -top-40 bg-white text-gray-800 rounded-md z-50
-        p-6 shadow-md hidden group-hover:block text-sm animate-scale-up-center'
+        p-6 shadow-md hidden group-hover:block group-hover:delay-500
+        text-sm animate-scale-up-center transition delay-500 duration-500'
     >
       <p className='flex gap-x-2 mb-3'>
         <LinkIcon className='h-5 w-5 text-amber-400' />

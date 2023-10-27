@@ -97,8 +97,8 @@ export default function Resume() {
                 url={service.url}
               />
               <li
-                className='hover:scale-[1.04] transition duration-300 z-40
-                  group-hover:opacity-25 mt-6 sm:mt-0'
+                className='hover:scale-[1.04] transition ease-in-out delay-150
+                  duration-300 z-40 group-hover:opacity-25 mt-6 sm:mt-0'
               >
                 <a
                   href={service.url}
