@@ -81,7 +81,7 @@ export const SUB_RESUME = [
   {
     title: '恒佳株式会社',
     url: 'https://koukaltd.co.jp/',
-    image: '/images/kouka.png',
+    image: '/images/kouka.gif',
     description: '家族が貿易会社を経営しており、作ってあげた',
     skill: 'Nuxt.js(v2.0) + scss',
     infra: 'AWS S3 + CloudFront + Route53'
@@ -89,7 +89,7 @@ export const SUB_RESUME = [
   {
     title: 'Himalaya合同会社',
     url: 'https://www.new-himalaya.com/',
-    image: '/images/himalaya.png',
+    image: '/images/himalaya.gif',
     description: '親友がエアドーム関連の会社が経営しており、手伝って作ってあげた',
     skill: 'Next.js(v13.0) + TypeScript + Tailwindcss',
     infra: 'Vercel'
@@ -97,7 +97,7 @@ export const SUB_RESUME = [
   {
     title: '8-Bit風アンケート',
     url: 'https://game-tournament-survey.vercel.app/',
-    image: '/images/survey.png',
+    image: '/images/survey.gif',
     description: 'ゲーム会用のファミコン風アンケート',
     skill: 'Nuxt.js(v3.0) + Tailwindcss + Nes.css + Google App Script',
     infra: 'Vercel'
@@ -105,7 +105,7 @@ export const SUB_RESUME = [
   {
     title: 'ページ計測Webアプリ',
     url: 'https://page-speed-measurement-nextapp-oclbewqdfa-an.a.run.app/',
-    image: '/images/psi.png',
+    image: '/images/psi.gif',
     description: 'page speed insigthsのAPIを利用してページ速度を計測するアプリ。 テスト用アカウント： admin / admin',
     skill: 'Next.js(v13.0) + Tailwindcss + Nest.js + MySQL',
     infra: 'Cloud Build + Cloud Run + CloudSQL + Cloud Secret Manager'
@@ -113,7 +113,7 @@ export const SUB_RESUME = [
   {
     title: '個人ブログ',
     url: 'https://next-sanity-six-sooty.vercel.app/',
-    image: '/images/blog.png',
+    image: '/images/blog.gif',
     description: 'Sanity CMSを利用する個人ブログ',
     skill: 'Next.js(v13.0) + Sanity + Tailwindcss',
     infra: 'Vercel'
@@ -121,7 +121,7 @@ export const SUB_RESUME = [
   {
     title: '80s & ストレンジャー・シングス風アンケート',
     url: 'https://after-game-tournament-survey.netlify.app/',
-    image: '/images/after-survey.png',
+    image: '/images/after-survey.gif',
     description: 'Sanity CMSを利用する個人ブログ',
     skill: 'Next.js(v13.0) + Tailwindcss',
     infra: 'Netlify'
