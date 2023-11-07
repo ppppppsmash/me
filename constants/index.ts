@@ -115,7 +115,15 @@ export const SUB_RESUME = [
     url: 'https://next-sanity-six-sooty.vercel.app/',
     image: '/images/blog.png',
     description: 'Sanity CMSを利用する個人ブログ',
-    skill: 'Next.js(v13.0) + Tailwindcss + Sanity + Tailwindcss',
+    skill: 'Next.js(v13.0) + Sanity + Tailwindcss',
     infra: 'Vercel'
+  },
+  {
+    title: '80s & ストレンジャー・シングス風アンケート',
+    url: 'https://after-game-tournament-survey.netlify.app/',
+    image: '/images/after-survey.png',
+    description: 'Sanity CMSを利用する個人ブログ',
+    skill: 'Next.js(v13.0) + Tailwindcss',
+    infra: 'Netlify'
   },
 ]
