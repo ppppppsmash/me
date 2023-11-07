@@ -18,15 +18,15 @@ export default function HoverCard({
 }: WORK_INFO) {
   return (
     <div
-      className='absolute -top-40 bg-white text-gray-800 rounded-md z-50
+      className='absolute w-full h-full top-0 bg-white text-gray-800 rounded-md z-50
         p-6 shadow-md hidden group-hover:block group-hover:delay-500
         text-sm animate-scale-up-center transition delay-500 duration-500'
     >
-      <p className='flex gap-x-2 mb-3'>
-        <LinkIcon className='h-5 w-5 text-amber-400' />
+      <p className='flex items-center gap-x-2 mb-3 underline'>
+        <LinkIcon className='h-4 w-4 text-black' />
         <Link
           href={{ pathname: url }}
-          className='hover:underline hover:text-gray-500'
+          className='hover:underline hover:text-gray-400'
         >
           ページに遷移
         </Link>
