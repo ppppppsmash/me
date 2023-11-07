@@ -108,7 +108,7 @@ export default function Resume() {
                   style={{animationDelay: `${index*0.1+2.5}s`}}
                 >
                   <Image
-                    className='w-full h-full object-cover aspect-auto rounded-md'
+                    className='w-full rounded-md'
                     src={service.image}
                     alt={service.title}
                     width={800}
