@@ -3,6 +3,7 @@ import { Metadata } from 'next'
 import './globals.scss'
 import { Inter } from 'next/font/google'
 import Nav from '@/components/Nav'
+import Rainy from '@/components/Rainy'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -15,7 +16,7 @@ export const metadata: Metadata = {
     locale: 'ja_JP',
     url: 'localhost',
     siteName: 'Kurosawa\'s portfolio',
-    title: 'Kurosawa',
+    title: 'Kurosawa\'s portfolio',
     images: 'https://xxx.png'
   },
   robots: {
@@ -40,8 +41,11 @@ export default function RootLayout({
       </Head>
       <body className={inter.className}>
         <Nav />
+        <Rainy />
         <main className='flex min-h-screen flex-col items-center
           justify-between bg-[url("/grid.svg")]'>
+        {/* <main className='flex min-h-screen flex-col items-center
+          justify-between bg-[url("/grid.svg")]'> */}
           {children}
         </main>
       </body>
