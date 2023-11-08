@@ -83,44 +83,44 @@ export default function Resume() {
         </ul>
       </div>
 
-        <h2 className='mt-8 opacity-0 translate-y-10 animate-slide-in'>実績 / お手伝い</h2>
-        <ul className='mt-4 list-none grid sm:grid-cols-2 gap-4'>
-          {SUB_RESUME.map((service, index) => (
-            <div
-              className='relative group'
-              key={index}
+      <h2 className='mt-8 opacity-0 translate-y-10 animate-slide-in'>実績 / お手伝い</h2>
+      <ul className='mt-4 list-none grid sm:grid-cols-2 gap-4'>
+        {SUB_RESUME.map((service, index) => (
+          <div
+            className='relative group z-30'
+            key={index}
+          >
+            <HoverCard
+              description={service.description}
+              skill={service.skill}
+              infra={service.infra}
+              url={service.url}
+            />
+            <li
+              className='hover:scale-[1.04] transition ease-in-out delay-150
+                duration-300 z-40 group-hover:opacity-25 mt-6 sm:mt-0'
             >
-              <HoverCard
-                description={service.description}
-                skill={service.skill}
-                infra={service.infra}
-                url={service.url}
-              />
-              <li
-                className='hover:scale-[1.04] transition ease-in-out delay-150
-                  duration-300 z-40 group-hover:opacity-25 mt-6 sm:mt-0'
+              <a
+                href={service.url}
+                target='_blank'
+                rel='noreferrer'
+                className={`opacity-0 h-full no-underline animate-slide-in`}
+                style={{animationDelay: `${index*0.1+2.5}s`}}
               >
-                <a
-                  href={service.url}
-                  target='_blank'
-                  rel='noreferrer'
-                  className={`opacity-0 h-full no-underline animate-slide-in`}
-                  style={{animationDelay: `${index*0.1+2.5}s`}}
-                >
-                  <Image
-                    className='w-full rounded-md'
-                    src={service.image}
-                    alt={service.title}
-                    width={800}
-                    height={400}
-                    decoding='async'
-                  />
-                </a>
-              </li>
-            </div>
-          ))}
-        </ul>
-      </div>
+                <Image
+                  className='w-full rounded-md'
+                  src={service.image}
+                  alt={service.title}
+                  width={800}
+                  height={400}
+                  decoding='async'
+                />
+              </a>
+            </li>
+          </div>
+        ))}
+      </ul>
     </div>
+  </div>
   )
 }
