@@ -1,5 +1,7 @@
 import * as THREE from 'three'
 
+type CustomLine = THREE.Line & { velocity: THREE.Vector3 }
+
 let isRainy = false
 
 export function initRainy() {
@@ -56,7 +58,7 @@ export function initRainy() {
 
     raindrop.position.copy(pos)
 
-    raindrop.velocity = new THREE.Vector3(
+    raindrop.userData.velocity = new THREE.Vector3(
       Math.random() * 0.12 - 0.06, // X speed
       (Math.random() * 0.1 - 0.2) - 1.25, // Y speed
       Math.random() * 0.12 - 0.06, // Z speed
@@ -69,7 +71,7 @@ export function initRainy() {
     requestAnimationFrame(animate)
     scene.traverse((object) => {
       if (object instanceof THREE.Line) {
-        object.position.add(object.velocity)
+        object.position.add(object.userData.velocity)
         if (object.position.y < -100) {
           object.position.copy(new THREE.Vector3(Math.random() * 200 - 100, Math.random() * 200 - 100, Math.random() * 200 - 100))
         }
