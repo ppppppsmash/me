@@ -82,7 +82,7 @@ export const SUB_RESUME = [
     title: '恒佳株式会社',
     url: 'https://koukaltd.co.jp/',
     image: '/images/kouka.gif',
-    description: '家族が貿易会社を経営しており、作ってあげた',
+    description: '家族が貿易会社を経営しており、作ってあげた。（現時点不具合が出ており、リニューアルを準備中）',
     skill: 'Nuxt.js(v2.0) + scss',
     infra: 'AWS S3 + CloudFront + Route53'
   },
@@ -96,7 +96,7 @@ export const SUB_RESUME = [
   },
   {
     title: '8-Bit風アンケート',
-    url: 'https://game-tournament-survey.vercel.app/',
+    url: 'https://game-survey-demo.vercel.app/',
     image: '/images/survey.gif',
     description: 'ゲーム会用のファミコン風アンケート',
     skill: 'Nuxt.js(v3.0) + Tailwindcss + Nes.css + Google App Script',
@@ -120,7 +120,7 @@ export const SUB_RESUME = [
   },
   {
     title: '80s & ストレンジャー・シングス風アンケート',
-    url: 'https://after-game-tournament-survey.netlify.app/',
+    url: 'https://after-game-survey-demo.netlify.app/',
     image: '/images/after-survey.gif',
     description: 'Sanity CMSを利用する個人ブログ',
     skill: 'Next.js(v13.0) + Tailwindcss',
