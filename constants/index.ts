@@ -78,14 +78,14 @@ export const RESUME = [
 ]
 
 export const SUB_RESUME = [
-  {
-    title: '恒佳株式会社',
-    url: 'https://koukaltd.co.jp/',
-    image: '/images/kouka.gif',
-    description: '家族が貿易会社を経営しており、作ってあげた。（現時点不具合が出ており、リニューアルを準備中）',
-    skill: 'Nuxt.js(v2.0) + scss',
-    infra: 'AWS S3 + CloudFront + Route53'
-  },
+  // {
+  //   title: '恒佳株式会社',
+  //   url: 'https://koukaltd.co.jp/',
+  //   image: '/images/kouka.gif',
+  //   description: '家族が貿易会社を経営しており、作ってあげた。（現時点不具合が出ており、リニューアルを準備中）',
+  //   skill: 'Nuxt.js(v2.0) + scss',
+  //   infra: 'AWS S3 + CloudFront + Route53'
+  // },
   {
     title: 'Himalaya合同会社',
     url: 'https://www.new-himalaya.com/',
