@@ -75,7 +75,7 @@ const Home = () => {
       <div className="wrapper">
         <article>
           <h1 className="text-[2.5rem] translate-y-5 animate-slide-in-title font-bold
-            min-w-[165px] opacity-0 pr-2 transform py-8 ">Kurosawa's portfolio</h1>
+            min-w-[165px] opacity-0 pr-2 transform py-8">Kurosawa&#39;s portfolio</h1>
         </article>
         <div className="warp">
           {SIDES.map((side) => (

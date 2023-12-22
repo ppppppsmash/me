@@ -1,6 +1,6 @@
 export const PROFILE = [
     { label: 'Github', href: 'https://github.com/ppppppsmash' },
-    { label: 'Instagram', href: 'https://instagram.com/_dyermaker?igshid=OGQ5ZDc2ODk2ZA==' }
+    { label: 'Instagram', href: 'https://www.instagram.com/_dyermaker?igsh=MWd3dXEzcDJxYTJwMQ%3D%3D&utm_source=qr' }
 ]
 
 export const INFO = [
