@@ -11,9 +11,12 @@
   --white-70: #bdbdbd;
 
   // semantic token
-  --background: var(--white-100);
-  --text: var(--black-100);
-  --text-article: var(--black-70);
+  // --background: var(--white-100);
+  // --text: var(--black-100);
+  // --text-article: var(--black-70);
+    --background: var(--black-100);
+    --text: var(--white-100);
+    --text-article: var(--white-70);
 
   // shadows
   --shadows-large: 0 30px 60px rgba(0, 0, 0, 0.12);
@@ -24,11 +27,11 @@
   --radius-circle: 50%;
   --radius-maximum: 9999px;
 
-  @media (prefers-color-scheme: dark) {
-    --background: var(--black-100);
-    --text: var(--white-100);
-    --text-article: var(--white-70);
-  }
+  // @media (prefers-color-scheme: dark) {
+  //   --background: var(--black-100);
+  //   --text: var(--white-100);
+  //   --text-article: var(--white-70);
+  // }
 }
 
 html,
