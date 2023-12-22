@@ -43,9 +43,7 @@ export default function RootLayout({
         <Nav />
         <Rainy />
         <main className='flex min-h-screen flex-col items-center
-          justify-between bg-[url("/grid.svg")]'>
-        {/* <main className='flex min-h-screen flex-col items-center
-          justify-between bg-[url("/grid.svg")]'> */}
+          justify-between'>
           {children}
         </main>
       </body>
