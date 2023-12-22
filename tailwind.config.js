@@ -6,9 +6,6 @@ module.exports = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    // colors: {
-    //   primary: '--color-primary',
-    // },
     extend: {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
@@ -17,6 +14,7 @@ module.exports = {
       },
       animation: {
         'slide-in': 'slideIn 0.35s ease-in-out 0.5s forwards',
+        'slide-in-title': 'slideInTitle 0.35s ease-in-out 0.5s forwards',
         'slide-in-sec': 'slideInSec 0.35s ease-in-out 0.5s forwards',
         'scale-up-center': 'scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000)  both'
       },
@@ -25,6 +23,16 @@ module.exports = {
           '0%': {
             opacity: 0,
             transform: 'translateY(20px)'
+          },
+          '100%': {
+            opacity: 1,
+            transform: 'translateY(0)'
+          }
+        },
+        slideInTitle: {
+          '0%': {
+            opacity: 0,
+            transform: 'translateY(calc(-50% + 20px))'
           },
           '100%': {
             opacity: 1,
