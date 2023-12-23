@@ -10,12 +10,6 @@ import HoverCard from '@/components/HoverCard'
 
 const SKILL_ICONS = [
   {
-    icon: <AiOutlineHtml5 size={24} />,
-  },
-  {
-    icon: <DiCss3 size={24} />,
-  },
-  {
     icon: <BsFiletypeScss size={24} />,
   },
   {

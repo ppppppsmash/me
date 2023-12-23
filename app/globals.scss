@@ -47,6 +47,7 @@ strong {
 	position: fixed;
 	top: 50%;
 	left: 50%;
+  width: 100%;
 }
 
 
@@ -78,7 +79,7 @@ strong {
   
 .warp {
   container-type: size;
-  width: 150vmin;
+  width: 100%;
 	aspect-ratio: 4 / 3;
   perspective: calc(var(--perspective) * 1px);
   transform-style: preserve-3d;
@@ -193,4 +194,20 @@ article {
 	-moz-transform: translate3d(0, 0, 50000px);
 	-ms-transform: translate3d(0, 0, 50000px);
 	-o-transform: translate3d(0, 0, 50000px);
+}
+
+@property --shimmer-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes shimmer {
+  0% {
+    --shimmer-angle: 0deg;
+  }
+
+  100% {
+    --shimmer-angle: 360deg;
+  }
 }
