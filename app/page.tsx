@@ -73,10 +73,14 @@ const Home = () => {
   return (
     <div className="scene">
       <div className="wrapper">
-        <article>
-          <h1 className="text-[2.5rem] translate-y-5 animate-slide-in-title font-bold
-            min-w-[165px] opacity-0 pr-2 transform py-8">Kurosawa&#39;s portfolio</h1>
+        <article className="from-pink-400 to-violet-600 rounded-lg p-[3px]
+          bg-[conic-gradient(from_var(--shimmer-angle),theme(colors.pink.400)_30%,theme(colors.slate.100)_40%,theme(colors.violet.400)_20%)]
+          animate-[shimmer_2.5s_linear_infinite]">
+            <h1 className="text-[2.5rem] translate-y-5 animate-slide-in-title font-bold
+              min-w-[165px] opacity-0 pr-2 transform py-8 rounded-lg bg-black"
+            >Kurosawa&#39;s portfolio</h1>
         </article>
+        
         <div className="warp">
           {SIDES.map((side) => (
             <div key={side} className={`warp__side warp__side--${side}`}></div>
