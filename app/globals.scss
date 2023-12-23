@@ -47,6 +47,7 @@ strong {
 	position: fixed;
 	top: 50%;
 	left: 50%;
+  width: 100%;
 }
 
 
@@ -78,7 +79,7 @@ strong {
   
 .warp {
   container-type: size;
-  width: 150vmin;
+  width: 100%;
 	aspect-ratio: 4 / 3;
   perspective: calc(var(--perspective) * 1px);
   transform-style: preserve-3d;

@@ -20,8 +20,6 @@ export const HOBBY = [
 ]
 
 export const SKILL = [
-  'HTML',
-  'CSS',
   'SCSS',
   'JavaScript',
   'PHP',
@@ -122,8 +120,8 @@ export const SUB_RESUME = [
     title: '80s & ストレンジャー・シングス風アンケート',
     url: 'https://after-game-survey-demo.netlify.app/',
     image: '/images/after-survey.gif',
-    description: 'Sanity CMSを利用する個人ブログ',
-    skill: 'Next.js(v13.0) + Tailwindcss',
+    description: 'マルチステップ風アンケートWebアプリ',
+    skill: 'Nuxt(v3.0) + Tailwindcss',
     infra: 'Netlify'
   },
 ]
