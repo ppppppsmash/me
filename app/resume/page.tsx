@@ -1,3 +1,6 @@
+import Link from 'next/link'
+import { LinkIcon } from '@heroicons/react/24/solid'
+
 import { INFO, RESUME, SKILL, SUB_RESUME } from '@/constants'
 import Image from 'next/image'
 import { AiOutlineHtml5 } from 'react-icons/ai'
@@ -8,6 +11,8 @@ import { FaPhp, FaAws, FaVuejs, FaReact } from 'react-icons/fa'
 import { SiTailwindcss, SiNextdotjs } from 'react-icons/si'
 import HoverCard from '@/components/HoverCard'
 import ProximityCard from '@/components/ProximityCard'
+
+
 
 const SKILL_ICONS = [
   {
@@ -49,7 +54,7 @@ const SKILL_ICONS = [
 export default function Resume() {
 
   return (
-    <div className='w-full max-w-[1200px] md:h-full'>
+    <div className='w-full max-w-[1000px] md:h-full'>
       <div className='p-4 pb-[170px]'>
       <h1 className='text-[2.5rem] opacity-0 translate-y-10 animate-slide-in'>Resume.</h1>
       <h2 className='text-[1.8rem] opacity-0 mt-8 translate-y-10 animate-slide-in'>Skill</h2>
@@ -81,40 +86,37 @@ export default function Resume() {
       </div>
 
       <h2 className='mt-8 opacity-0 translate-y-10 animate-slide-in'>実績 / お手伝い</h2>
-      <div className='mt-4 list-none grid sm:grid-cols-2 gap-4'>
+      <div className='mt-4 grid sm:grid-cols-2 gap-4'>
       {SUB_RESUME.map((service, index) => (
-        <ProximityCard>
+        <ProximityCard key={index}>
           <div
-            className='relative group z-30'
-            key={index}
+            className='relative group z-30 rounded-lg'
           >
-            {/* <HoverCard
-              description={service.description}
-              skill={service.skill}
-              infra={service.infra}
-              url={service.url}
-            /> */}
-            <li
-              className='hover:scale-[0.98] transition ease-in-out delay-150
-                duration-300 z-40 group-hover:opacity-25 mt-6 sm:mt-0'
+            <Link
+              href={{ pathname: service.url }}
+              target="_blank"
+              className='hover:underline'
             >
-              {/* <a
-                href={service.url}
-                target='_blank'
-                rel='noreferrer'
-                className={`opacity-0 h-full no-underline animate-slide-in w-full`}
-                style={{animationDelay: `${index*0.1+2.5}s`}}
-              > */}
-                <Image
-                  className='w-full rounded-md'
-                  src={service.image}
-                  alt={service.title}
-                  width={800}
-                  height={400}
-                  decoding='async'
-                />
-              {/* </a> */}
-            </li>
+            <div
+              className='transition ease-in-out delay-150
+                duration-300 z-40 mt-6 sm:mt-0'
+            >
+              <Image
+                className='w-full rounded-md'
+                src={service.image}
+                alt={service.title}
+                width={800}
+                height={400}
+                decoding='async'
+              />
+              <div className="p-2">
+                <p className='mb-2'>{ service.description }</p>
+                <p className='mb-2'>STACK INFO：{ service.skill }</p>
+                <p className='mb-2'>INFRA INFO：{ service.infra }</p>
+                <p className='flex items-center gap-x-2 mb-3 underline'></p>
+              </div>
+            </div>
+            </Link>
           </div>
         </ProximityCard>
       ))}
