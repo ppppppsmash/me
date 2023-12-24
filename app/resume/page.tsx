@@ -7,6 +7,7 @@ import { TbBrandJavascript, TbBrandTypescript, TbBrandPython, TbBrandDjango } fr
 import { FaPhp, FaAws, FaVuejs, FaReact } from 'react-icons/fa'
 import { SiTailwindcss, SiNextdotjs } from 'react-icons/si'
 import HoverCard from '@/components/HoverCard'
+import ProximityCard from '@/components/ProximityCard'
 
 const SKILL_ICONS = [
   {
