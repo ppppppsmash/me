@@ -44,7 +44,9 @@ const SKILL_ICONS = [
   }
 ]
 
+
 export default function Resume() {
+
   return (
     <div className='w-full max-w-[800px] md:h-full'>
       <div className='p-4 pb-[170px]'>
