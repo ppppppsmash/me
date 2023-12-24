@@ -49,7 +49,7 @@ const SKILL_ICONS = [
 export default function Resume() {
 
   return (
-    <div className='w-full max-w-[800px] md:h-full'>
+    <div className='w-full max-w-[1200px] md:h-full'>
       <div className='p-4 pb-[170px]'>
       <h1 className='text-[2.5rem] opacity-0 translate-y-10 animate-slide-in'>Resume.</h1>
       <h2 className='text-[1.8rem] opacity-0 mt-8 translate-y-10 animate-slide-in'>Skill</h2>
@@ -81,29 +81,30 @@ export default function Resume() {
       </div>
 
       <h2 className='mt-8 opacity-0 translate-y-10 animate-slide-in'>実績 / お手伝い</h2>
-      <ul className='mt-4 list-none grid sm:grid-cols-2 gap-4'>
-        {SUB_RESUME.map((service, index) => (
+      <div className='mt-4 list-none grid sm:grid-cols-2 gap-4'>
+      {SUB_RESUME.map((service, index) => (
+        <ProximityCard>
           <div
             className='relative group z-30'
             key={index}
           >
-            <HoverCard
+            {/* <HoverCard
               description={service.description}
               skill={service.skill}
               infra={service.infra}
               url={service.url}
-            />
+            /> */}
             <li
-              className='hover:scale-[1.04] transition ease-in-out delay-150
+              className='hover:scale-[0.98] transition ease-in-out delay-150
                 duration-300 z-40 group-hover:opacity-25 mt-6 sm:mt-0'
             >
-              <a
+              {/* <a
                 href={service.url}
                 target='_blank'
                 rel='noreferrer'
-                className={`opacity-0 h-full no-underline animate-slide-in`}
+                className={`opacity-0 h-full no-underline animate-slide-in w-full`}
                 style={{animationDelay: `${index*0.1+2.5}s`}}
-              >
+              > */}
                 <Image
                   className='w-full rounded-md'
                   src={service.image}
@@ -112,11 +113,12 @@ export default function Resume() {
                   height={400}
                   decoding='async'
                 />
-              </a>
+              {/* </a> */}
             </li>
           </div>
-        ))}
-      </ul>
+        </ProximityCard>
+      ))}
+      </div>
     </div>
   </div>
   )

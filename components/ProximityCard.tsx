@@ -90,7 +90,11 @@ export default function ProximityCard({ children }: ProximityCardProps) {
 
   return (
     <div ref={containerRef} className="container">
-      <div ref={cardRef} className="card">{children}</div>
+      <div
+        ref={cardRef}
+        className="card">
+        {children}
+      </div>
     </div>
   )
 }
