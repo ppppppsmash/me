@@ -9,7 +9,6 @@ import { BsFiletypeScss } from 'react-icons/bs'
 import { TbBrandJavascript, TbBrandTypescript, TbBrandPython, TbBrandDjango } from 'react-icons/tb'
 import { FaPhp, FaAws, FaVuejs, FaReact } from 'react-icons/fa'
 import { SiTailwindcss, SiNextdotjs } from 'react-icons/si'
-import HoverCard from '@/components/HoverCard'
 import ProximityCard from '@/components/ProximityCard'
 
 

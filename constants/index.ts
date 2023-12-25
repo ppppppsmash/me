@@ -124,4 +124,12 @@ export const SUB_RESUME = [
     skill: 'Nuxt(v3.0) + Tailwindcss',
     infra: 'Netlify'
   },
+  {
+    title: 'タスクの管理アプリ',
+    url: 'https://my-task-management-g7gol0du3-ppppppsmash.vercel.app/',
+    image: '/images/task-manager.gif',
+    description: 'いろいろまだ決めていないですが、考えながら機能を入れていこう',
+    skill: 'Next.js(v14.0) + Tailwindcss + TypeScript + Clerk.js',
+    infra: 'Vercel'
+  },
 ]
