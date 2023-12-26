@@ -98,10 +98,10 @@ export default function Resume() {
             >
             <div
               className='transition ease-in-out delay-150
-                duration-300 z-40 mt-6 sm:mt-0'
+                duration-300 z-40 mt-6 sm:mt-0 overflow-hidden'
             >
               <Image
-                className='w-full rounded-md'
+                className='w-full rounded-xl'
                 src={service.image}
                 alt={service.title}
                 width={800}

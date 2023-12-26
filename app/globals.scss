@@ -13,7 +13,7 @@
   --text: hsl(0 0% 90%);
   --gradient: conic-gradient(from 180deg at 50% 70%,hsla(0,0%,98%,1) 0deg,#eec32d 72.0000010728836deg,#ec4b4b 144.0000021457672deg,#709ab9 216.00000858306885deg,#4dffbf 288.0000042915344deg,hsla(0,0%,98%,1) 1turn);
   --border-radius: 12px;
-  --border-width: 4px;
+  --border-width: 3px;
   --border: hsl(280 10% 50% / 1);
 
 }
@@ -214,7 +214,7 @@ article {
 	height: 100%;
 	background: var(--background);
   overflow: hidden;
-	padding: 0.4rem;
+	padding: 0.1rem;
 	border-radius: var(--border-radius);
 	width: 100%;
 	display: flex;

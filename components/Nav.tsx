@@ -22,34 +22,23 @@ export const MENUS = [
     label: 'Resume',
     href: '/resume'
   },
-  { id: 'hr' },
+  //{ id: 'hr' },
   {
     icon: <SiGithub />,
     label: 'Github',
     href: 'https://github.com/ppppppsmash'
-  },
-  {
-    icon: <SiInstagram />,
-    label: 'Instagram',
-    href: 'https://instagram.com/_dyermaker?igshid=MzMyNGUyNmU2YQ%3D%3D&utm_source=qr'
   }
 ]
 
 
 export default function Nav() {
   return (
-    <nav className='fixed px-2 left-1/2 bottom-0 w-11/12 sm:w-full max-w-[500px] rounded-full z-[9999]
+    <nav className='fixed px-8 left-1/2 bottom-0 w-11/12 sm:w-full max-w-[320px] rounded-full z-[9999]
     bg-slate-100 bg-opacity-20 opacity-0 h-[58px] animate-slide-in-sec -translate-x-1/2
       translate-y-6 backdrop-blur-3xl backdrop-saturate-200 backdrop-brightness-100'>
-      <ul className='w-full h-full p-5 pb-5 list-none flex gap-8
-      items-center justify-start overflow-x-scroll overflow-y-hidden'>
+      <ul className='w-full h-full list-none flex items-center justify-between
+      overflow-x-scroll overflow-y-hidden'>
         { MENUS.map((menu, index) => {
-          if (menu.id === 'hr') {
-            return (
-              <li key={index}>|</li>
-            )
-          }
-
           return (
             <li key={ index }>
               <Link
@@ -64,8 +53,6 @@ export default function Nav() {
             </li>
           )
         })}
-        <li>
-        </li>
       </ul>
     </nav>
   )
