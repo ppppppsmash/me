@@ -4,11 +4,11 @@ export const PROFILE = [
 ]
 
 export const INFO = [
-  { label: '名前', value: 'Liming Pei' },
+  { label: '名前', value: 'L.M PEI' },
   { label: '出身', value: '中国' },
   { label: '生年月日', value: '1990/09/10' },
   { label: '居住地', value: '神奈川県' },
-  { label: '最近の状態', value: '帰化申請中、新しい名前「黑澤 新」に決めました' },
+  //{ label: '最近の状態', value: '帰化申請中、新しい名前「黑澤 新」に決めました' },
   { label: '', value: 'I love Japan, I love my Japanese wife, I love my Chinese Family. ' }
 ]
 
@@ -20,7 +20,6 @@ export const HOBBY = [
 ]
 
 export const SKILL = [
-  'SCSS',
   'JavaScript',
   'PHP',
   'Tailwindcss',

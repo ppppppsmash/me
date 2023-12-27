@@ -15,9 +15,6 @@ import ProximityCard from '@/components/ProximityCard'
 
 const SKILL_ICONS = [
   {
-    icon: <BsFiletypeScss size={24} />,
-  },
-  {
     icon: <TbBrandJavascript size={24} />,
   },
   {
