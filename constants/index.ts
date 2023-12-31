@@ -125,7 +125,7 @@ export const SUB_RESUME = [
   },
   {
     title: 'タスクの管理アプリ',
-    url: 'https://my-task-management-g7gol0du3-ppppppsmash.vercel.app/',
+    url: 'https://my-task-management-gamma.vercel.app',
     image: '/images/task-manager.gif',
     description: 'いろいろまだ決めていないですが、考えながら機能を入れていこう',
     skill: 'Next.js(v14.0) + Tailwindcss + TypeScript + Clerk.js',
