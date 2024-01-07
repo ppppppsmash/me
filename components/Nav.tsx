@@ -40,10 +40,10 @@ export default function Nav() {
       overflow-x-scroll overflow-y-hidden'>
         { MENUS.map((menu, index) => {
           return (
-            <li key={ index }>
+            <li key={ index } className='px-1'>
               <Link
               className='w-[40px] h-[40px] bg-[#232323] border-0 cursor-pointer text-white
-              rounded-full grid place-items-center focus-visible hover:scale-[1.1]'
+              rounded-full grid place-items-center focus-visible hover:scale-[1.1] duration-300'
                 href={{ pathname: menu.href }}
                 target={ menu.href?.startsWith('https://') ? '_blank' : '_self' }
                 rel={ menu.href?.startsWith('https://') ? 'noreferrer' : undefined }
