@@ -8,7 +8,7 @@ import { DiCss3 } from  'react-icons/di'
 import { BsFiletypeScss } from 'react-icons/bs'
 import { TbBrandJavascript, TbBrandTypescript, TbBrandPython, TbBrandDjango } from 'react-icons/tb'
 import { FaPhp, FaAws, FaVuejs, FaReact } from 'react-icons/fa'
-import { SiTailwindcss, SiNextdotjs } from 'react-icons/si'
+import { SiTailwindcss, SiNextdotjs, SiSvelte } from 'react-icons/si'
 import ProximityCard from '@/components/ProximityCard'
 
 
@@ -34,6 +34,9 @@ const SKILL_ICONS = [
   },
   {
     icon: <FaReact size={24} />,
+  },
+  {
+    icon: <SiSvelte size={24} />,
   },
   {
     icon: <SiNextdotjs size={24} />,
