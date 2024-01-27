@@ -28,6 +28,7 @@ export const SKILL = [
   'AWS',
   'Vue.js',
   'React.js',
+  'Svelte.js',
   'Nest.js',
   'Python',
   'Django'
