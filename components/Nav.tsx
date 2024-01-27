@@ -22,7 +22,6 @@ export const MENUS = [
     label: 'Resume',
     href: '/resume'
   },
-  //{ id: 'hr' },
   {
     icon: <SiGithub />,
     label: 'Github',
@@ -36,8 +35,7 @@ export default function Nav() {
     <nav className='fixed px-8 left-1/2 bottom-0 w-11/12 sm:w-full max-w-[320px] rounded-full z-[9999]
     bg-slate-100 bg-opacity-20 opacity-0 h-[58px] animate-slide-in-sec -translate-x-1/2
       translate-y-6 backdrop-blur-3xl backdrop-saturate-200 backdrop-brightness-100'>
-      <ul className='w-full h-full list-none flex items-center justify-between
-      overflow-x-scroll overflow-y-hidden'>
+      <ul className='w-full h-full list-none flex items-center justify-between overflow-y-hidden'>
         { MENUS.map((menu, index) => {
           return (
             <li key={ index } className='px-1'>
