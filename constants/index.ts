@@ -23,6 +23,8 @@ export const HOBBY = [
 export const SKILL = [
   'JavaScript',
   'PHP',
+  'Python',
+  'Node.js',
   'Tailwindcss',
   'TypeScript',
   'AWS',
@@ -30,7 +32,7 @@ export const SKILL = [
   'React.js',
   'Svelte.js',
   'Nest.js',
-  'Python',
+  'Ruby on rails',
   'Django'
 ]
 

@@ -5,7 +5,12 @@ export default function About() {
   return (
     <div className='w-full max-w-[800px] md:h-[100vh]'>
       <div className='p-4 pb-20'>
-        <h1 className='text-[2.5rem] opacity-0 translate-y-10 animate-slide-in'>About.</h1>
+        <h1 className='text-[2.5rem] opacity-0 translate-y-10 animate-slide-in'>
+          <span className="skill-effect flex items-center gap-x-2 font-semibold bg-clip-text text-transparent bg-gradient-to-r
+            from-fuchsia-400 via-rose-500 to-yellow-600">
+            About.
+          </span>
+        </h1>
         <h2 className='text-[1.8rem] opacity-0 mt-8 translate-y-10 animate-slide-in'>Me</h2>
         <div className='flex justify-between'>
           <ul className='mt-4 ml-1'>
