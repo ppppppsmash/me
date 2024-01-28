@@ -48,7 +48,7 @@ const SKILL_ICONS = [
     icon: <SiNextdotjs size={24} />,
   },
   {
-    icon: <SiRubyonrails size={24} />,
+    icon: <SiRubyonrails size={26} />,
   },
   {
     icon: <TbBrandDjango size={24} />,
@@ -61,7 +61,14 @@ export default function Resume() {
   return (
     <div className='w-full max-w-[1000px] md:h-full'>
       <div className='p-4 pb-[170px]'>
-      <h1 className='text-[2.5rem] opacity-0 translate-y-10 animate-slide-in'>Resume.</h1>
+      <h1 className='text-[2.5rem] opacity-0 translate-y-10 animate-slide-in'>
+        <span
+          className="skill-effect flex items-center gap-x-2 font-semibold bg-clip-text text-transparent bg-gradient-to-r
+            from-fuchsia-400 via-rose-500 to-yellow-600"
+        >
+          Resume.
+        </span>
+      </h1>
       <h2 className='text-[1.8rem] opacity-0 mt-8 translate-y-10 animate-slide-in'>Skill</h2>
 
       <div className='flex justify-center gap-2'>
