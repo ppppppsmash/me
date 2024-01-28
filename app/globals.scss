@@ -374,6 +374,7 @@ article {
 .skill-effect {
   animation: gradient-active 6s ease infinite;
   background-size: 400% 400%;
+  -webkit-animation: gradient-active 6s ease infinite;
 }
 
 @keyframes gradient-active {
@@ -386,4 +387,11 @@ article {
   100% {
     background-position: 0% 50%;
   }
+}
+
+#github-page article {
+  position: relative!important;
+  top: 0!important;
+  left: 0!important;
+  translate: 0 0!important;
 }

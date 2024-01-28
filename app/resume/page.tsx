@@ -59,15 +59,17 @@ const SKILL_ICONS = [
 export default function Resume() {
 
   return (
-    <div className='w-full max-w-[1000px] md:h-full'>
+    <div className='w-full max-w-[800px] md:h-full'>
       <div className='p-4 pb-[170px]'>
-      <h1 className='text-[2.5rem] opacity-0 translate-y-10 animate-slide-in'>
-        <span
-          className="skill-effect flex items-center gap-x-2 font-semibold bg-clip-text text-transparent bg-gradient-to-r
-            from-fuchsia-400 via-rose-500 to-yellow-600"
-        >
-          Resume.
+      <h1 className='text-2xl sm:text-[2.5rem] opacity-0 translate-y-10 animate-slide-in flex items-center'>
+        <span className='skill-effect flex items-center gap-x-2 font-semibold bg-clip-text text-transparent bg-gradient-to-r
+          from-fuchsia-400 via-rose-500 to-yellow-600'>&lt;</span>
+        <span className='skill-effect flex items-center gap-x-2 font-semibold bg-clip-text text-transparent bg-gradient-to-r
+          from-fuchsia-400 via-rose-500 to-yellow-600'>
+          Resume
         </span>
+        <span className='skill-effect flex items-center gap-x-2 font-semibold bg-clip-text text-transparent bg-gradient-to-r
+          from-fuchsia-400 via-rose-500 to-yellow-600 pl-4'>/&gt;</span>
       </h1>
       <h2 className='text-[1.8rem] opacity-0 mt-8 translate-y-10 animate-slide-in'>Skill</h2>
 
@@ -76,7 +78,7 @@ export default function Resume() {
           {SKILL_ICONS.map((item, index) => (
             <li
               key={index}
-              className={`w-1/3 gap-x-2 leading-normal opacity-0 my-4 translate-y-10 animate-slide-in flex items-center`}
+              className={`w-1/2 sm:w-1/3 gap-x-2 leading-normal opacity-0 my-4 translate-y-10 animate-slide-in flex items-center`}
               style={{animationDelay: `${index*0.1+1}s`}}
             >
               {item.icon}
