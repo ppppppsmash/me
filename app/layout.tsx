@@ -4,6 +4,7 @@ import './globals.scss'
 import { Inter } from 'next/font/google'
 import Nav from '@/components/Nav'
 import Rainy from '@/components/Rainy'
+import Snowy from '@/components/Snowy'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -41,7 +42,7 @@ export default function RootLayout({
       </Head>
       <body className={inter.className}>
         <Nav />
-        <Rainy />
+        <Snowy />
         <main className='flex min-h-screen flex-col items-center
           justify-between'>
           {children}

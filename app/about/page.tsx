@@ -5,7 +5,7 @@ export default function About() {
   return (
     <div className='w-full max-w-[800px] md:h-[100vh]'>
       <div className='p-4 pb-20'>
-      <h1 className='text-2xl sm:text-[2.5rem] opacity-0 translate-y-10 animate-slide-in flex items-center'>
+        <h1 className='text-2xl sm:text-[2.5rem] opacity-0 translate-y-10 animate-slide-in flex items-center'>
           <span className='skill-effect flex items-center gap-x-2 font-semibold bg-clip-text text-transparent bg-gradient-to-r
             from-fuchsia-400 via-rose-500 to-yellow-600'>&lt;</span>
           <span className='skill-effect flex items-center gap-x-2 font-semibold bg-clip-text text-transparent bg-gradient-to-r

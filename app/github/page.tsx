@@ -12,30 +12,30 @@ const explicitTheme = {
 export default function Github() {
   
   return (
-    <div className='w-full max-w-[800px] md:h-[100vh]'>
+    <div id="github-page" className='w-full max-w-[800px] md:h-[100vh]'>
       <div className='p-4 pb-10 relative'>
         <h1 className='text-2xl sm:text-[2.5rem] opacity-0 translate-y-10 animate-slide-in flex sm:items-center'>
           <span className='skill-effect gap-x-2 font-semibold bg-clip-text text-transparent bg-gradient-to-r
             from-fuchsia-400 via-rose-500 to-yellow-600'>&lt;</span>
           <span className='skill-effect flex items-center gap-x-2 font-semibold bg-clip-text text-transparent bg-gradient-to-r
             from-fuchsia-400 via-rose-500 to-yellow-600'>
-            Github Activity
+            Github Active
           </span>
           <span className='skill-effect gap-x-2 font-semibold bg-clip-text text-transparent bg-gradient-to-r
             from-fuchsia-400 via-rose-500 to-yellow-600 pl-4'>/&gt;</span>
         </h1>
 
         <div className='mt-6'>
-        <GitHubCalendar
-          username="ppppppsmash"
-          blockMargin={4}
-          blockSize={8}
-          colorScheme="dark"
-          fontSize={12}
-          year="last"
-          theme={explicitTheme}
-        />
-</div>
+          <GitHubCalendar
+            username="ppppppsmash"
+            blockMargin={4}
+            blockSize={8}
+            colorScheme="dark"
+            fontSize={12}
+            year="last"
+            theme={explicitTheme}
+          />
+        </div>
       </div>
 
       <div className="mt-5">
