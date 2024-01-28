@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { AiOutlineHome } from 'react-icons/ai'
 import { BiUser } from 'react-icons/bi'
 import { RiStickyNote2Line } from 'react-icons/ri'
-import { SiGithub, SiInstagram } from 'react-icons/si'
+import { SiGithub } from 'react-icons/si'
 
 export const MENUS = [
   {
@@ -25,7 +25,7 @@ export const MENUS = [
   {
     icon: <SiGithub />,
     label: 'Github',
-    href: 'https://github.com/ppppppsmash'
+    href: '/github'
   }
 ]
 
