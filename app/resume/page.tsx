@@ -7,8 +7,8 @@ import { AiOutlineHtml5 } from 'react-icons/ai'
 import { DiCss3 } from  'react-icons/di'
 import { BsFiletypeScss } from 'react-icons/bs'
 import { TbBrandJavascript, TbBrandTypescript, TbBrandPython, TbBrandDjango } from 'react-icons/tb'
-import { FaPhp, FaAws, FaVuejs, FaReact } from 'react-icons/fa'
-import { SiTailwindcss, SiNextdotjs, SiSvelte } from 'react-icons/si'
+import { FaPhp, FaAws, FaVuejs, FaReact, FaNodeJs } from 'react-icons/fa'
+import { SiTailwindcss, SiNextdotjs, SiSvelte, SiRubyonrails } from 'react-icons/si'
 import ProximityCard from '@/components/ProximityCard'
 
 
@@ -19,6 +19,12 @@ const SKILL_ICONS = [
   },
   {
     icon: <FaPhp size={24} />,
+  },
+  {
+    icon: <TbBrandPython size={24} />,
+  },
+  {
+    icon: <FaNodeJs size={24} />,
   },
   {
     icon: <SiTailwindcss size={24} />,
@@ -42,7 +48,7 @@ const SKILL_ICONS = [
     icon: <SiNextdotjs size={24} />,
   },
   {
-    icon: <TbBrandPython size={24} />,
+    icon: <SiRubyonrails size={24} />,
   },
   {
     icon: <TbBrandDjango size={24} />,
@@ -57,35 +63,24 @@ export default function Resume() {
       <div className='p-4 pb-[170px]'>
       <h1 className='text-[2.5rem] opacity-0 translate-y-10 animate-slide-in'>Resume.</h1>
       <h2 className='text-[1.8rem] opacity-0 mt-8 translate-y-10 animate-slide-in'>Skill</h2>
+
       <div className='flex justify-center gap-2'>
-        <ul className='mt-4 ml-1'>
-          {SKILL_ICONS.map((icons_list, index) => (
+        <ul className='mt-4 ml-1 flex flex-wrap justify-between'>
+          {SKILL_ICONS.map((item, index) => (
             <li
               key={index}
-              className={`leading-normal opacity-0 my-4 translate-y-10 animate-slide-in`}
+              className={`w-1/3 gap-x-2 leading-normal opacity-0 my-4 translate-y-10 animate-slide-in flex items-center`}
               style={{animationDelay: `${index*0.1+1}s`}}
             >
-              {icons_list.icon}
-            </li>
-          ))}
-        </ul>
-        <ul className='mt-4 ml-1'>
-          {SKILL.map((skill, index) => (
-            <li
-              key={index}
-              className={`leading-normal opacity-0 my-4 translate-y-10 animate-slide-in`}
-              style={{animationDelay: `${index*0.1+1}s`}}
-            >
-              <p className='text-[1rem]'>
-                {skill}
-              </p>
+              {item.icon}
+              {SKILL[index]}
             </li>
           ))}
         </ul>
       </div>
 
-      <h2 className='mt-8 opacity-0 translate-y-10 animate-slide-in'>実績 / お手伝い</h2>
-      <div className='mt-4 grid sm:grid-cols-2 gap-4'>
+      <h2 className='mt-12 opacity-0 translate-y-10 animate-slide-in'>実績 / お手伝い</h2>
+      <div className='mt-4 grid sm:grid-cols-2 gap-x-8 gap-y-4'>
       {SUB_RESUME.map((service, index) => (
         <ProximityCard key={index}>
           <div
