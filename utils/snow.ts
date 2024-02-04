@@ -21,7 +21,7 @@ export function initSnowy() {
   renderer.domElement.style.position = 'fixed'
   renderer.domElement.style.top = '0'
   renderer.domElement.style.left = '0'
-  renderer.domElement.style.zIndex = '10'
+  renderer.domElement.style.zIndex = '-10'
   document.body.appendChild(renderer.domElement)
   // on resize
   window.addEventListener('resize', () => {

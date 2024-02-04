@@ -38,8 +38,8 @@ export default function Github() {
         </div>
       </div>
 
-      <div className="mt-5">
-      <GithubActivityFeed
+      <div className="mt-5 z-50">
+        <GithubActivityFeed
           user="ppppppsmash"
         />
       </div>

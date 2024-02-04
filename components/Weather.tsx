@@ -6,8 +6,8 @@ export default function Weather() {
   const isOddDate = currentDate % 2 !== 0
 
   return (
-    <>
+    <div>
       {isOddDate ? <Snowy /> : <Rainy />}
-    </>
+    </div>
   )
 }
