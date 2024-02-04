@@ -40,16 +40,17 @@ export default function RootLayout({
         <link href='https://fonts.cdnfonts.com/css/sf-pro-display' rel='stylesheet' />
         <link href='https://https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css' rel='stylesheet' />
       </Head>
-      <body className={inter.className}>
+      <body className={`${inter.className} bg-transparent`}>
         <Nav />
         {/* <WeatherButton /> */}
         {/* <Snowy /> */}
         {/* <Rainy /> */}
-        <Weather />
 
         <main className='flex min-h-screen flex-col items-center justify-between'>
           {children}
         </main>
+
+        <Weather />
       </body>
     </html>
   )
