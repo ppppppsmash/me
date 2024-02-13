@@ -6,6 +6,7 @@ import Nav from '@/components/Nav'
 import WeatherButton from '@/components/WeatherButton'
 import Weather from '@/components/Weather'
 import Sakura from '@/components/Sakura'
+import Snowy from '@/components/Snowy'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -51,7 +52,8 @@ export default function RootLayout({
           {children}
         </main>
 
-        <Weather />
+        <Snowy />
+        {/* <Weather /> */}
         {/* <Sakura /> */}
       </body>
     </html>
