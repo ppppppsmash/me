@@ -395,3 +395,28 @@ article {
   left: 0!important;
   translate: 0 0!important;
 }
+
+.react-activity-calendar {
+  width: 100%!important;
+}
+
+.gha-feed {
+  background: transparent!important;
+  border-radius: 10px!important;
+
+  .gha-header {
+    background: transparent!important;
+
+    .gha-gravatar {
+      a {
+        img {
+          border-radius: 50%!important;
+          -webkit-border-radius: 50%!important;
+          -moz-border-radius: 50%!important;
+          -ms-border-radius: 50%!important;
+          -o-border-radius: 50%!important;
+        }
+}
+    }
+  }
+}
