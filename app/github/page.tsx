@@ -5,6 +5,7 @@ import GitHubCalendar from 'react-github-calendar'
 import { GithubActivityFeed } from 'react-github-activity-feed'
 import "react-github-activity-feed/dist/light.css"
 import Image from 'next/image'
+import Link from 'next/link'
 
 const explicitTheme = {
   light: ['#f0f0f0', '#c4edde', '#7ac7c4', '#f73859', '#384259'],
@@ -26,11 +27,10 @@ export default function Github() {
     setActivity(data)
 
     if (data.length > 0) {
-      setAvatar(data[0].actor.avatar_url);
-      setUser(data[0].actor.login);
+      setAvatar(data[0].actor.avatar_url)
+      setUser(data[0].actor.login)
     }
   }
-  //setActivity(fetchGitActivity())
 
   useEffect(() => {
     fetchGitActivity()
@@ -61,39 +61,13 @@ export default function Github() {
             theme={explicitTheme}
           />
         </div>
-      </div>
 
-      <div className="mt-5 z-50">
-        {avatar && user && (
-          <div className='flex items-center gap-x-4 mb-5'>
-            <p>
-              <Image
-                className='rounded-full'
-                src={avatar}
-                width={50}
-                height={50}
-                alt='icon'
-              />
-            </p>
-            <p>{user}</p>
-          </div>
-        )}
-        {activity.map((item: any, index: number) => (
-          <div
-            className='mt-4'
-            key={index}
-          >
-            <ul
-              className='mb-3'
-            >
-              <li>
-                {item.type}
-              </li>
-              <li>{item.created_at}</li>
-            </ul>
-          </div>
-        ))}
+        <div className='mt-5'>  
+          <GithubActivityFeed
+            user='ppppppsmash'
+          />
+        </div>
       </div>
-    </div>
+    </div>   
   )
 }
