@@ -5,11 +5,10 @@ export const PROFILE = [
 
 export const INFO = [
   { label: '名前', value: '黒澤 新' },
-  { label: '出身', value: '中国' },
   { label: '生年月日', value: '1990/09/10' },
   { label: '居住地', value: '神奈川県' },
-  { label: '最近の状態', value: '最近、帰化申請が無事に通りました。これから、日本の国民として頑張ります！（納税ｗ）' },
-  { label: '', value: 'I love Japan, I love my Japanese wife, I love my Chinese Family. ' },
+  { label: '最近の状態', value: '最近、帰化申請が無事に通りました。これから、日本の国民として頑張ります！' },
+  { label: '', value: 'I love Japan, I love my Japanese wife.' },
   { label: '', value: 'Pray for ISHIKAWA Prefecture🙏' }
 ]
 
