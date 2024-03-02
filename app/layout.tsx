@@ -52,9 +52,9 @@ export default function RootLayout({
           {children}
         </main>
 
-        <Snowy />
+        {/* <Snowy /> */}
         {/* <Weather /> */}
-        {/* <Sakura /> */}
+        <Sakura />
       </body>
     </html>
   )

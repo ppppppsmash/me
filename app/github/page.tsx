@@ -9,7 +9,7 @@ import Link from 'next/link'
 
 const explicitTheme = {
   light: ['#f0f0f0', '#c4edde', '#7ac7c4', '#f73859', '#384259'],
-  dark: ['#383838', '#4D455D', '#7DB9B6', '#F5E9CF', '#E96479'],
+  dark: ['#1B2631', '#D7BDE2', '#AF7AC5', '#9B59B6', '#512E5F'],
 }
 
 
