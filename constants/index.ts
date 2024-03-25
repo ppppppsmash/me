@@ -9,14 +9,15 @@ export const INFO = [
   { label: '居住地', value: '神奈川県' },
   { label: '最近の状態', value: '最近、帰化申請が無事に通りました。これから、日本の国民として頑張ります！' },
   { label: '', value: 'I love Japan, I love my Japanese wife.' },
-  { label: '', value: 'Pray for ISHIKAWA Prefecture🙏' }
+  { label: '', value: 'Pray for ISHIKAWA Prefecture🙏' },
+  { label: '', value: "I'm grateful to everyone at WebCrew Inc., and I wish everyone all the best in the future. See you my friends." },
 ]
 
 export const HOBBY = [
   { label: '映画', value: '七人の侍、キッズ・リターン、冷たい熱帯魚 etc.' },
   { label: 'テレビゲーム', value: 'ドラクエ、クロノトリガー、ダークソウル etc.' },
   { label: 'おもちゃ', value: 'ソフビ、トランスフォーマー、超合金魂 etc.' },
-  { label: '音楽', value: 'Nina Simone / The Rolling Stones / Led Zepplin' }
+  { label: '音楽', value: 'Nina Simone / The Rolling Stones / Led Zepplin' },
 ]
 
 export const SKILL = [
