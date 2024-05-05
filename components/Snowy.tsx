@@ -4,9 +4,7 @@ import { useEffect } from 'react'
 import { initSnowy } from '@/utils/snow'
 
 export default function Snowy() {
-  useEffect(() => {
-    initSnowy()
-  }, [])
+  initSnowy()
 
   return (
     <div></div>
