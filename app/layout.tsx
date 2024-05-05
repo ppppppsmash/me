@@ -7,6 +7,7 @@ import WeatherButton from '@/components/WeatherButton'
 import Weather from '@/components/Weather'
 import Sakura from '@/components/Sakura'
 import Snowy from '@/components/Snowy'
+import WeatherWrapper from '@/components/WeatherWrapper'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -44,17 +45,12 @@ export default function RootLayout({
       </Head>
       <body className={`${inter.className} bg-transparent`}>
         <Nav />
-        {/* <WeatherButton /> */}
-        {/* <Snowy /> */}
-        {/* <Rainy /> */}
 
         <main className='flex min-h-screen flex-col items-center justify-between'>
           {children}
         </main>
 
-        {/* <Snowy /> */}
-        {/* <Weather /> */}
-        <Sakura />
+        <WeatherWrapper />
       </body>
     </html>
   )

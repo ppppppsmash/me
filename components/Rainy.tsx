@@ -4,9 +4,7 @@ import { useEffect } from 'react'
 import { initRainy } from '@/utils/rain'
 
 export default function Rainy() {
-  useEffect(() => {
-    initRainy()
-  }, [])
+  initRainy()
 
   return (
     <div></div>
