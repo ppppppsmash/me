@@ -7,9 +7,8 @@ export const INFO = [
   { label: '名前', value: '黒澤 新' },
   { label: '生年月日', value: '1990/09/10' },
   { label: '居住地', value: '神奈川県' },
-  { label: '最近の状態', value: '最近、帰化申請が無事に通りました。これから、日本の国民として頑張ります！' },
+  { label: '最近の状態', value: '出身チャイナですが、日本国籍が取得できて、新・日本国民になりました。' },
   { label: '', value: 'I love Japan, I love my Japanese wife.' },
-  { label: '', value: 'Pray for ISHIKAWA Prefecture🙏' },
   { label: '', value: "I'm grateful to everyone at WebCrew Inc., and I wish everyone all the best in the future. See you my friends." },
 ]
 
