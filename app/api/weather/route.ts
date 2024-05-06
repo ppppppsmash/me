@@ -3,19 +3,19 @@ import { NextRequest, NextResponse } from 'next/server'
 export async function GET(request: any) {
   const { searchParams } = new URL(request.url)
 
-  const address = searchParams.get('address')
+  const city = searchParams.get('city')
 
-  let url = ''
-
-  if (address) {
-    url = `https://api.openweathermap.org/data/2.5/weather?q=${address}&appid=${process.env.NEXT_PUBLIC_WEATHER_API_KEY}`
-  } else {
-    console.log('none')
-  }
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${process.env.WEATHER_API_KEY}`
 
   const res = await fetch(url)
 
-  const data = await res.json()
+  try {
+    const data = await res.json()
 
-  return NextResponse.json({ data })
+    return new Response(JSON.stringify({ data }))
+  } catch (error) {
+    console.error('Error parsing JSON:', error)
+
+    return NextResponse.error()
+  }
 }

@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import Sakura from './Sakura'
+import Rainy from './Rainy'
 
 const getCurrentDate = () => {
 
@@ -14,10 +15,10 @@ const WeatherWrapper = () => {
 
   const fetchData = async () => {
     try {
-      const response = await fetch(`http://localhost:3000/api/weather?address=${city}`)
+      const response = await fetch(`/api/weather?city=${city}`)
 
       const jsonData = (await response.json()).data
-      setWeatherData(jsonData)
+      setWeatherData(jsonData.weather[0].main)
     } catch (error) {
       console.log(error)
     }
@@ -29,7 +30,7 @@ const WeatherWrapper = () => {
 
   return (
     <>
-      <Sakura />
+      {weatherData === 'Rain' && <Rainy />}
     </>
   )
 }
