@@ -5,7 +5,7 @@ export async function GET(request: any) {
 
   const city = searchParams.get('city')
 
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${process.env.NEXT_PUBLIC_WEATHER_API_KEY}`
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${process.env.WEATHER_API_KEY}`
 
   const res = await fetch(url)
 

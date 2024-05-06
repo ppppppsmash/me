@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import Sakura from './Sakura'
+import Rainy from './Rainy'
 
 const getCurrentDate = () => {
 
@@ -29,7 +30,7 @@ const WeatherWrapper = () => {
 
   return (
     <>
-      <Sakura />
+      {weatherData === 'Rain' && <Rainy />}
     </>
   )
 }
