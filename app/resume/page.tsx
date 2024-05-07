@@ -104,7 +104,7 @@ export default function Resume() {
               className='transition ease-in-out delay-150
                 duration-300 z-40 mt-6 sm:mt-0 overflow-hidden'
             >
-              <Image
+              <img
                 className='w-full rounded-xl'
                 src={service.image}
                 alt={service.title}
