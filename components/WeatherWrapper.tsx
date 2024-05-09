@@ -24,6 +24,8 @@ const WeatherWrapper = () => {
     }
   }
 
+  console.log(weatherData)
+
   useEffect(() => {
     fetchData()
   }, [])
