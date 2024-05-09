@@ -33,7 +33,7 @@ export default function About() {
             </li>
           ))}
           </ul>
-          <div className='w-full max-w-[600px] m-auto p-0 relative'>
+          <div className='w-full max-w-[90%] sm:max-w-[600px] m-auto p-0 absolute sm:relative right-0'>
             <svg
               className='w-full h-full'
               version="1.2" height="300" width="600" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
