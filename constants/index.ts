@@ -87,6 +87,14 @@ export const SUB_RESUME = [
   //   infra: 'AWS S3 + CloudFront + Route53'
   // },
   {
+    title: 'AIツール',
+    url: 'https://lucent-fairy-5f9ca0.netlify.app/',
+    image: '/images/kurosawa-ai.png',
+    description: 'openAI製のモデルを自由に切り替えれるAIツール',
+    skill: 'vue.js(v3.x) + TypeScript + DizzleORM + PostgreSQL',
+    infra: 'Netlify'
+  },
+  {
     title: 'Himalaya合同会社',
     url: 'https://www.new-himalaya.com/',
     image: '/images/himalaya.gif',
