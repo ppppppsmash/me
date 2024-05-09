@@ -15,7 +15,6 @@
   --border-radius: 12px;
   --border-width: 3px;
   --border: hsl(280 10% 50% / 1);
-
 }
 
 @font-face {
@@ -421,7 +420,14 @@ article {
           -ms-border-radius: 50%!important;
           -o-border-radius: 50%!important;
         }
-}
+      }
     }
   }
 }
+
+#pulsar{
+  stroke-dasharray:281;
+  animation: dash 2.5s infinite linear forwards;
+}
+
+@keyframes dash{ from{stroke-dashoffset:814;} to {stroke-dashoffset:-814;}}
