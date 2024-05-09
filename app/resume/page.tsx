@@ -1,11 +1,6 @@
 import Link from 'next/link'
-import { LinkIcon } from '@heroicons/react/24/solid'
 
-import { INFO, RESUME, SKILL, SUB_RESUME } from '@/constants'
-import Image from 'next/image'
-import { AiOutlineHtml5 } from 'react-icons/ai'
-import { DiCss3 } from  'react-icons/di'
-import { BsFiletypeScss } from 'react-icons/bs'
+import { SKILL, SUB_RESUME } from '@/constants'
 import { TbBrandJavascript, TbBrandTypescript, TbBrandPython, TbBrandDjango } from 'react-icons/tb'
 import { FaPhp, FaAws, FaVuejs, FaReact, FaNodeJs } from 'react-icons/fa'
 import { SiTailwindcss, SiNextdotjs, SiSvelte, SiRubyonrails } from 'react-icons/si'
