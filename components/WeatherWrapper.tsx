@@ -33,8 +33,8 @@ const WeatherWrapper = () => {
 
   return (
     <>
-      {weatherData === 'Rain' && <Rainy />}
-      {/* <Windy /> */}
+      {/* {weatherData === 'Rain' && <Rainy />} */}
+      <Windy />
     </>
   )
 }
