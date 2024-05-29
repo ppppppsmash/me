@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import Sakura from './Sakura'
 import Rainy from './Rainy'
 import Windy from './Windy'
+import { SunnyLight } from './Sunny'
 
 const getCurrentDate = () => {
 
@@ -11,6 +12,7 @@ const getCurrentDate = () => {
 
 const WeatherWrapper = () => {
   const [weatherData, setWeatherData] = useState(null)
+  const [weatherDescriptionData, setWeatherDescriptionData] = useState(null)
   const date = getCurrentDate()
   const city = 'tokyo'
 
@@ -19,6 +21,7 @@ const WeatherWrapper = () => {
       const response = await fetch(`/api/weather?city=${city}`)
 
       const jsonData = (await response.json()).data
+      setWeatherDescriptionData(jsonData.weather[0].description)
       setWeatherData(jsonData.weather[0].main)
     } catch (error) {
       console.log(error)
@@ -33,8 +36,9 @@ const WeatherWrapper = () => {
 
   return (
     <>
-      {/* {weatherData === 'Rain' && <Rainy />} */}
-      <Windy />
+      {weatherData === 'Rain' && weatherDescriptionData === 'shower rain' && <Rainy />}
+      {weatherData === 'Rain' && <Windy />}
+      {weatherData === 'Clear' && <SunnyLight className="absolute top-0 left-0" />}
     </>
   )
 }
