@@ -19,9 +19,20 @@ module.exports = {
         'slide-in': 'slideIn 0.35s ease-in-out 0.5s forwards',
         'slide-in-title': 'slideInTitle 0.35s ease-in-out 0.5s forwards',
         'slide-in-sec': 'slideInSec 0.35s ease-in-out 0.5s forwards',
-        'scale-up-center': 'scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000)  both'
+        'scale-up-center': 'scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000)  both',
+        'spotlight': 'spotlight 2s ease .75s 1 forwards',
       },
       keyframes: {
+        spotlight: {
+          "0%": {
+            opacity: 0,
+            transform: "translate(-72%, -62%) scale(0.5)",
+          },
+          "100%": {
+            opacity: 1,
+            transform: "translate(-50%,-40%) scale(1)",
+          },
+        },
         slideIn: {
           '0%': {
             opacity: 0,
