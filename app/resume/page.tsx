@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { SKILL, SUB_RESUME } from '@/constants'
 import { TbBrandJavascript, TbBrandTypescript, TbBrandPython, TbBrandDjango } from 'react-icons/tb'
 import { FaPhp, FaAws, FaVuejs, FaReact, FaNodeJs } from 'react-icons/fa'
-import { SiTailwindcss, SiNextdotjs, SiSvelte, SiRubyonrails } from 'react-icons/si'
+import { SiTailwindcss, SiNextdotjs, SiSvelte, SiRubyonrails, SiAstro } from 'react-icons/si'
 import ProximityCard from '@/components/ProximityCard'
 
 
@@ -47,6 +47,9 @@ const SKILL_ICONS = [
   },
   {
     icon: <TbBrandDjango size={24} />,
+  },
+  {
+    icon: <SiAstro size={24} />
   }
 ]
 
@@ -93,7 +96,7 @@ export default function Resume() {
             <Link
               href={{ pathname: service.url }}
               target="_blank"
-              className='hover:underline'
+              className='duration-200 hover:font-bold'
             >
             <div
               className='transition ease-in-out delay-150

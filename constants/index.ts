@@ -32,7 +32,8 @@ export const SKILL = [
   'Svelte.js',
   'Nest.js',
   'Ruby on rails',
-  'Django'
+  'Django',
+  'Astro'
 ]
 
 export const RESUME = [
