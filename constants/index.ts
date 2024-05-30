@@ -32,7 +32,8 @@ export const SKILL = [
   'Svelte.js',
   'Nest.js',
   'Ruby on rails',
-  'Django'
+  'Django',
+  'Astro'
 ]
 
 export const RESUME = [
@@ -86,6 +87,14 @@ export const SUB_RESUME = [
   //   skill: 'Nuxt.js(v2.0) + scss',
   //   infra: 'AWS S3 + CloudFront + Route53'
   // },
+  {
+    title: '台湾企業Landing Page',
+    url: 'https://aceherblab.com/',
+    image: '/images/kubo-landing.gif',
+    description: '台湾企業にランディングページの実装',
+    skill: 'Astro + TypeScript + tailwindcss + Netlify',
+    infra: 'Netlify'
+  },
   {
     title: 'AIツール',
     url: 'https://lucent-fairy-5f9ca0.netlify.app/',
