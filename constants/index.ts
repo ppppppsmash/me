@@ -87,6 +87,14 @@ export const SUB_RESUME = [
   //   infra: 'AWS S3 + CloudFront + Route53'
   // },
   {
+    title: '台湾企業Landing Page',
+    url: 'https://aceherblab.com/',
+    image: '/images/kubo-landing.gif',
+    description: '台湾企業にランディングページの実装',
+    skill: 'Astro + TypeScript + tailwindcss + Netlify',
+    infra: 'Netlify'
+  },
+  {
     title: 'AIツール',
     url: 'https://lucent-fairy-5f9ca0.netlify.app/',
     image: '/images/kurosawa-ai.png',
