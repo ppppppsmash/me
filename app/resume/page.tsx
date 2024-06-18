@@ -96,7 +96,7 @@ export default function Resume() {
             <Link
               href={{ pathname: service.url }}
               target="_blank"
-              className='duration-200 hover:font-bold'
+              className='duration-200 hover:font-bold hover:text-white/70'
             >
             <div
               className='transition ease-in-out delay-150
