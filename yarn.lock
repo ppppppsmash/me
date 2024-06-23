@@ -337,6 +337,13 @@
     "@typescript-eslint/types" "5.62.0"
     eslint-visitor-keys "^3.3.0"
 
+"@upstash/redis@^1.31.6":
+  version "1.31.6"
+  resolved "https://registry.yarnpkg.com/@upstash/redis/-/redis-1.31.6.tgz#54146617df3d07dfb51c858d3dd0aa23a06727fa"
+  integrity sha512-7sDQQqvVnnV+2PUVGjocITa34CULGLoWhmfSY/LtpxNYv24EsgOk9VXhmGXIyzJBcXxB614wOF6ccEN0Lr7fqQ==
+  dependencies:
+    crypto-js "^4.2.0"
+
 acorn-jsx@^5.3.2:
   version "5.3.2"
   resolved "https://registry.yarnpkg.com/acorn-jsx/-/acorn-jsx-5.3.2.tgz#7ed5bb55908b3b2f1bc55c6af1653bada7f07937"
@@ -652,6 +659,11 @@ cross-spawn@^7.0.2:
     path-key "^3.1.0"
     shebang-command "^2.0.0"
     which "^2.0.1"
+
+crypto-js@^4.2.0:
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/crypto-js/-/crypto-js-4.2.0.tgz#4d931639ecdfd12ff80e8186dba6af2c2e856631"
+  integrity sha512-KALDyEYgpY+Rlob/iriUtjV6d5Eq+Y191A5g4UqLAi8CyGP9N1+FdVbkc1SxKc2r4YAYqG8JzO2KGL+AizD70Q==
 
 cssesc@^3.0.0:
   version "3.0.0"
@@ -2116,6 +2128,11 @@ react-icons@^4.9.0:
   version "4.11.0"
   resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-4.11.0.tgz#4b0e31c9bfc919608095cc429c4f1846f4d66c65"
   integrity sha512-V+4khzYcE5EBk/BvcuYRq6V/osf11ODUM2J8hg2FDSswRrGvqiYUYPRy4OdrWaQOBj4NcpJfmHZLNaD+VH0TyA==
+
+react-ipgeolocation@^1.4.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/react-ipgeolocation/-/react-ipgeolocation-1.4.0.tgz#5edaf9e86b7a1620cf86fdd9485ea3caeb252ed5"
+  integrity sha512-pZ+/wxDVsHW3lHoPRkyu8NDXuNhz7d+vgp4vILJxpkktM46A90c4l6AxeU5P0jxDVv6b92lWphX30ahZZJapvg==
 
 react-is@^16.13.1:
   version "16.13.1"
