@@ -27,10 +27,8 @@ export async function POST(req) {
   const { country } = await req.json()
 
   try {
-    // 最新の国情報を保存
     await redis.set('last_visitor_country', country)
 
-    // 閲覧者数をインクリメント
     await redis.incr('visitor_count')
 
     const data = await redis.get('last_visitor_country')
