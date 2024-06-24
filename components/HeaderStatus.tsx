@@ -84,10 +84,10 @@ export default function HeaderStatus() {
   ]
 
   return (
-    <div className="fixed bottom-8 right-2">
+    <div className="fixed top-2 sm:top-4 right-2">
       <div className="flex justify-end items-center space-x-5 text-xs pt-4 pr-6">
         <div className="flex items-center">
-          <UsersIcon className="w-5 h-5" />
+          <UsersIcon className="w-4 h-4" />
           <FlipWords words={summary} /> {countryFlag}
         </div>
       </div>
