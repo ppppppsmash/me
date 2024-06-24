@@ -5,6 +5,8 @@ import useGeoLocation from 'react-ipgeolocation'
 
 import { UsersIcon } from '@heroicons/react/24/outline'
 
+import { FlipWords } from '@/components/FlipWords'
+
 
 export default function HeaderStatus() {
   const [visitorStats, setVisitorStats] = useState({ visitorCount: 0, lastVisitorCountry: '' })
@@ -50,14 +52,14 @@ export default function HeaderStatus() {
     fetchVisitorStats()
   }, [])
 
-  const getCountryInfo = (countryCode: any) => {
+  const getCountryInfo = (countryCode: string) => {
     switch (countryCode) {
       case 'JP':
         return { name: '日本', flag: '🇯🇵' }
       case 'US':
         return { name: 'アメリカ', flag: '🇺🇸' }
       case 'CN':
-        return { name: '支那', flag: '🇨🇳' }
+        return { name: '中国', flag: '🇨🇳' }
       case 'KR':
         return { name: '韓国', flag: '🇰🇷' }
       case 'GB':
@@ -73,15 +75,21 @@ export default function HeaderStatus() {
     }
   }
 
+
   const { name: countryName, flag: countryFlag } = getCountryInfo(visitorStats.lastVisitorCountry)
+
+  const summary = [
+    `総閲覧数:  ${String(visitorStats.visitorCount)}人`,
+    `最近の訪問者： ${countryName}`
+  ]
 
   return (
     <div className="fixed bottom-8 right-2">
       <div className="flex justify-end items-center space-x-5 text-xs pt-4 pr-6">
-        <p className="flex items-center space-x-1">
+        <div className="flex items-center space-x-1">
           <UsersIcon className="w-5 h-5" />
-          <span>総閲覧数: {visitorStats.visitorCount}人</span></p>
-          <p>最近の訪問者： {countryName} {countryFlag} より</p>
+          <FlipWords words={summary} /> {countryFlag}
+        </div>
       </div>
     </div>
   )
