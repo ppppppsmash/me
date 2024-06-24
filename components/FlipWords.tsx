@@ -1,6 +1,7 @@
 'use client'
+
 import React, { useCallback, useEffect, useRef, useState } from 'react'
-import { AnimatePresence, motion, LayoutGroup } from 'framer-motion'
+import { AnimatePresence, motion, Transition } from 'framer-motion'
 import { cn } from '@/utils/cn'
 
 export const FlipWords = ({
@@ -44,9 +45,7 @@ export const FlipWords = ({
           y: 0,
         }}
         transition={{
-          duration: 0.4,
           ease: 'easeInOut',
-          type: 'spring',
           stiffness: 100,
           damping: 10,
         }}
