@@ -398,6 +398,7 @@ article {
   top: 0!important;
   left: 0!important;
   translate: 0 0!important;
+  border: none!important;
 }
 
 .react-activity-calendar {
@@ -406,14 +407,28 @@ article {
 
 .gha-feed {
   background: transparent!important;
-  border-radius: 10px!important;
+  border: none!important;
 
   .gha-header {
+    border: none!important;
     background: transparent!important;
+
+    .gha-github-icon {
+      .octicon-mark-github {
+        color: #FFF!important;
+      } 
+    }
+
+    .gha-user-info {
+      a {
+        color: #FFF!important;
+      }
+    }
 
     .gha-gravatar {
       a {
         img {
+          display: none!important;
           border-radius: 50%!important;
           -webkit-border-radius: 50%!important;
           -moz-border-radius: 50%!important;
@@ -421,6 +436,42 @@ article {
           -o-border-radius: 50%!important;
         }
       }
+    }
+  }
+
+  .gha-activity {
+    border: none!important;
+
+    .gha-activity-icon {
+      .octicon {
+        font: normal normal 18px octicons;
+      }
+    }
+
+    .gha-message {
+      a {
+        color: #FFF!important;
+      }
+
+      .gha-commits {
+        li {
+          img {
+            display: none;
+          }
+        }
+      }
+
+      .gha-gravatar-user {
+        margin-top: 4px;
+
+        img {
+          border-radius: 50%;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          -ms-border-radius: 50%;
+          -o-border-radius: 50%;
+}
+}
     }
   }
 }
