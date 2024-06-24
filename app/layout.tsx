@@ -3,10 +3,8 @@ import { Metadata } from 'next'
 import './globals.scss'
 import { Inter } from 'next/font/google'
 import Nav from '@/components/Nav'
-import WeatherButton from '@/components/WeatherButton'
-import Weather from '@/components/Weather'
-import Sakura from '@/components/Sakura'
-import Snowy from '@/components/Snowy'
+import HeaderStatus from '@/components/HeaderStatus'
+
 import WeatherWrapper from '@/components/WeatherWrapper'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -44,12 +42,13 @@ export default function RootLayout({
         <link href='https://https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css' rel='stylesheet' />
       </Head>
       <body className={`${inter.className} bg-transparent`}>
-
         <Nav />
 
         <main className='flex min-h-screen flex-col items-center justify-between'>
           {children}
         </main>
+
+        <HeaderStatus />
 
         <WeatherWrapper />
       </body>

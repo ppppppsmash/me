@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import gsap from 'gsap'
 
 const SIDES = ['top', 'right', 'bottom', 'left']
@@ -22,6 +22,8 @@ const CONFIG = {
 }
 
 const Home = () => {
+  
+
   useEffect(() => {
     const GENERATE_BEAMS = () => {
       for (const SIDE of SIDES) {
@@ -40,11 +42,11 @@ const Home = () => {
           CONTAINER.appendChild(Object.assign(document.createElement('div'), {
             className: 'beam',
             style: `
-              --hue: ${BEAM.hue};
-              --ar: ${gsap.utils.random(1, 10, 1)};
-              --x: ${BEAM.x};
-              --speed: ${BEAM.speed};
-              --delay: ${BEAM.delay};
+              --hue: ${BEAM.hue}
+              --ar: ${gsap.utils.random(1, 10, 1)}
+              --x: ${BEAM.x}
+              --speed: ${BEAM.speed}
+              --delay: ${BEAM.delay}
             `,
           }))
         }
@@ -78,7 +80,7 @@ const Home = () => {
           animate-[shimmer_2.5s_linear_infinite]">
             <h1 className="text-[2.5rem] translate-y-5 animate-slide-in-title font-bold
               min-w-[165px] opacity-0 pr-2 transform py-8 rounded-[15px] bg-white dark:bg-black font-panton text-black dark:text-white"
-            >Kurosawa&#39;s portfolio</h1>
+            >Kurosawa{"'"}s Portfolio</h1>
         </article>
         
         <div className="warp">
