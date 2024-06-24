@@ -9,7 +9,7 @@ import { FlipWords } from '@/components/FlipWords'
 
 
 export default function HeaderStatus() {
-  const [visitorStats, setVisitorStats] = useState({ visitorCount: 0, lastVisitorCountry: '' })
+  const [visitorStats, setVisitorStats] = useState({ visitorCount: 0, lastVisitorCountry: '..' })
 
   const location = useGeoLocation()
 
@@ -86,7 +86,7 @@ export default function HeaderStatus() {
   return (
     <div className="fixed bottom-8 right-2">
       <div className="flex justify-end items-center space-x-5 text-xs pt-4 pr-6">
-        <div className="flex items-center space-x-1">
+        <div className="flex items-center">
           <UsersIcon className="w-5 h-5" />
           <FlipWords words={summary} /> {countryFlag}
         </div>

@@ -22,8 +22,8 @@ export async function GET() {
   }
 }
 
-export async function POST(req) {
-  const { country } = await req.json()
+export async function POST(request: any) {
+  const { country } = await request.json()
 
   try {
     await redis.set('last_visitor_country', country)
