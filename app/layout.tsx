@@ -6,6 +6,7 @@ import Nav from '@/components/Nav'
 import HeaderStatus from '@/components/HeaderStatus'
 
 import WeatherWrapper from '@/components/WeatherWrapper'
+import { BackgroundBeams } from '@/components/BackgroundBeams'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -51,6 +52,8 @@ export default function RootLayout({
         <HeaderStatus />
 
         <WeatherWrapper />
+
+        <BackgroundBeams />
       </body>
     </html>
   )
