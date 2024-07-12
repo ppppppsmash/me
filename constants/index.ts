@@ -104,14 +104,6 @@ export const SUB_RESUME = [
     infra: 'Netlify'
   },
   {
-    title: 'Himalaya合同会社',
-    url: 'https://www.new-himalaya.com/',
-    image: '/images/himalaya.gif',
-    description: '親友がエアドーム関連の会社が経営しており、手伝って作ってあげた',
-    skill: 'Next.js(v13.0) + TypeScript + Tailwindcss',
-    infra: 'Vercel'
-  },
-  {
     title: '8-Bit風アンケート',
     url: 'https://game-survey-demo.vercel.app/',
     image: '/images/survey.gif',
