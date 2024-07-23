@@ -44,7 +44,7 @@ export default function About() {
                     src="/images/me.png"
                     height="600"
                     width="600"
-                    className="h-60 w-full object-cover group-hover/card:shadow-xl"
+                    className="h-36 sm:h-60 w-full object-cover group-hover/card:shadow-xl"
                     alt="thumbnail"
                   />
                 </CardItem>
