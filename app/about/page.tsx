@@ -1,5 +1,8 @@
 import { HOBBY, INFO } from '@/constants'
+import Link from "next/link";
 import Image from 'next/image'
+
+import { CardBody, CardContainer, CardItem } from '@/components/3dCard'
 
 export default function About() {
   return (
@@ -33,12 +36,20 @@ export default function About() {
             </li>
           ))}
           </ul>
-          <div className='w-full max-w-[90%] sm:max-w-[600px] m-auto p-0 absolute sm:relative right-0'>
-            <svg
-              className='w-full h-full'
-              version="1.2" height="300" width="600" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
-              <path id="pulsar" stroke="rgba(255,255,255,0.5)" fill="none" strokeWidth="1" strokeLinejoin="round" d="M0,90L250,90Q257,60 262,87T267,95 270,88 273,92t6,35 7,-60T290,127 297,107s2,-11 10,-10 1,1 8,-10T319,95c6,4 8,-6 10,-17s2,10 9,11h210" /> 
-            </svg>
+          <div className='w-full max-w-[80%] sm:max-w-[400px] m-auto p-0 absolute sm:relative right-0 z-50'>
+            <CardContainer className="inter-var">
+              <CardBody>
+                <CardItem translateZ="100" className="w-full mt-4">
+                  <Image
+                    src="/images/me.png"
+                    height="600"
+                    width="600"
+                    className="h-60 w-full object-cover group-hover/card:shadow-xl"
+                    alt="thumbnail"
+                  />
+                </CardItem>
+              </CardBody>
+            </CardContainer>
           </div>
         </div>
 
