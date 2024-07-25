@@ -36,15 +36,15 @@ export default function About() {
             </li>
           ))}
           </ul>
-          <div className='w-full max-w-[80%] sm:max-w-[400px] m-auto p-0 absolute sm:relative right-0 z-50'>
+          <div className='w-full max-w-[100%] sm:max-w-[600px] m-auto p-0 absolute sm:relative right-0 z-50'>
             <CardContainer className="inter-var">
               <CardBody>
                 <CardItem translateZ="100" className="w-full mt-4">
                   <Image
-                    src="/images/me.png"
+                    src="/images/me_icon.png"
                     height="500"
                     width="500"
-                    className="w-full object-cover group-hover/card:shadow-xl"
+                    className="w-full object-cover group-hover/card:shadow-xl rounded-lg"
                     alt="thumbnail"
                   />
                 </CardItem>
