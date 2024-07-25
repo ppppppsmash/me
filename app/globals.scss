@@ -470,9 +470,13 @@ article {
           -moz-border-radius: 50%;
           -ms-border-radius: 50%;
           -o-border-radius: 50%;
-}
-}
+        }
+      }
     }
+  }
+
+  .gha-footer {
+    display: none!important;
   }
 }
 
