@@ -2,15 +2,12 @@
 
 import React, { useEffect, useState } from 'react'
 import useGeoLocation from 'react-ipgeolocation'
-
 import { UsersIcon } from '@heroicons/react/24/outline'
-
 import { FlipWords } from '@/components/FlipWords'
-
 
 export default function HeaderStatus() {
   const [visitorStats, setVisitorStats] = useState({ visitorCount: 0, lastVisitorCountry: '..' })
-
+  const [isLoaded, setIsLoaded] = useState(false)
   const location = useGeoLocation()
 
   useEffect(() => {
@@ -28,7 +25,6 @@ export default function HeaderStatus() {
           if (!response.ok) {
             throw new Error('Failed to save geo information')
           }
-
         } catch (error) {
           console.error('Error saving geo info:', error)
         }
@@ -44,8 +40,10 @@ export default function HeaderStatus() {
         const response = await fetch('/api/location')
         const data = await response.json()
         setVisitorStats(data)
+        setIsLoaded(true)
       } catch (error) {
         console.error('Error fetching visitor stats:', error)
+        setIsLoaded(true)
       }
     }
 
@@ -59,7 +57,7 @@ export default function HeaderStatus() {
       case 'US':
         return { name: 'アメリカ', flag: '🇺🇸' }
       case 'CN':
-        return { name: '中国', flag: '🇨🇳' }
+        return { name: 'チャイナ', flag: '🇨🇳' }
       case 'KR':
         return { name: '韓国', flag: '🇰🇷' }
       case 'GB':
@@ -70,11 +68,12 @@ export default function HeaderStatus() {
         return { name: 'フランス', flag: '🇫🇷' }
       case 'IN':
         return { name: 'インド', flag: '🇮🇳' }
+      case 'CA':
+        return { name: 'カナダ', flag: '🇨🇦' }
       default:
         return { name: countryCode, flag: '' }
     }
   }
-
 
   const { name: countryName, flag: countryFlag } = getCountryInfo(visitorStats.lastVisitorCountry)
 
@@ -87,8 +86,12 @@ export default function HeaderStatus() {
     <div className="fixed top-2 sm:top-4 right-2">
       <div className="flex justify-end items-center space-x-5 text-xs pt-4 pr-6">
         <div className="flex items-center">
-          <UsersIcon className="w-4 h-4" />
-          <FlipWords words={summary} /> {countryFlag}
+          {isLoaded && visitorStats.visitorCount > 0 && (
+            <>
+              <UsersIcon className="w-4 h-4" />
+              <FlipWords words={summary} /> {countryFlag}
+            </>
+          )}
         </div>
       </div>
     </div>
