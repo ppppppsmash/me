@@ -30,7 +30,6 @@ export const SKILL = [
   'Vue.js',
   'React.js',
   'Svelte.js',
-  'Nest.js',
   'Ruby on rails',
   'Django',
   'Astro'

@@ -1,55 +1,64 @@
 import Link from 'next/link'
 
 import { SKILL, SUB_RESUME } from '@/constants'
-import { TbBrandJavascript, TbBrandTypescript, TbBrandPython, TbBrandDjango } from 'react-icons/tb'
-import { FaPhp, FaAws, FaVuejs, FaReact, FaNodeJs } from 'react-icons/fa'
-import { SiTailwindcss, SiNextdotjs, SiSvelte, SiRubyonrails, SiAstro } from 'react-icons/si'
+import { SiRubyonrails } from 'react-icons/si'
 import ProximityCard from '@/components/ProximityCard'
+import {
+  IconBrandJavascript,
+  IconBrandPhp,
+  IconBrandPython,
+  IconBrandNodejs,
+  IconBrandTailwind,
+  IconBrandTypescript,
+  IconBrandAws,
+  IconBrandVue,
+  IconBrandReact,
+  IconBrandSvelte,
+  IconBrandAstro,
+  IconBrandDjango,
+} from "@tabler/icons-react";
 
 
 
 const SKILL_ICONS = [
   {
-    icon: <TbBrandJavascript size={24} />,
+    icon: <IconBrandJavascript size={24} />,
   },
   {
-    icon: <FaPhp size={24} />,
+    icon: <IconBrandPhp size={24} />,
   },
   {
-    icon: <TbBrandPython size={24} />,
+    icon: <IconBrandPython size={24} />,
   },
   {
-    icon: <FaNodeJs size={24} />,
+    icon: <IconBrandNodejs size={24} />,
   },
   {
-    icon: <SiTailwindcss size={24} />,
+    icon: <IconBrandTailwind size={24} />,
   },
   {
-    icon: <TbBrandTypescript size={24} />,
+    icon: <IconBrandTypescript size={24} />,
   },
   {
-    icon: <FaAws size={24} />,
+    icon: <IconBrandAws size={24} />,
   },
   {
-    icon: <FaVuejs size={24} />,
+    icon: <IconBrandVue size={24} />,
   },
   {
-    icon: <FaReact size={24} />,
+    icon: <IconBrandReact size={24} />,
   },
   {
-    icon: <SiSvelte size={24} />,
-  },
-  {
-    icon: <SiNextdotjs size={24} />,
+    icon: <IconBrandSvelte size={24} />,
   },
   {
     icon: <SiRubyonrails size={26} />,
   },
   {
-    icon: <TbBrandDjango size={24} />,
+    icon: <IconBrandDjango size={24} />,
   },
   {
-    icon: <SiAstro size={24} />
+    icon: <IconBrandAstro size={24} />
   }
 ]
 
