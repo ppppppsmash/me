@@ -1,5 +1,4 @@
 import { HOBBY, INFO } from '@/constants'
-import Link from "next/link";
 import Image from 'next/image'
 
 import { CardBody, CardContainer, CardItem } from '@/components/3dCard'

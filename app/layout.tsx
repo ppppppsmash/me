@@ -1,12 +1,13 @@
 import Head from 'next/head'
 import { Metadata } from 'next'
-import './globals.scss'
 import { Inter } from 'next/font/google'
 import Nav from '@/components/Nav'
 import HeaderStatus from '@/components/HeaderStatus'
 
 import WeatherWrapper from '@/components/WeatherWrapper'
 import { BackgroundBeams } from '@/components/BackgroundBeams'
+
+import './globals.scss'
 
 const inter = Inter({ subsets: ['latin'] })
 

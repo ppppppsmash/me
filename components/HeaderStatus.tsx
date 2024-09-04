@@ -70,6 +70,20 @@ export default function HeaderStatus() {
         return { name: 'インド', flag: '🇮🇳' }
       case 'CA':
         return { name: 'カナダ', flag: '🇨🇦' }
+      case 'IT':
+        return { name: 'イタリア', flag: '🇮🇹' }
+      case 'ES':
+        return { name: 'スペイン', flag: '🇪🇸' }
+      case 'BR':
+        return { name: 'ブラジル', flag: '🇧🇷' }
+      case 'ZA':
+        return { name: '南アフリカ', flag: '🇿🇦' }
+      case 'MX':
+        return { name: 'メキシコ', flag: '🇲🇽' }
+      case 'AU':
+        return { name: 'オーストラリア', flag: '🇦🇺' }
+      case 'NZ':
+        return { name: 'ニュージーランド', flag: '🇳🇿' }
       default:
         return { name: countryCode, flag: '' }
     }
