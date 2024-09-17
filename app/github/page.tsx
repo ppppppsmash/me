@@ -37,7 +37,7 @@ export default function Github() {
   }, [])
 
   return (
-    <div id="github-page" className='w-full max-w-[800px] md:h-[100vh]'>
+    <div id="github-page" className='w-full max-w-[800px] md:h-[100vh] z-50'>
       <div className='p-4 pb-10 relative'>
         <h1 className='text-2xl sm:text-[2.5rem] opacity-0 translate-y-10 animate-slide-in flex sm:items-center'>
           <span className='skill-effect gap-x-2 font-semibold bg-clip-text text-transparent bg-gradient-to-r
@@ -62,7 +62,7 @@ export default function Github() {
           />
         </div>
 
-        <div className='mt-5'>  
+        <div className='mt-5 '>  
           <GithubActivityFeed
             user='ppppppsmash'
           />
