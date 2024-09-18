@@ -35,7 +35,7 @@ export default function About() {
             </li>
           ))}
           </ul>
-          <div className='w-full max-w-[100%] sm:max-w-[240px] m-auto p-0 absolute sm:relative right-0 z-50'>
+          <div className='w-full max-w-[240px] m-auto p-0 absolute sm:relative right-0 z-50'>
             <CardContainer className="inter-var">
               <CardBody>
                 <CardItem translateZ="100" className="w-full mt-4">
