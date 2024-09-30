@@ -1,5 +1,7 @@
 import Head from 'next/head'
+import Script from 'next/script'
 import { Metadata } from 'next'
+
 import { Inter } from 'next/font/google'
 import Nav from '@/components/Nav'
 import HeaderStatus from '@/components/HeaderStatus'
@@ -43,6 +45,7 @@ export default function RootLayout({
         <link href='https://fonts.cdnfonts.com/css/sf-pro-display' rel='stylesheet' />
         <link href='https://https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css' rel='stylesheet' />
       </Head>
+      <Script src="https://my-comment-widget.vercel.app/widget.umd.js" />
       <body className={`${inter.className} bg-transparent`}>
         <Nav />
 
@@ -53,6 +56,8 @@ export default function RootLayout({
         <HeaderStatus />
 
         <WeatherWrapper />
+
+        <my-widget project-id="1" />
 
         <BackgroundBeams />
       </body>
