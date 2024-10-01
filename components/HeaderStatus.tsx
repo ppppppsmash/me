@@ -57,7 +57,7 @@ export default function HeaderStatus() {
       case 'US':
         return { name: 'アメリカ', flag: '🇺🇸' }
       case 'CN':
-        return { name: '巨婴国', flag: '🇨🇳' }
+        return { name: 'Covid-19', flag: '🇨🇳' }
       case 'KR':
         return { name: '韓国', flag: '🇰🇷' }
       case 'GB':
