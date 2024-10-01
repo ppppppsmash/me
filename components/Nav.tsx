@@ -5,8 +5,8 @@ import {
   IconHome,
   IconBrandGithub,
   IconUser,
+  IconBubbleText,
 } from "@tabler/icons-react";
-import Image from "next/image";
 
 export default function Nav() {
   const links = [
@@ -38,6 +38,13 @@ export default function Nav() {
         <IconBrandGithub className="h-full w-full text-neutral-300" />
       ),
       href: "/github",
+    },
+    {
+      title: "Relax",
+      icon: (
+        <IconBubbleText className="h-full w-full text-neutral-300" />
+      ),
+      href: "/relax",
     },
   ];
   return (
