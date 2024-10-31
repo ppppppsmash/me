@@ -33,6 +33,11 @@
   dependencies:
     regenerator-runtime "^0.14.0"
 
+"@csstools/convert-colors@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@csstools/convert-colors/-/convert-colors-2.0.0.tgz#6dd323583b40cfe05aaaca30debbb30f26742bbf"
+  integrity sha512-P7BVvddsP2Wl5v3drJ3ArzpdfXMqoZ/oHOV/yFiGFb3JQr9Z9UXZ9tnHAKJsO89lfprR1F9ExW3Yij21EjEBIA==
+
 "@eslint-community/eslint-utils@^4.2.0":
   version "4.4.0"
   resolved "https://registry.yarnpkg.com/@eslint-community/eslint-utils/-/eslint-utils-4.4.0.tgz#a23514e8fb9af1269d5f7788aa556798d61c6b59"
@@ -1884,6 +1889,11 @@ natural-compare@^1.4.0:
   resolved "https://registry.yarnpkg.com/natural-compare/-/natural-compare-1.4.0.tgz#4abebfeed7541f2c27acfb29bdbbd15c8d5ba4f7"
   integrity sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==
 
+next-themes@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/next-themes/-/next-themes-0.3.0.tgz#b4d2a866137a67d42564b07f3a3e720e2ff3871a"
+  integrity sha512-/QHIrsYpd6Kfk7xakK4svpDI5mmXP0gfvCoJdGpZQ2TOrQZmsW0QxjaiLn8wbIKjtm4BTSqLoix4lxYYOnLJ/w==
+
 next@13.4.6:
   version "13.4.6"
   resolved "https://registry.yarnpkg.com/next/-/next-13.4.6.tgz#ebe52f5c74d60176d45b45e73f25a51103713ea4"
@@ -2216,6 +2226,13 @@ react-github-calendar@^4.1.1:
   dependencies:
     react-activity-calendar "^2.2.5"
     react-error-boundary "^4.0.12"
+
+react-icon-cloud@^4.1.4:
+  version "4.1.4"
+  resolved "https://registry.yarnpkg.com/react-icon-cloud/-/react-icon-cloud-4.1.4.tgz#a6aa7a2d6f48a0eaacb091ca9fe830568a840c0e"
+  integrity sha512-hc8yGNU98V6ObPdeNIt75M016xGMxbTWqB4l6exo1uwE5bvFU095unMbX2K3YBKYhGKEV3c7fSmq3jD3cRWX+A==
+  dependencies:
+    "@csstools/convert-colors" "^2.0.0"
 
 react-icons@^4.9.0:
   version "4.11.0"
