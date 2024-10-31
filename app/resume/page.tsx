@@ -17,6 +17,59 @@ import {
   IconBrandAstro,
   IconBrandDjango,
 } from "@tabler/icons-react";
+import { IconCloud } from '@/components/IconCloud'
+
+const slugs = [
+  // "typescript",
+  // "javascript",
+  // "tailwindcss",
+  // "react",
+  // "next",
+  // "vue.js",
+  // "nuxt.js",
+  // "gcp",
+  // "rubyonrails",
+  // "vite",
+  // "html5",
+  // "css3",
+  // "nodedotjs",
+  // "express",
+  // "nest",
+  // "prisma",
+  // "amazonaws",
+  // "postgresql",
+  // "firebase",
+  // "nginx",
+  // "vercel",
+  // "testinglibrary",
+  // "jest",
+  // "cypress",
+  // "docker",
+  // "git",
+  // "github",
+  // "figma",
+  'vuedotjs',
+  'nuxtdotjs',
+  'react',
+  'nextdotjs',
+  'svelte',
+  'astro',
+  'html5',
+  'php',
+  'nodedotjs',
+  'wordpress',
+  'nestjs',
+  'python',
+  'django',
+  'tailwindcss',
+  'rubyonrails',
+  'amazonaws',
+  'googlecloud',
+  'prisma',
+  'drizzle',
+  'mysql',
+  'postgresql',
+];
 
 
 
@@ -81,55 +134,46 @@ export default function Resume() {
         <h2 className='text-[1.8rem] opacity-0 mt-8 translate-y-10 animate-slide-in'>Skill</h2>
 
         <div className='flex justify-center gap-2'>
-          <ul className='mt-4 ml-1 flex flex-wrap justify-between'>
-            {SKILL_ICONS.map((item, index) => (
-              <li
-                key={index}
-                className={`w-1/2 sm:w-1/3 gap-x-2 leading-normal opacity-0 my-4 translate-y-10 animate-slide-in flex items-center`}
-                style={{animationDelay: `${index*0.1+1}s`}}
-              >
-                {item.icon}
-                {SKILL[index]}
-              </li>
-            ))}
-          </ul>
+          <div className="relative flex size-full max-w-lg items-center justify-center overflow-hidden bg-background px-6 pb-6 pt-8">
+            <IconCloud iconSlugs={slugs} />
+          </div>
         </div>
 
         <h2 className='mt-12 opacity-0 translate-y-10 animate-slide-in'>実績 / お手伝い</h2>
         <div className='mt-4 grid sm:grid-cols-2 gap-x-8 gap-y-4'>
           {SUB_RESUME.map((service, index) => (
-        <ProximityCard key={index}>
-          <div
-            className='relative group z-30 rounded-lg'
-          >
-            <Link
-              href={{ pathname: service.url }}
-              target="_blank"
-              className='duration-200 hover:font-bold hover:text-white/70'
-            >
-            <div
-              className='transition ease-in-out delay-150
-                duration-300 z-40 mt-6 sm:mt-0 overflow-hidden'
-            >
-              <img
-                className='w-full rounded-xl'
-                src={service.image}
-                alt={service.title}
-                width={800}
-                height={400}
-                decoding='async'
-              />
-              <div className="p-2">
-                <p className='mb-2'>{ service.description }</p>
-                <p className='mb-2'>STACK INFO：{ service.skill }</p>
-                <p className='mb-2'>INFRA INFO：{ service.infra }</p>
-                <p className='flex items-center gap-x-2 mb-3 underline'></p>
+            <ProximityCard key={index}>
+              <div
+                className='relative group z-30 rounded-lg'
+              >
+                <Link
+                  href={{ pathname: service.url }}
+                  target="_blank"
+                  className='duration-200 hover:font-bold hover:text-white/70'
+                >
+                <div
+                  className='transition ease-in-out delay-150
+                    duration-300 z-40 mt-6 sm:mt-0 overflow-hidden'
+                >
+                  <img
+                    className='w-full rounded-xl'
+                    src={service.image}
+                    alt={service.title}
+                    width={800}
+                    height={400}
+                    decoding='async'
+                  />
+                  <div className="p-2">
+                    <p className='mb-2'>{ service.description }</p>
+                    <p className='mb-2'>STACK INFO：{ service.skill }</p>
+                    <p className='mb-2'>INFRA INFO：{ service.infra }</p>
+                    <p className='flex items-center gap-x-2 mb-3 underline'></p>
+                  </div>
+                </div>
+                </Link>
               </div>
-            </div>
-            </Link>
-          </div>
-        </ProximityCard>
-      ))}
+            </ProximityCard>
+          ))}
       </div>
     </div>
   </div>

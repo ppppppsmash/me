@@ -8,6 +8,7 @@ import HeaderStatus from '@/components/HeaderStatus'
 
 import WeatherWrapper from '@/components/WeatherWrapper'
 import { BackgroundBeams } from '@/components/BackgroundBeams'
+import StarBg from '@/components/StarBg'
 
 import './globals.scss'
 
@@ -59,7 +60,8 @@ export default function RootLayout({
 
         <my-widget project-id="1" />
 
-        <BackgroundBeams />
+        {/* <BackgroundBeams /> */}
+        <StarBg />
       </body>
     </html>
   )
