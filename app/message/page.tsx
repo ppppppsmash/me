@@ -4,16 +4,19 @@ import { TypewriterEffectSmooth } from "@/components/TypewritterEffect";
 export default function Message() {
   const words = [
     {
-      text: "我",
+      text: "谁",
     },
     {
-      text: "很",
+      text: "看",
     },
     {
-      text: "想",
+      text: "谁",
     },
     {
-      text: "你",
+      text: "小",
+    },
+    {
+      text: "狗",
     },
   ];
   return (
