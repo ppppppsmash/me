@@ -128,7 +128,7 @@ export const SUB_RESUME = [
   },
   {
     title: '80s & ストレンジャー・シングス風アンケート',
-    url: 'https://after-game-survey-demo.netlify.app/',
+    url: 'https://tvgame-survey.netlify.app/',
     image: '/images/after-survey.gif',
     description: 'マルチステップ風アンケートWebアプリ',
     skill: 'Nuxt(v3.0) + Tailwindcss',
