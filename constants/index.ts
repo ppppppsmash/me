@@ -7,7 +7,7 @@ export const INFO = [
   { label: '名前', value: '黒澤' },
   // { label: '生年月日', value: '1990/09/10' },
   { label: '居住地', value: '神奈川県' },
-  { label: '最近の状態', value: '最近SwiftUIを独学しています!' },
+  { label: '最近の状態', value: 'ドラクエIIIリメイク版にハマってしまっている...' },
   // { label: '', value: 'gpt apiなどでのAIをラップするツールの開発は一番つまらないよな。' },
   // { label: '', value: 'I love Japan, I love my Japanese wife.' },
 ]
