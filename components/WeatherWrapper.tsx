@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 import Sakura from './Sakura'
 import Rainy from './Rainy'
 import Windy from './Windy'
-import { SunnyLight } from './Sunny'
+import { NewSunnyLight } from './NewSunny'
 
 const getCurrentDate = () => {
 
@@ -38,7 +38,7 @@ const WeatherWrapper = () => {
     <>
       {weatherData === 'Rain' && weatherDescriptionData === 'shower rain' && <Rainy />}
       {weatherData === 'Rain' && <Windy />}
-      {weatherData === 'Clear' && <SunnyLight className="absolute top-0 left-0" />}
+      {weatherData === 'Clear' && <NewSunnyLight className="absolute top-0 left-0" />}
     </>
   )
 }
