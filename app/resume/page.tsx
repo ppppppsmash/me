@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { SUB_RESUME } from '@/constants'
 import ProximityCard from '@/components/ProximityCard'
 import { IconCloud } from '@/components/IconCloud'
+import { AuroraText } from '@/components/AuroraText';
 
 const slugs = [
   'vuedotjs',
@@ -37,14 +38,9 @@ export default function Resume() {
     <div className='w-full max-w-[800px] md:h-full'>
       <div className='p-4 pb-[170px]'>
         <h1 className='text-2xl sm:text-[2.5rem] opacity-0 translate-y-10 animate-slide-in flex items-center'>
-          <span className='skill-effect flex items-center gap-x-2 font-semibold bg-clip-text text-transparent bg-gradient-to-r
-            from-fuchsia-400 via-rose-500 to-yellow-600'>&lt;</span>
-          <span className='skill-effect flex items-center gap-x-2 font-semibold bg-clip-text text-transparent bg-gradient-to-r
-            from-fuchsia-400 via-rose-500 to-yellow-600'>
+          <AuroraText className='font-bold'>
             Resume
-          </span>
-          <span className='skill-effect flex items-center gap-x-2 font-semibold bg-clip-text text-transparent bg-gradient-to-r
-            from-fuchsia-400 via-rose-500 to-yellow-600 pl-4'>/&gt;</span>
+          </AuroraText>
         </h1>
         <h2 className='text-[1.8rem] opacity-0 mt-8 translate-y-10 animate-slide-in'>Skill</h2>
 
