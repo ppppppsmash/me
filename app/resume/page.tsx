@@ -1,23 +1,9 @@
 import Link from 'next/link'
 
-import { SKILL, SUB_RESUME } from '@/constants'
-import { SiRubyonrails } from 'react-icons/si'
+import { SUB_RESUME } from '@/constants'
 import ProximityCard from '@/components/ProximityCard'
-import {
-  IconBrandJavascript,
-  IconBrandPhp,
-  IconBrandPython,
-  IconBrandNodejs,
-  IconBrandTailwind,
-  IconBrandTypescript,
-  IconBrandAws,
-  IconBrandVue,
-  IconBrandReact,
-  IconBrandSvelte,
-  IconBrandAstro,
-  IconBrandDjango,
-} from "@tabler/icons-react";
 import { IconCloud } from '@/components/IconCloud'
+import { AuroraText } from '@/components/AuroraText';
 
 const slugs = [
   'vuedotjs',
@@ -43,71 +29,24 @@ const slugs = [
   'postgresql',
 ];
 
-
-
-const SKILL_ICONS = [
-  {
-    icon: <IconBrandJavascript size={24} />,
-  },
-  {
-    icon: <IconBrandPhp size={24} />,
-  },
-  {
-    icon: <IconBrandPython size={24} />,
-  },
-  {
-    icon: <IconBrandNodejs size={24} />,
-  },
-  {
-    icon: <IconBrandTailwind size={24} />,
-  },
-  {
-    icon: <IconBrandTypescript size={24} />,
-  },
-  {
-    icon: <IconBrandAws size={24} />,
-  },
-  {
-    icon: <IconBrandVue size={24} />,
-  },
-  {
-    icon: <IconBrandReact size={24} />,
-  },
-  {
-    icon: <IconBrandSvelte size={24} />,
-  },
-  {
-    icon: <SiRubyonrails size={26} />,
-  },
-  {
-    icon: <IconBrandDjango size={24} />,
-  },
-  {
-    icon: <IconBrandAstro size={24} />
-  }
-]
-
-
 export default function Resume() {
+  const images = slugs.map(
+    (slug) => `https://cdn.simpleicons.org/${slug}/${slug}`,
+  );
 
   return (
     <div className='w-full max-w-[800px] md:h-full'>
       <div className='p-4 pb-[170px]'>
         <h1 className='text-2xl sm:text-[2.5rem] opacity-0 translate-y-10 animate-slide-in flex items-center'>
-          <span className='skill-effect flex items-center gap-x-2 font-semibold bg-clip-text text-transparent bg-gradient-to-r
-            from-fuchsia-400 via-rose-500 to-yellow-600'>&lt;</span>
-          <span className='skill-effect flex items-center gap-x-2 font-semibold bg-clip-text text-transparent bg-gradient-to-r
-            from-fuchsia-400 via-rose-500 to-yellow-600'>
+          <AuroraText className='font-bold'>
             Resume
-          </span>
-          <span className='skill-effect flex items-center gap-x-2 font-semibold bg-clip-text text-transparent bg-gradient-to-r
-            from-fuchsia-400 via-rose-500 to-yellow-600 pl-4'>/&gt;</span>
+          </AuroraText>
         </h1>
         <h2 className='text-[1.8rem] opacity-0 mt-8 translate-y-10 animate-slide-in'>Skill</h2>
 
         <div className='flex justify-center gap-2'>
           <div className="relative flex size-full max-w-lg items-center justify-center overflow-hidden bg-background px-6 pb-6 pt-8">
-            <IconCloud iconSlugs={slugs} />
+            <IconCloud images={images} />
           </div>
         </div>
 
