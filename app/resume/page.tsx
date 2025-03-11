@@ -1,22 +1,7 @@
 import Link from 'next/link'
 
-import { SKILL, SUB_RESUME } from '@/constants'
-import { SiRubyonrails } from 'react-icons/si'
+import { SUB_RESUME } from '@/constants'
 import ProximityCard from '@/components/ProximityCard'
-import {
-  IconBrandJavascript,
-  IconBrandPhp,
-  IconBrandPython,
-  IconBrandNodejs,
-  IconBrandTailwind,
-  IconBrandTypescript,
-  IconBrandAws,
-  IconBrandVue,
-  IconBrandReact,
-  IconBrandSvelte,
-  IconBrandAstro,
-  IconBrandDjango,
-} from "@tabler/icons-react";
 import { IconCloud } from '@/components/IconCloud'
 
 const slugs = [
@@ -43,52 +28,10 @@ const slugs = [
   'postgresql',
 ];
 
-
-
-const SKILL_ICONS = [
-  {
-    icon: <IconBrandJavascript size={24} />,
-  },
-  {
-    icon: <IconBrandPhp size={24} />,
-  },
-  {
-    icon: <IconBrandPython size={24} />,
-  },
-  {
-    icon: <IconBrandNodejs size={24} />,
-  },
-  {
-    icon: <IconBrandTailwind size={24} />,
-  },
-  {
-    icon: <IconBrandTypescript size={24} />,
-  },
-  {
-    icon: <IconBrandAws size={24} />,
-  },
-  {
-    icon: <IconBrandVue size={24} />,
-  },
-  {
-    icon: <IconBrandReact size={24} />,
-  },
-  {
-    icon: <IconBrandSvelte size={24} />,
-  },
-  {
-    icon: <SiRubyonrails size={26} />,
-  },
-  {
-    icon: <IconBrandDjango size={24} />,
-  },
-  {
-    icon: <IconBrandAstro size={24} />
-  }
-]
-
-
 export default function Resume() {
+  const images = slugs.map(
+    (slug) => `https://cdn.simpleicons.org/${slug}/${slug}`,
+  );
 
   return (
     <div className='w-full max-w-[800px] md:h-full'>
@@ -107,7 +50,7 @@ export default function Resume() {
 
         <div className='flex justify-center gap-2'>
           <div className="relative flex size-full max-w-lg items-center justify-center overflow-hidden bg-background px-6 pb-6 pt-8">
-            <IconCloud iconSlugs={slugs} />
+            <IconCloud images={images} />
           </div>
         </div>
 
