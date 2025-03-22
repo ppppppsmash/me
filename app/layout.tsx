@@ -50,7 +50,7 @@ export default function RootLayout({
       <body className={`${inter.className} bg-transparent`}>
         <Nav />
 
-        <main className='flex min-h-screen flex-col items-center justify-between'>
+        <main className='flex h-[100svh] flex-col items-center justify-between'>
           {children}
         </main>
 
@@ -61,7 +61,7 @@ export default function RootLayout({
         <my-widget project-id="1" />
 
         {/* <BackgroundBeams /> */}
-        <StarBg />
+        {/* <StarBg /> */}
       </body>
     </html>
   )

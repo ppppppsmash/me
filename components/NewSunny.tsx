@@ -38,7 +38,7 @@ export const NewSunnyLight = ({
       transition={{
         duration: 1.5,
       }}
-      className={cn("pointer-events-none absolute inset-0 h-full w-full", className)}
+      className={cn("pointer-events-none absolute inset-0 h-[100svh] w-full overflow-hidden", className)}
     >
       <motion.div
         animate={{

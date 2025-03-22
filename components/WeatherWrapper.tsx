@@ -1,46 +1,47 @@
-'use client'
+"use client";
 
-import { useEffect, useState } from 'react'
-import Sakura from './Sakura'
-import Rainy from './Rainy'
-import Windy from './Windy'
-import { NewSunnyLight } from './NewSunny'
+import { useEffect, useState } from "react";
+import Sakura from "./Sakura";
+import Rainy from "./Rainy";
+import Windy from "./Windy";
+import { NewSunnyLight } from "./NewSunny";
 
 const getCurrentDate = () => {
 
 }
 
 const WeatherWrapper = () => {
-  const [weatherData, setWeatherData] = useState(null)
-  const [weatherDescriptionData, setWeatherDescriptionData] = useState(null)
-  const date = getCurrentDate()
-  const city = 'tokyo'
+  const [weatherData, setWeatherData] = useState(null);
+  const [weatherDescriptionData, setWeatherDescriptionData] = useState(null);
+  const date = getCurrentDate();
+  const city = "tokyo";
 
   const fetchData = async () => {
     try {
-      const response = await fetch(`/api/weather?city=${city}`)
+      const response = await fetch(`/api/weather?city=${city}`);
 
-      const jsonData = (await response.json()).data
-      setWeatherDescriptionData(jsonData.weather[0].description)
-      setWeatherData(jsonData.weather[0].main)
+      const jsonData = (await response.json()).data;
+      setWeatherDescriptionData(jsonData.weather[0].description);
+      setWeatherData(jsonData.weather[0].main);
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
-  }
+  };
 
-  console.log(weatherData)
+  console.log(weatherData);
 
   useEffect(() => {
-    fetchData()
-  }, [])
+    fetchData();
+  }, []);
 
   return (
     <>
-      {weatherData === 'Rain' && weatherDescriptionData === 'shower rain' && <Rainy />}
-      {weatherData === 'Rain' && <Windy />}
-      {weatherData === 'Clear' && <NewSunnyLight className="absolute top-0 left-0" />}
+      {weatherData === "Rain" && weatherDescriptionData === "shower rain" && <Rainy />}
+      {weatherData === "Rain" && <Windy />}
+      {weatherData === "Clear" && <NewSunnyLight className="absolute top-0 left-0" />}
+      <Sakura />
     </>
   )
 }
 
-export default WeatherWrapper
+export default WeatherWrapper;
