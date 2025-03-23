@@ -1,12 +1,9 @@
-import Link from "next/link";
-
 import { SUB_RESUME } from "@/constants";
-import ProximityCard from "@/components/ProximityCard";
 import { IconCloud } from "@/components/IconCloud";
 import { AuroraText } from "@/components/AuroraText";
 import { stackSlugs } from "@/constants";
-import { GlowingEffect } from "@/components/GlowingEffect";
 import { GridItem } from "@/components/GridItem";
+
 export default function Resume() {
   const images = stackSlugs.map(
     (slug) => `https://cdn.simpleicons.org/${slug}/${slug}`,
@@ -33,10 +30,10 @@ export default function Resume() {
           {SUB_RESUME.map((service, index) => (
             <GridItem
               key={index}
+              url={service.url}
               area={service.area}
               title={service.title}
               description={service.description}
-              url={service.url}
               skill={service.skill}
             />
           ))}
@@ -44,4 +41,4 @@ export default function Resume() {
       </div>
     </div>
   );
-}
+};
