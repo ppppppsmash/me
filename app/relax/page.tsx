@@ -1,10 +1,10 @@
-'use client'
+"use client";
 
-import { useState, useEffect } from 'react';
-import { format } from 'date-fns';
+import { useState, useEffect } from "react";
+import { format } from "date-fns";
 
-import supabase from '@/lib/supabaseClient';
-import { AuroraText } from '@/components/AuroraText';
+import supabase from "@/lib/supabaseClient";
+import { AuroraText } from "@/components/AuroraText";
 
 
 const StarIcon = (props: React.SVGProps<SVGSVGElement>) => {
@@ -32,10 +32,10 @@ export default function Relax() {
   useEffect(() => {
     async function fetchData() {
       const { data, error } = await supabase
-        .from('feedbacks')
-        .select('*')
-        .eq('project_id', 1)
-        .order('created_at', { ascending: false });
+        .from("feedbacks")
+        .select("*")
+        .eq("project_id", 1)
+        .order("created_at", { ascending: false });
 
       if (error) {
         console.error(error);
@@ -48,17 +48,17 @@ export default function Relax() {
   }, [data]);
 
   return (
-    <div className='w-full max-w-[800px] md:h-full'>
-      <div className='p-4 pb-[170px]'>
-        <h1 className='text-2xl sm:text-[2.5rem] opacity-0 translate-y-10 animate-slide-in flex items-center fixed'>
-          <AuroraText className='font-bold'>
+    <div className="w-full max-w-[800px] md:h-full">
+      <div className="p-4 pb-[170px]">
+        <h1 className="text-2xl sm:text-[2.5rem] opacity-0 translate-y-10 animate-slide-in flex items-center fixed">
+          <AuroraText className="font-bold">
             Comments
           </AuroraText>
         </h1>
 
-        <h2 className='text-[1.8rem] opacity-0 mt-12 translate-y-10 animate-slide-in'>Your comment is posted here</h2>
+        <h2 className="text-[1.8rem] opacity-0 mt-12 translate-y-10 animate-slide-in">Your comment is posted here</h2>
 
-        <div className='mt-4 relative'>
+        <div className="mt-4 relative">
           <ul className="-mb-8 px-1 md:px-4">
             {data.map((item) => (
               <li
@@ -70,7 +70,7 @@ export default function Relax() {
                   <div className="-mt-1 flex min-w-0 flex-1 items-center gap-3">
                     <b className="text-sm font-bold dark:text-zinc-100">{item.user_name}</b>
                     <time className="inline-flex select-none text-[12px] font-medium opacity-40">
-                      {format(new Date(item.created_at), 'yyyy-MM-dd HH:mm:ss')}
+                      {format(new Date(item.created_at), "yyyy-MM-dd HH:mm:ss")}
                     </time>
                   </div>
                 </div>
@@ -79,7 +79,7 @@ export default function Relax() {
                   {[...Array(5)].map((_, index) => (
                     <StarIcon
                       key={index}
-                      className={`h-5 w-5 ${item.rating > index ? 'fill-white' : 'fill-muted stroke-muted-foreground'}`}
+                      className={`h-5 w-5 ${item.rating > index ? "fill-white" : "fill-muted stroke-muted-foreground"}`}
                       />
                     ))}
                   </div>
@@ -93,4 +93,4 @@ export default function Relax() {
       </div>
     </div>
   );
-}
+};

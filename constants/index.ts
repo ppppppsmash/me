@@ -31,7 +31,7 @@ export const INFO = [
   { label: "名前", value: "黒澤" },
   // { label: "生年月日", value: "1990/09/10" },
   { label: "居住地", value: "神奈川県" },
-  { label: "最近の状態", value: "ドラクエIIIリメイク版にハマってしまっている..." },
+  { label: "最近の状態", value: "golang独学中" },
   // { label: "", value: "gpt apiなどでのAIをラップするツールの開発は一番つまらないよな。" },
   // { label: "", value: "I love Japan, I love my Japanese wife." },
 ];
@@ -102,14 +102,6 @@ export const RESUME = [
 ];
 
 export const SUB_RESUME = [
-  // {
-  //   title: "恒佳株式会社",
-  //   url: "https://koukaltd.co.jp/",
-  //   image: "/images/kouka.gif",
-  //   description: "家族が貿易会社を経営しており、作ってあげた。（現時点不具合が出ており、リニューアルを準備中）",
-  //   skill: "Nuxt.js(v2.0) + scss",
-  //   infra: "AWS S3 + CloudFront + Route53"
-  // },
   {
     title: "台湾企業Landing Page",
     url: "https://aceherblab.com/",
@@ -172,5 +164,13 @@ export const SUB_RESUME = [
     skill: "Next.js(v14.0) + Tailwindcss + TypeScript + Clerk.js",
     infra: "Vercel",
     area: "md:col-span-2"
+  },
+  {
+    title: "企業サイト",
+    url: "https://koukaltd.co.jp/",
+    image: "/images/kouka.gif",
+    description: "家族が貿易会社を経営しており、作ってあげた。（現時点不具合が出ており、リニューアルを準備中）",
+    skill: "Nuxt.js(v2.0) + scss",
+    infra: "AWS S3 + CloudFront + Route53"
   },
 ];
