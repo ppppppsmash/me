@@ -138,15 +138,15 @@ export const SUB_RESUME = [
     infra: "Cloud Build + Cloud Run + CloudSQL + Cloud Secret Manager",
     area: "md:col-span-2"
   },
-  {
-    title: "個人ブログ",
-    url: "https://next-sanity-six-sooty.vercel.app/",
-    image: "/images/blog.gif",
-    description: "Sanity CMSを利用する個人ブログ",
-    skill: "Next.js(v13.0) + Sanity + Tailwindcss",
-    infra: "Vercel",
-    area: "md:col-span-2"
-  },
+  // {
+  //   title: "個人ブログ",
+  //   url: "https://next-sanity-six-sooty.vercel.app/",
+  //   image: "/images/blog.gif",
+  //   description: "Sanity CMSを利用する個人ブログ",
+  //   skill: "Next.js(v13.0) + Sanity + Tailwindcss",
+  //   infra: "Vercel",
+  //   area: "md:col-span-2"
+  // },
   {
     title: "80s & ストレンジャー・シングス風アンケート",
     url: "https://tvgame-survey.netlify.app/",
