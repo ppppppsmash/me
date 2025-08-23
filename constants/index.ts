@@ -169,7 +169,7 @@ export const SUB_RESUME = [
     title: "企業サイト",
     url: "https://koukaltd.co.jp/",
     image: "/images/kouka.gif",
-    description: "家族が貿易会社を経営しており、作ってあげた。（現時点不具合が出ており、リニューアルを準備中）",
+    description: "家族が貿易会社を経営しており、作ってあげた。",
     skill: "Nuxt.js(v2.0) + scss",
     infra: "AWS S3 + CloudFront + Route53"
   },
