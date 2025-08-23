@@ -23,6 +23,7 @@ module.exports = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
       animation: {
+        'shine': 'shine 5s linear infinite',
         'slide-in': 'slideIn 0.35s ease-in-out 0.5s forwards',
         'slide-in-title': 'slideInTitle 0.35s ease-in-out 0.5s forwards',
         'slide-in-sec': 'slideInSec 0.35s ease-in-out 0.5s forwards',
@@ -30,6 +31,10 @@ module.exports = {
         'spotlight': 'spotlight 2s ease .75s 1 forwards',
       },
       keyframes: {
+        shine: {
+          '0%': { 'background-position': '100%' },
+          '100%': { 'background-position': '-100%' },
+        },
         spotlight: {
           '0%': {
             opacity: 0,

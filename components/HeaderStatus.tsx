@@ -2,8 +2,8 @@
 
 import React, { useEffect, useState } from "react";
 import useGeoLocation from "react-ipgeolocation";
-import { UsersIcon } from "@heroicons/react/24/outline";
-import { FlipWords } from "@/components/FlipWords";
+import { UsersIcon, FlagIcon } from "@heroicons/react/24/outline";
+import ShinyText from "@/components/ShinyText";
 
 export default function HeaderStatus() {
   const [visitorStats, setVisitorStats] = useState({ visitorCount: 0, lastVisitorCountry: '..' })
@@ -97,14 +97,20 @@ export default function HeaderStatus() {
   ]
 
   return (
-    <div className="fixed top-2 sm:top-4 right-2">
-      <div className="flex justify-end items-center space-x-5 text-xs pt-4 pr-6">
-        <div className="flex items-center">
+    <div className="fixed top-2 right-2">
+      <div className="flex justify-end items-center space-x-5 text-xs pt-2 pr-6">
+        <div className="flex items-center flex-start">
           {isLoaded && visitorStats.visitorCount > 0 && (
-            <>
-              <UsersIcon className="w-4 h-4" />
-              <FlipWords words={summary} /> {countryFlag}
-            </>
+            <div className="flex flex-col items-start gap-2">
+              <div className="flex items-center gap-2">
+                <UsersIcon className="w-3 h-3" />
+                <ShinyText text={summary[0]} />
+              </div>
+              <div className="flex items-center gap-2">
+                <FlagIcon className="w-3 h-3" />
+                <ShinyText text={summary[1]} /> {countryFlag}
+              </div>
+            </div>
           )}
         </div>
       </div>
