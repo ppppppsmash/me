@@ -1,9 +1,9 @@
-'use client'
+"use client";
 
-import React, { useEffect, useState } from 'react'
-import useGeoLocation from 'react-ipgeolocation'
-import { UsersIcon } from '@heroicons/react/24/outline'
-import { FlipWords } from '@/components/FlipWords'
+import React, { useEffect, useState } from "react";
+import useGeoLocation from "react-ipgeolocation";
+import { UsersIcon } from "@heroicons/react/24/outline";
+import { FlipWords } from "@/components/FlipWords";
 
 export default function HeaderStatus() {
   const [visitorStats, setVisitorStats] = useState({ visitorCount: 0, lastVisitorCountry: '..' })
@@ -52,48 +52,48 @@ export default function HeaderStatus() {
 
   const getCountryInfo = (countryCode: string) => {
     switch (countryCode) {
-      case 'JP':
-        return { name: '日本', flag: '🇯🇵' }
-      case 'US':
-        return { name: 'アメリカ', flag: '🇺🇸' }
-      case 'CN':
-        return { name: 'Covid-19', flag: '🇨🇳' }
-      case 'KR':
-        return { name: '韓国', flag: '🇰🇷' }
-      case 'GB':
-        return { name: 'イギリス', flag: '🇬🇧' }
-      case 'DE':
-        return { name: 'ドイツ', flag: '🇩🇪' }
-      case 'FR':
-        return { name: 'フランス', flag: '🇫🇷' }
-      case 'IN':
-        return { name: 'インド', flag: '🇮🇳' }
-      case 'CA':
-        return { name: 'カナダ', flag: '🇨🇦' }
-      case 'IT':
-        return { name: 'イタリア', flag: '🇮🇹' }
-      case 'ES':
-        return { name: 'スペイン', flag: '🇪🇸' }
-      case 'BR':
-        return { name: 'ブラジル', flag: '🇧🇷' }
-      case 'ZA':
-        return { name: '南アフリカ', flag: '🇿🇦' }
-      case 'MX':
-        return { name: 'メキシコ', flag: '🇲🇽' }
-      case 'AU':
-        return { name: 'オーストラリア', flag: '🇦🇺' }
-      case 'NZ':
-        return { name: 'ニュージーランド', flag: '🇳🇿' }
+      case "JP":
+        return { name: "日本", flag: "🇯🇵" };
+      case "US":
+        return { name: "アメリカ", flag: "🇺🇸" };
+      case "CN":
+        return { name: "Covid-19", flag: "🦠" };
+      case "KR":
+        return { name: "韓国", flag: "🇰🇷" };
+      case "GB":
+        return { name: "イギリス", flag: "🇬🇧" };
+      case "DE":
+        return { name: "ドイツ", flag: "🇩🇪" };
+      case "FR":
+        return { name: "フランス", flag: "🇫🇷" };
+      case "IN":
+        return { name: "インド", flag: "🇮🇳" };
+      case "CA":
+        return { name: "カナダ", flag: "🇨🇦" };
+      case "IT":
+        return { name: "イタリア", flag: "🇮🇹" };
+      case "ES":
+        return { name: "スペイン", flag: "🇪🇸" };
+      case "BR":
+        return { name: "ブラジル", flag: "🇧🇷" };
+      case "ZA":
+        return { name: "南アフリカ", flag: "🇿🇦" };
+      case "MX":
+        return { name: "メキシコ", flag: "🇲🇽" };
+      case "AU":
+        return { name: "オーストラリア", flag: "🇦🇺" };
+      case "NZ":
+        return { name: "ニュージーランド", flag: "🇳🇿" };
       default:
-        return { name: countryCode, flag: '' }
+        return { name: countryCode, flag: "" };
     }
   }
 
   const { name: countryName, flag: countryFlag } = getCountryInfo(visitorStats.lastVisitorCountry)
 
   const summary = [
-    `総閲覧数:  ${String(visitorStats.visitorCount)}人`,
-    `最近の訪問者： ${countryName}`
+    `総閲覧数: ${String(visitorStats.visitorCount)}人`,
+    `最近の訪問者: ${countryName}`
   ]
 
   return (

@@ -129,15 +129,15 @@ export const SUB_RESUME = [
     infra: "Vercel",
     area: "md:col-span-2"
   },
-  {
-    title: "ページ計測Webアプリ",
-    url: "https://page-speed-measurement-nextapp-oclbewqdfa-an.a.run.app/",
-    image: "/images/psi.gif",
-    description: "page speed insigthsのAPIを利用してページ速度を計測するアプリ。 テスト用アカウント： admin / admin",
-    skill: "Next.js(v13.0) + Tailwindcss + Nest.js + MySQL",
-    infra: "Cloud Build + Cloud Run + CloudSQL + Cloud Secret Manager",
-    area: "md:col-span-2"
-  },
+  // {
+  //   title: "ページ計測Webアプリ",
+  //   url: "https://page-speed-measurement-nextapp-oclbewqdfa-an.a.run.app/",
+  //   image: "/images/psi.gif",
+  //   description: "page speed insigthsのAPIを利用してページ速度を計測するアプリ。 テスト用アカウント： admin / admin",
+  //   skill: "Next.js(v13.0) + Tailwindcss + Nest.js + MySQL",
+  //   infra: "Cloud Build + Cloud Run + CloudSQL + Cloud Secret Manager",
+  //   area: "md:col-span-2"
+  // },
   // {
   //   title: "個人ブログ",
   //   url: "https://next-sanity-six-sooty.vercel.app/",
@@ -169,7 +169,7 @@ export const SUB_RESUME = [
     title: "企業サイト",
     url: "https://koukaltd.co.jp/",
     image: "/images/kouka.gif",
-    description: "家族が貿易会社を経営しており、作ってあげた。（現時点不具合が出ており、リニューアルを準備中）",
+    description: "家族が貿易会社を経営しており、作ってあげた。",
     skill: "Nuxt.js(v2.0) + scss",
     infra: "AWS S3 + CloudFront + Route53"
   },

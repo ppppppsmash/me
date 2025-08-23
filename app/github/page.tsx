@@ -1,39 +1,39 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import GitHubCalendar from "react-github-calendar"
-import { GithubActivityFeed } from "react-github-activity-feed"
-import "react-github-activity-feed/dist/light.css"
+import GitHubCalendar from "react-github-calendar";
+import { GithubActivityFeed } from "react-github-activity-feed";
+import "react-github-activity-feed/dist/light.css";
 import { AuroraText } from "@/components/AuroraText";
 
 const explicitTheme = {
   light: ["#f0f0f0", "#c4edde", "#7ac7c4", "#f73859", "#384259"],
   dark: ["#1B2631", "#D7BDE2", "#AF7AC5", "#9B59B6", "#512E5F"],
-}
+};
 
 
 
 export default function Github() {
-  const [activity, setActivity] = useState([])
-  const [avatar, setAvatar] = useState("")
-  const [user, setUser] = useState("")
+  const [activity, setActivity] = useState([]);
+  const [avatar, setAvatar] = useState("");
+  const [user, setUser] = useState("");
 
   const fetchGitActivity = async() => {
     const response = await fetch("https://api.github.com/users/ppppppsmash/events", {
-      method: "GET"
-    })
-    const data = await response.json()
-    setActivity(data)
+      method: "GET",
+    });
+    const data = await response.json();
+    setActivity(data);
 
     if (data.length > 0) {
-      setAvatar(data[0].actor.avatar_url)
-      setUser(data[0].actor.login)
+      setAvatar(data[0].actor.avatar_url);
+      setUser(data[0].actor.login);
     }
-  }
+  };
 
   useEffect(() => {
-    fetchGitActivity()
-  }, [])
+    fetchGitActivity();
+  }, []);
 
   return (
     <div id="github-page" className="w-full max-w-[800px] md:h-[100vh] z-50">
@@ -56,12 +56,12 @@ export default function Github() {
           />
         </div>
 
-        <div className="mt-5 ">  
+        <div className="mt-5 opacity-0 translate-y-10 animate-slide-in">
           <GithubActivityFeed
             user="ppppppsmash"
           />
         </div>
       </div>
-    </div>   
-  )
+    </div>
+  );
 };
