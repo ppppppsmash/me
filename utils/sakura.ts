@@ -1,6 +1,8 @@
 import * as THREE from 'three';
 
 let isSakura = false;
+let animationFrameId: number;
+let resizeListener: () => void;
 
 export function initSakura() {
   if (typeof window === 'undefined' || isSakura) {
@@ -23,12 +25,13 @@ export function initSakura() {
   renderer.domElement.style.left = '0';
   renderer.domElement.style.zIndex = '-10';
   document.body.appendChild(renderer.domElement);
-  // on resize
-  window.addEventListener('resize', () => {
+
+  resizeListener = () => {
     renderer.setSize(window.innerWidth, window.innerHeight);
     camera.aspect = window.innerWidth / window.innerHeight;
     camera.updateProjectionMatrix();
-  }, false);
+  };
+  window.addEventListener('resize', resizeListener, false);
 
   const sakuraCount = 100;
   const sakuraPetals: THREE.Mesh[] = [];
@@ -76,7 +79,7 @@ export function initSakura() {
   }
 
   function animate() {
-    requestAnimationFrame(animate);
+    animationFrameId = requestAnimationFrame(animate);
 
     sakuraPetals.forEach((sakuraPetal) => {
       sakuraPetal.userData.velocity.y -= 0.00005;  // 重力の影響を小さく
@@ -107,4 +110,23 @@ export function initSakura() {
   }
 
   animate();
+}
+
+export function cleanupSakura() {
+  if (!isSakura) return;
+
+  if (animationFrameId) {
+    cancelAnimationFrame(animationFrameId);
+  }
+
+  if (resizeListener) {
+    window.removeEventListener('resize', resizeListener);
+  }
+
+  const renderer = document.querySelector('canvas');
+  if (renderer) {
+    renderer.remove();
+  }
+
+  isSakura = false;
 }

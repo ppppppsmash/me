@@ -39,7 +39,7 @@ const WeatherWrapper = () => {
       {weatherData === "Rain" && weatherDescriptionData === "shower rain" && <Rainy />}
       {weatherData === "Rain" && <Windy />}
       {weatherData === "Clear" && <NewSunnyLight className="absolute top-0 left-0" />}
-      <Sakura />
+      {/* <Sakura /> */}
     </>
   )
 }

@@ -1,56 +1,65 @@
-import Head from 'next/head'
-import Script from 'next/script'
-import { Metadata } from 'next'
+import Head from "next/head";
+import Script from "next/script";
+import { Metadata } from "next";
 
-import { Inter } from 'next/font/google'
-import Nav from '@/components/Nav'
-import HeaderStatus from '@/components/HeaderStatus'
+import { Inter } from "next/font/google";
+import Nav from "@/components/Nav";
+import HeaderStatus from "@/components/HeaderStatus";
 
-import WeatherWrapper from '@/components/WeatherWrapper'
-import { BackgroundBeams } from '@/components/BackgroundBeams'
-import StarBg from '@/components/StarBg'
+import WeatherWrapper from "@/components/WeatherWrapper";
+// import { BackgroundBeams } from "@/components/BackgroundBeams";
+// import StarBg from "@/components/StarBg";
+import SquareBg from "@/components/SquareBg";
 
-import './globals.scss'
+import "./globals.scss";
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'KUROSAWA',
-  description: 'KUROSAWAのポートフォリオ',
-  authors: { name: 'KUROSAWA ARATA'},
+  title: "KUROSAWA",
+  description: "KUROSAWAのポートフォリオ",
+  authors: { name: "KUROSAWA ARATA" },
   openGraph: {
-    type: 'website',
-    locale: 'ja_JP',
-    url: 'localhost',
-    siteName: 'Kurosawa\'s portfolio',
-    title: 'Kurosawa\'s portfolio',
-    images: 'https://xxx.png'
+    type: "website",
+    locale: "ja_JP",
+    url: "localhost",
+    siteName: "Kurosawa's portfolio",
+    title: "Kurosawa's portfolio",
+    images: "https://xxx.png",
   },
   robots: {
     index: false,
-    follow: false
+    follow: false,
   },
   viewport: {
-    width: 'device-width, initial-scale=1.0, viewport-fit=cover'
+    width: "device-width, initial-scale=1.0, viewport-fit=cover",
   }
-}
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
-    <html lang='ja'>
+    <html lang="ja">
       <Head>
-        <link href='https://fonts.cdnfonts.com/css/sf-pro-display' rel='stylesheet' />
-        <link href='https://https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css' rel='stylesheet' />
+        <link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet" />
+        <link href="https://https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet" />
       </Head>
       <Script src="https://my-comment-widget.vercel.app/widget.umd.js" />
       <body className={`${inter.className} bg-transparent`}>
         <Nav />
 
-        <main className='flex h-[100svh] flex-col items-center justify-between'>
+        <SquareBg 
+          speed={0.5} 
+          squareSize={40}
+          direction="diagonal"
+          borderColor="#c4c4c4"
+          hoverFillColor="#222"
+        />
+
+        <main className="flex h-[100svh] flex-col items-center justify-between">
           {children}
         </main>
 
@@ -64,5 +73,5 @@ export default function RootLayout({
         {/* <StarBg /> */}
       </body>
     </html>
-  )
+  );
 }
