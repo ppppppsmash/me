@@ -52,10 +52,10 @@ export default function RootLayout({
         <Nav />
 
         <SquareBg 
-          speed={0.5} 
-          squareSize={40}
+          speed={0.4} 
+          squareSize={45}
           direction="diagonal"
-          borderColor="#c4c4c4"
+          borderColor="#271e37"
           hoverFillColor="#222"
         />
 

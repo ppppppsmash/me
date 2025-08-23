@@ -129,15 +129,15 @@ export const SUB_RESUME = [
     infra: "Vercel",
     area: "md:col-span-2"
   },
-  {
-    title: "ページ計測Webアプリ",
-    url: "https://page-speed-measurement-nextapp-oclbewqdfa-an.a.run.app/",
-    image: "/images/psi.gif",
-    description: "page speed insigthsのAPIを利用してページ速度を計測するアプリ。 テスト用アカウント： admin / admin",
-    skill: "Next.js(v13.0) + Tailwindcss + Nest.js + MySQL",
-    infra: "Cloud Build + Cloud Run + CloudSQL + Cloud Secret Manager",
-    area: "md:col-span-2"
-  },
+  // {
+  //   title: "ページ計測Webアプリ",
+  //   url: "https://page-speed-measurement-nextapp-oclbewqdfa-an.a.run.app/",
+  //   image: "/images/psi.gif",
+  //   description: "page speed insigthsのAPIを利用してページ速度を計測するアプリ。 テスト用アカウント： admin / admin",
+  //   skill: "Next.js(v13.0) + Tailwindcss + Nest.js + MySQL",
+  //   infra: "Cloud Build + Cloud Run + CloudSQL + Cloud Secret Manager",
+  //   area: "md:col-span-2"
+  // },
   // {
   //   title: "個人ブログ",
   //   url: "https://next-sanity-six-sooty.vercel.app/",
