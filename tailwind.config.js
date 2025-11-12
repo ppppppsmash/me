@@ -7,6 +7,7 @@ const {
 } = require('tailwindcss/lib/util/flattenColorPalette')
 
 module.exports = {
+  darkMode: 'class', // ダークモードをクラスベースで有効化
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
