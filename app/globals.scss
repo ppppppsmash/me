@@ -486,3 +486,9 @@ article {
 }
 
 @keyframes dash{ from{stroke-dashoffset:814;} to {stroke-dashoffset:-814;}}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
