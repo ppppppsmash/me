@@ -35,6 +35,7 @@ export default function Drizzle() {
     let time = 0;
 
     function animate() {
+      if (!canvas) return;
       animId = requestAnimationFrame(animate);
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       time += 0.005;
