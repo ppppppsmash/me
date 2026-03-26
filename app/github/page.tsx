@@ -38,7 +38,7 @@ export default function Github() {
   return (
     <div id="github-page" className="w-full max-w-[800px] md:h-[100vh] z-50">
       <div className="p-4 pb-10 relative">
-        <h1 className="text-2xl sm:text-[2.5rem] opacity-0 translate-y-10 animate-slide-in flex sm:items-center">
+        <h1 className="text-2xl sm:text-[2.5rem] opacity-0 translate-y-10 animate-slide-in flex sm:items-center sticky top-0 z-40 py-2 backdrop-blur-sm">
           <AuroraText className="font-bold">
             Github Activity
           </AuroraText>

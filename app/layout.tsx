@@ -54,12 +54,12 @@ export default function RootLayout({
             speed={0.4} 
             squareSize={45}
             direction="diagonal"
-            borderColor="#271e37"
+            borderColor="rgba(255, 255, 255, 0.08)"
             hoverFillColor="#222"
           />
 
           <main className="flex h-[100svh] flex-col items-center justify-between">
-          <AnimatedThemeToggler className="absolute top-[15px] left-[20px] z-[9999] dark:text-white text-black w-5" />
+          <AnimatedThemeToggler className="fixed top-[15px] left-[20px] z-[9999] dark:text-white text-black w-5" />
             {children}
           </main>
 x
