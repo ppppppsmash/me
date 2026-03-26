@@ -1,8 +1,20 @@
+"use client";
+
 import { SUB_RESUME } from "@/constants";
 import { IconCloud } from "@/components/IconCloud";
 import { AuroraText } from "@/components/AuroraText";
 import { stackSlugs } from "@/constants";
 import { GridItem } from "@/components/GridItem";
+import { motion } from "framer-motion";
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 16 },
+  show: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5, delay: i * 0.08 + 0.3, ease: [0.25, 0.1, 0.25, 1] },
+  }),
+};
 
 export default function Resume() {
   const images = stackSlugs.map(
@@ -17,28 +29,38 @@ export default function Resume() {
             Resume
           </AuroraText>
         </h1>
-        <h2 className="text-[1.8rem] opacity-0 mt-8 translate-y-10 animate-slide-in">Skill</h2>
 
-        <div className="flex justify-center gap-2">
-          <div className="relative flex size-full max-w-lg items-center justify-center overflow-hidden bg-background px-6 pb-6 pt-8">
-            <IconCloud images={images} />
+        {/* Skills */}
+        <div className="mt-6">
+          <p className="text-[11px] uppercase tracking-widest dark:text-neutral-500 text-neutral-400 mb-2 ml-1">
+            Skills
+          </p>
+          <div className="flex justify-center">
+            <div className="relative flex size-full max-w-lg items-center justify-center overflow-hidden px-6 pb-4 pt-6">
+              <IconCloud images={images} />
+            </div>
           </div>
         </div>
 
-        <h2 className="mt-12 opacity-0 translate-y-10 animate-slide-in">実績 / お手伝い</h2>
-        <ul className="grid md:grid-cols-6 gap-4 row-start-1 col-start-1 mt-6">
-          {SUB_RESUME.map((service, index) => (
-            <GridItem
-              key={index}
-              url={service.url}
-              area={service.area}
-              title={service.title}
-              description={service.description}
-              skill={service.skill}
-            />
-          ))}
-        </ul>
+        {/* Works */}
+        <div className="mt-8">
+          <p className="text-[11px] uppercase tracking-widest dark:text-neutral-500 text-neutral-400 mb-4 ml-1">
+            Works
+          </p>
+          <ul className="grid md:grid-cols-6 gap-4 row-start-1 col-start-1">
+            {SUB_RESUME.map((service, index) => (
+              <GridItem
+                key={index}
+                url={service.url}
+                area={service.area}
+                title={service.title}
+                description={service.description}
+                skill={service.skill}
+              />
+            ))}
+          </ul>
+        </div>
       </div>
     </div>
   );
-};
+}
