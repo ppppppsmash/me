@@ -50,7 +50,7 @@ export default function Relax() {
   return (
     <div className="w-full max-w-[800px] md:h-full">
       <div className="p-4 pb-[170px]">
-        <h1 className="text-2xl sm:text-[2.5rem] opacity-0 translate-y-10 animate-slide-in flex items-center fixed">
+        <h1 className="text-2xl sm:text-[2.5rem] opacity-0 translate-y-10 animate-slide-in flex items-center sticky top-0 z-40 py-2">
           <AuroraText className="font-bold">
             Comments
           </AuroraText>
@@ -79,7 +79,7 @@ export default function Relax() {
                   {[...Array(5)].map((_, index) => (
                     <StarIcon
                       key={index}
-                      className={`h-5 w-5 ${item.rating > index ? "fill-white" : "fill-muted stroke-muted-foreground"}`}
+                      className={`h-5 w-5 ${item.rating > index ? "dark:fill-white fill-neutral-800" : "fill-muted stroke-muted-foreground"}`}
                       />
                     ))}
                   </div>

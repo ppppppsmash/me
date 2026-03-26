@@ -1,12 +1,13 @@
-'use client'
+"use client";
 
-import { useEffect } from 'react'
-import { initSakura } from '@/utils/sakura'
+import { useEffect } from "react";
+import { initSakura, cleanupSakura } from "@/utils/sakura";
 
 export default function Sakura() {
-  initSakura()
+  useEffect(() => {
+    initSakura();
+    return () => cleanupSakura();
+  }, []);
 
-  return (
-    <div></div>
-  )
+  return null;
 }

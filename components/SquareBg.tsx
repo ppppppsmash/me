@@ -30,6 +30,17 @@ const Squares: React.FC<SquaresProps> = ({
   const numSquaresY = useRef<number>(0);
   const gridOffset = useRef<GridOffset>({ x: 0, y: 0 });
   const hoveredSquareRef = useRef<GridOffset | null>(null);
+  const isDarkRef = useRef<boolean>(true);
+
+  useEffect(() => {
+    const updateTheme = () => {
+      isDarkRef.current = document.documentElement.classList.contains("dark");
+    };
+    updateTheme();
+    const observer = new MutationObserver(updateTheme);
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ["class"] });
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -65,11 +76,11 @@ const Squares: React.FC<SquaresProps> = ({
               hoveredSquareRef.current.x &&
             Math.floor((y - startY) / squareSize) === hoveredSquareRef.current.y
           ) {
-            ctx.fillStyle = hoverFillColor;
+            ctx.fillStyle = isDarkRef.current ? hoverFillColor : "#ddd";
             ctx.fillRect(squareX, squareY, squareSize, squareSize);
           }
 
-          ctx.strokeStyle = borderColor;
+          ctx.strokeStyle = isDarkRef.current ? borderColor : "rgba(0, 0, 0, 0.06)";
           ctx.strokeRect(squareX, squareY, squareSize, squareSize);
         }
       }
@@ -85,8 +96,10 @@ const Squares: React.FC<SquaresProps> = ({
       gradient.addColorStop(0, "rgba(0, 0, 0, 0)");
       gradient.addColorStop(1, "#060010");
 
-      ctx.fillStyle = gradient;
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      if (isDarkRef.current) {
+        ctx.fillStyle = gradient;
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+      }
     };
 
     const updateAnimation = () => {

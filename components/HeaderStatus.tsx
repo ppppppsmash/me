@@ -103,12 +103,12 @@ export default function HeaderStatus() {
           {isLoaded && visitorStats.visitorCount > 0 && (
             <div className="flex flex-col items-start gap-2">
               <div className="flex items-center gap-2">
-                <UsersIcon className="w-3 h-3" />
-                <ShinyText text={summary[0]} />
+                <UsersIcon className="w-3 h-3 dark:text-white text-gray-800" />
+                <ShinyText text={summary[0]} className="dark:text-white text-gray-800" />
               </div>
               <div className="flex items-center gap-2">
-                <FlagIcon className="w-3 h-3" />
-                <ShinyText text={summary[1]} /> {countryFlag}
+                <FlagIcon className="w-3 h-3 dark:text-white text-gray-800" />
+                <ShinyText text={summary[1]} className="dark:text-white text-gray-800" /> {countryFlag}
               </div>
             </div>
           )}

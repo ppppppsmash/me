@@ -6,15 +6,23 @@
 /* 	--perspective: 100px; */
 	--grid-size: 5%;
 	--line-width: 1px;
+  --color: hsl(0 0% 20%);
+  --accent: hsl(0 0% 75%);
+  --background: hsl(0 0% 94%);
+  --line: hsl(0 0% 0% / 0.12);
+  --text: hsl(0 0% 10%);
+  --gradient: conic-gradient(from 180deg at 50% 70%,hsla(0,0%,98%,1) 0deg,#eec32d 72.0000010728836deg,#ec4b4b 144.0000021457672deg,#709ab9 216.00000858306885deg,#4dffbf 288.0000042915344deg,hsla(0,0%,98%,1) 1turn);
+  --border-radius: 12px;
+  --border-width: 3px;
+  --border: hsl(280 10% 50% / 1);
+}
+
+.dark {
   --color: hsl(0 0% 94%);
   --accent: hsl(0 0% 2%);
   --background: hsl(0 0% 4%);
   --line: hsl(0 0% 100% / 0.15);
   --text: hsl(0 0% 90%);
-  --gradient: conic-gradient(from 180deg at 50% 70%,hsla(0,0%,98%,1) 0deg,#eec32d 72.0000010728836deg,#ec4b4b 144.0000021457672deg,#709ab9 216.00000858306885deg,#4dffbf 288.0000042915344deg,hsla(0,0%,98%,1) 1turn);
-  --border-radius: 12px;
-  --border-width: 3px;
-  --border: hsl(280 10% 50% / 1);
 }
 
 @font-face {
@@ -25,6 +33,12 @@
 *, *::before, *::after {
   box-sizing: border-box;
 }
+
+// ::view-transition-old(root),
+// ::view-transition-new(root) {
+//   animation: none;
+//   mix-blend-mode: normal;
+// }
 
 html,
 body {
@@ -217,7 +231,7 @@ article {
 	--start: 0;
 	height: 100%;
 	background: var(--background);
-  overflow: hidden;
+	overflow: hidden;
 	padding: 0.1rem;
 	border-radius: var(--border-radius);
 	width: 100%;
@@ -415,13 +429,13 @@ article {
 
     .gha-github-icon {
       .octicon-mark-github {
-        color: #FFF!important;
-      } 
+        color: var(--text)!important;
+      }
     }
 
     .gha-user-info {
       a {
-        color: #FFF!important;
+        color: var(--text)!important;
       }
     }
 
@@ -450,7 +464,7 @@ article {
 
     .gha-message {
       a {
-        color: #FFF!important;
+        color: var(--text)!important;
       }
 
       .gha-commits {
@@ -486,3 +500,12 @@ article {
 }
 
 @keyframes dash{ from{stroke-dashoffset:814;} to {stroke-dashoffset:-814;}}
+
+// Comment widget button - always dark style
+my-widget {
+  button, [role="button"] {
+    background-color: #1a1a1a!important;
+    color: #fff!important;
+    border-color: #333!important;
+  }
+}
