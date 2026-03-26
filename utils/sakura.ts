@@ -157,7 +157,6 @@ export function initSakura() {
 
   const petalGeometry = createPetalGeometry();
 
-  // Multiple pink shades for variety
   const petalColors = [0xffb7c5, 0xffc1cc, 0xffa8b8, 0xffd1dc, 0xffcad4];
   const materials = petalColors.map(
     (color) =>
