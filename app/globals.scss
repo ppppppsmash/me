@@ -50,6 +50,7 @@ body {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   text-size-adjust: 100%;
+  background: var(--background);
   color: var(--text);
 }
 
@@ -229,6 +230,7 @@ article {
 	--active: 0.15;
 	--start: 0;
 	height: 100%;
+	background: var(--background);
 	overflow: hidden;
 	padding: 0.1rem;
 	border-radius: var(--border-radius);
