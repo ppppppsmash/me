@@ -62,7 +62,7 @@ export default function RootLayout({
           <AnimatedThemeToggler className="fixed top-[15px] left-[20px] z-[9999] dark:text-white text-black w-5" />
             {children}
           </main>
-x
+
           <HeaderStatus />
 
           <WeatherWrapper />
