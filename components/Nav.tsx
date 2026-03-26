@@ -13,7 +13,7 @@ export default function Nav() {
     {
       title: "Home",
       icon: (
-        <IconHome className="h-full w-full text-neutral-300" />
+        <IconHome className="h-full w-full dark:text-neutral-300 text-neutral-600" />
       ),
       href: "/",
     },
@@ -21,28 +21,28 @@ export default function Nav() {
     {
       title: "Profile",
       icon: (
-        <IconUser className="h-full w-full text-neutral-300" />
+        <IconUser className="h-full w-full dark:text-neutral-300 text-neutral-600" />
       ),
       href: "/about",
     },
     {
       title: "Resume",
       icon: (
-        <IconCode className="h-full w-full text-neutral-300" />
+        <IconCode className="h-full w-full dark:text-neutral-300 text-neutral-600" />
       ),
       href: "/resume",
     },
     {
       title: "Github",
       icon: (
-        <IconBrandGithub className="h-full w-full text-neutral-300" />
+        <IconBrandGithub className="h-full w-full dark:text-neutral-300 text-neutral-600" />
       ),
       href: "/github",
     },
     {
       title: "Relax",
       icon: (
-        <IconBubbleText className="h-full w-full text-neutral-300" />
+        <IconBubbleText className="h-full w-full dark:text-neutral-300 text-neutral-600" />
       ),
       href: "/relax",
     },

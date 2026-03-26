@@ -15,6 +15,12 @@ export const AnimatedThemeToggler = ({
   const [isDark, setIsDark] = useState(false)
   const buttonRef = useRef<HTMLButtonElement>(null)
   useEffect(() => {
+    const saved = localStorage.getItem("theme")
+    if (saved === "dark") {
+      document.documentElement.classList.add("dark")
+    } else if (saved === "light") {
+      document.documentElement.classList.remove("dark")
+    }
     const updateTheme = () => {
       setIsDark(document.documentElement.classList.contains("dark"))
     }
@@ -28,7 +34,7 @@ export const AnimatedThemeToggler = ({
   }, [])
   const toggleTheme = useCallback(async () => {
     if (!buttonRef.current) return
-    await document.startViewTransition(() => {
+    await (document as any).startViewTransition(() => {
       flushSync(() => {
         const newTheme = !isDark
         setIsDark(newTheme)

@@ -79,7 +79,7 @@ export default function Relax() {
                   {[...Array(5)].map((_, index) => (
                     <StarIcon
                       key={index}
-                      className={`h-5 w-5 ${item.rating > index ? "fill-white" : "fill-muted stroke-muted-foreground"}`}
+                      className={`h-5 w-5 ${item.rating > index ? "dark:fill-white fill-neutral-800" : "fill-muted stroke-muted-foreground"}`}
                       />
                     ))}
                   </div>

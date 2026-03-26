@@ -47,7 +47,7 @@ export default function RootLayout({
           <link href="https://https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet" />
         </Head>
         <Script src="https://my-comment-widget.vercel.app/widget.umd.js" />
-        <body className={`${inter.className} dark:bg-transparent bg-white`}>
+        <body className={`${inter.className} dark:bg-transparent bg-neutral-100/80`}>
           <Nav />
 
           <SquareBg 
