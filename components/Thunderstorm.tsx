@@ -38,6 +38,7 @@ export default function Thunderstorm() {
     let boltOpacity = 0;
 
     function generateBolt() {
+      if (!canvas) return [];
       const segments: typeof boltSegments = [];
       let x = canvas.width * (0.2 + Math.random() * 0.6);
       let y = 0;
@@ -62,6 +63,7 @@ export default function Thunderstorm() {
     }
 
     function animate() {
+      if (!canvas) return;
       animId = requestAnimationFrame(animate);
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
