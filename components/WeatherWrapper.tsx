@@ -4,7 +4,13 @@ import { useEffect, useState } from "react";
 import Sakura from "./Sakura";
 import Rainy from "./Rainy";
 import Windy from "./Windy";
-import { NewSunnyLight } from "./NewSunny";
+import Sunny from "./Sunny";
+import Thunderstorm from "./Thunderstorm";
+import Drizzle from "./Drizzle";
+import Snow from "./Snow";
+import Clouds from "./Clouds";
+import Fog from "./Fog";
+import WeatherBadge from "./WeatherBadge";
 
 const isSakuraSeason = () => {
   const now = new Date();
@@ -40,9 +46,18 @@ const WeatherWrapper = () => {
 
   return (
     <>
+      {/* Preview: Sunny */}
+      <WeatherBadge weather={weatherData} />
+      {weatherData === "Thunderstorm" && <Thunderstorm />}
+      {weatherData === "Drizzle" && <Drizzle />}
+      {weatherData === "Snow" && <Snow />}
+      {weatherData === "Clouds" && <Clouds />}
+      {weatherData === "Fog" && <Fog />}
+      {weatherData === "Mist" && <Fog />}
+      {weatherData === "Haze" && <Fog />}
       {weatherData === "Rain" && weatherDescriptionData === "shower rain" && <Rainy />}
       {weatherData === "Rain" && <Windy />}
-      {weatherData === "Clear" && <NewSunnyLight className="absolute top-0 left-0" />}
+      {weatherData === "Clear" && <Sunny />}
       {showSakura && <Sakura />}
     </>
   )

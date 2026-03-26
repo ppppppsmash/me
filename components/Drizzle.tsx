@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react";
 
-export default function Windy() {
+export default function Drizzle() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
@@ -18,57 +18,47 @@ export default function Windy() {
     resize();
     window.addEventListener("resize", resize);
 
-    interface Drop {
-      x: number;
-      y: number;
-      len: number;
-      speed: number;
-      windSpeed: number;
-      opacity: number;
-      width: number;
-    }
-
-    const drops: Drop[] = [];
-    for (let i = 0; i < 500; i++) {
+    // Fine, gentle rain drops
+    const drops: { x: number; y: number; len: number; speed: number; opacity: number; drift: number }[] = [];
+    for (let i = 0; i < 250; i++) {
       drops.push({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
-        len: 18 + Math.random() * 25,
-        speed: 16 + Math.random() * 12,
-        windSpeed: 6 + Math.random() * 5,
-        opacity: 0.12 + Math.random() * 0.22,
-        width: 0.6 + Math.random() * 0.8,
+        len: 8 + Math.random() * 10,
+        speed: 3 + Math.random() * 4,
+        opacity: 0.2 + Math.random() * 0.3,
+        drift: (Math.random() - 0.5) * 0.4,
       });
     }
 
+    // Mist layer
     let time = 0;
 
     function animate() {
       animId = requestAnimationFrame(animate);
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-      time += 0.01;
+      time += 0.005;
 
-      // Wind gust variation
-      const gust = 1 + Math.sin(time * 0.6) * 0.4;
+      // Soft mist overlay
+      const mistAlpha = 0.03 + Math.sin(time * 0.8) * 0.01;
+      ctx.fillStyle = `rgba(180, 190, 210, ${mistAlpha})`;
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
 
+      // Draw fine drizzle
       drops.forEach((d) => {
-        const wind = d.windSpeed * gust;
-        const endX = d.x - wind * (d.len / d.speed);
-        const endY = d.y + d.len;
-
         ctx.strokeStyle = `rgba(150, 170, 210, ${d.opacity})`;
-        ctx.lineWidth = d.width;
+        ctx.lineWidth = 1;
         ctx.beginPath();
         ctx.moveTo(d.x, d.y);
-        ctx.lineTo(endX, endY);
+        ctx.lineTo(d.x + d.drift * d.len, d.y + d.len);
         ctx.stroke();
 
         d.y += d.speed;
-        d.x -= wind;
+        d.x += d.drift;
 
-        if (d.y > canvas.height || d.x < -20) {
-          d.y = -d.len - Math.random() * 80;
-          d.x = Math.random() * canvas.width * 1.3;
+        if (d.y > canvas.height) {
+          d.y = -d.len;
+          d.x = Math.random() * canvas.width;
         }
       });
     }
