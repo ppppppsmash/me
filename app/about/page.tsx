@@ -18,7 +18,7 @@ export default function About() {
   return (
     <div className="w-full max-w-[800px] md:h-[100vh]">
       <div className="p-4 pb-20">
-        <h1 className="text-2xl sm:text-[2.5rem] opacity-0 translate-y-10 animate-slide-in flex items-center sticky top-0 z-40 py-2">
+        <h1 className="text-2xl sm:text-[2.5rem] opacity-0 translate-y-10 animate-slide-in flex items-center sticky top-0 z-40 pt-14 pb-2 sm:pt-2">
           <AuroraText className="font-bold">
             About Me
           </AuroraText>
