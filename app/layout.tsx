@@ -59,7 +59,7 @@ export default function RootLayout({
           />
 
           <main className="flex h-[100svh] flex-col items-center justify-between">
-          <AnimatedThemeToggler className="fixed top-[15px] left-[20px] z-[9999] dark:text-white text-black w-5" />
+          <AnimatedThemeToggler className="fixed top-[15px] left-[20px] z-[9999] dark:text-white text-black" />
             {children}
           </main>
 

@@ -2,6 +2,7 @@
 import { useCallback, useEffect, useRef, useState } from "react"
 import { MoonIcon, SunIcon } from "@heroicons/react/24/outline"
 import { flushSync } from "react-dom"
+import { motion, AnimatePresence } from "framer-motion"
 import { cn } from "@/utils/cn"
 interface AnimatedThemeTogglerProps
   extends React.ComponentPropsWithoutRef<"button"> {
@@ -68,10 +69,28 @@ export const AnimatedThemeToggler = ({
     <button
       ref={buttonRef}
       onClick={toggleTheme}
-      className={cn(className)}
+      className={cn(
+        "w-9 h-9 flex items-center justify-center rounded-lg transition-all duration-300",
+        "dark:bg-white/[0.06] bg-black/[0.04]",
+        "border dark:border-white/[0.08] border-black/[0.06]",
+        "dark:hover:bg-white/[0.12] hover:bg-black/[0.08]",
+        "hover:scale-110 active:scale-95",
+        "backdrop-blur-sm",
+        className
+      )}
       {...props}
     >
-      {isDark ? <SunIcon /> : <MoonIcon />}
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={isDark ? "sun" : "moon"}
+          initial={{ rotate: -90, scale: 0, opacity: 0 }}
+          animate={{ rotate: 0, scale: 1, opacity: 1 }}
+          exit={{ rotate: 90, scale: 0, opacity: 0 }}
+          transition={{ duration: 0.25, ease: "easeInOut" }}
+        >
+          {isDark ? <SunIcon className="w-4 h-4" /> : <MoonIcon className="w-4 h-4" />}
+        </motion.div>
+      </AnimatePresence>
       <span className="sr-only">Toggle theme</span>
     </button>
   )
