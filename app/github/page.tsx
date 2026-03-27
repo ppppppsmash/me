@@ -2,12 +2,12 @@
 
 import { useEffect, useState } from "react";
 import GitHubCalendar from "react-github-calendar";
-import { AuroraText } from "@/components/AuroraText";
+import NeonText from "@/components/NeonText";
 import GitActivityFeed from "@/components/GitActivityFeed";
 
 const explicitTheme = {
-  light: ["#f0f0f0", "#c4edde", "#7ac7c4", "#f73859", "#384259"],
-  dark: ["#1B2631", "#D7BDE2", "#AF7AC5", "#9B59B6", "#512E5F"],
+  light: ["#e8f5e9", "#a5d6a7", "#66bb6a", "#2e7d32", "#1b5e20"],
+  dark: ["#0d1f13", "#065f46", "#059669", "#10b981", "#34d399"],
 };
 
 export default function Github() {
@@ -24,9 +24,7 @@ export default function Github() {
     <div id="github-page" className="w-full max-w-[800px] md:h-[100vh] z-50">
       <div className="p-4 pb-[170px] relative">
         <h1 className="text-2xl sm:text-[2.5rem] opacity-0 translate-y-10 animate-slide-in flex sm:items-center sticky top-0 z-40 pt-14 pb-2 sm:pt-2">
-          <AuroraText className="font-bold">
-            Github
-          </AuroraText>
+          <NeonText color="#10b981">Github</NeonText>
           {stats && (
             <span className="ml-4 flex gap-3 text-[11px] dark:text-neutral-500 text-neutral-400 self-end mb-1">
               <span>{stats.repos} repos</span>

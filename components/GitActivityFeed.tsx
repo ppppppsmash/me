@@ -154,14 +154,14 @@ export default function GitActivityFeed({ username }: { username: string }) {
 
                   <div className="flex-1 min-w-0">
                     <p className="text-[13px] dark:text-neutral-300 text-neutral-600 leading-snug">
-                      <span className="dark:text-neutral-100 text-neutral-800 font-medium">{repo}</span>
+                      <span className="dark:text-emerald-400 text-emerald-600 font-medium">{repo}</span>
                       <span className="mx-1 dark:text-neutral-600 text-neutral-300">/</span>
                       <span>{action}</span>
                       <span className="ml-1.5 text-[11px] dark:text-neutral-600 text-neutral-400 tabular-nums">
                         {relativeTime(event.created_at)}
                       </span>
                       {branch && (
-                        <span className="ml-1.5 text-[11px] font-mono dark:text-purple-400/70 text-purple-500/70">
+                        <span className="ml-1.5 text-[11px] font-mono dark:text-emerald-500/60 text-emerald-600/60">
                           {branch}
                         </span>
                       )}

@@ -2,7 +2,7 @@
 
 import { SUB_RESUME } from "@/constants";
 import { IconCloud } from "@/components/IconCloud";
-import { AuroraText } from "@/components/AuroraText";
+import NeonText from "@/components/NeonText";
 import { stackSlugs } from "@/constants";
 import { GridItem } from "@/components/GridItem";
 import { motion } from "framer-motion";
@@ -25,9 +25,7 @@ export default function Resume() {
     <div className="w-full max-w-[800px] md:h-full">
       <div className="p-4 pb-[170px]">
         <h1 className="text-2xl sm:text-[2.5rem] opacity-0 translate-y-10 animate-slide-in flex items-center sticky top-0 z-40 pt-14 pb-2 sm:pt-2">
-          <AuroraText className="font-bold">
-            Resume
-          </AuroraText>
+          <NeonText color="#f43f5e">Resume</NeonText>
         </h1>
 
         {/* Skills */}
