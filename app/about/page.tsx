@@ -3,7 +3,7 @@
 import { HOBBY, INFO } from "@/constants";
 import { motion } from "framer-motion";
 import { CardBody, CardContainer, CardItem } from "@/components/3dCard";
-import { AuroraText } from "@/components/AuroraText";
+import NeonText from "@/components/NeonText";
 
 const item = {
   hidden: { opacity: 0, y: 16 },
@@ -19,9 +19,7 @@ export default function About() {
     <div className="w-full max-w-[800px] md:h-[100vh]">
       <div className="p-4 pb-20">
         <h1 className="text-2xl sm:text-[2.5rem] opacity-0 translate-y-10 animate-slide-in flex items-center sticky top-0 z-40 pt-14 pb-2 sm:pt-2">
-          <AuroraText className="font-bold">
-            About Me
-          </AuroraText>
+          <NeonText color="#3b82f6">About Me</NeonText>
         </h1>
 
         <div className="flex justify-between mt-6">

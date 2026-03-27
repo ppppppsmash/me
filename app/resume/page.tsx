@@ -2,7 +2,7 @@
 
 import { SUB_RESUME } from "@/constants";
 import { IconCloud } from "@/components/IconCloud";
-import { AuroraText } from "@/components/AuroraText";
+import NeonText from "@/components/NeonText";
 import { stackSlugs } from "@/constants";
 import { GridItem } from "@/components/GridItem";
 import { motion } from "framer-motion";
@@ -25,9 +25,7 @@ export default function Resume() {
     <div className="w-full max-w-[800px] md:h-full">
       <div className="p-4 pb-[170px]">
         <h1 className="text-2xl sm:text-[2.5rem] opacity-0 translate-y-10 animate-slide-in flex items-center sticky top-0 z-40 pt-14 pb-2 sm:pt-2">
-          <AuroraText className="font-bold">
-            Resume
-          </AuroraText>
+          <NeonText color="#f43f5e">Resume</NeonText>
         </h1>
 
         {/* Skills */}
@@ -47,15 +45,15 @@ export default function Resume() {
           <p className="text-[11px] uppercase tracking-widest dark:text-neutral-500 text-neutral-400 mb-4 ml-1">
             Works
           </p>
-          <ul className="grid md:grid-cols-6 gap-4 row-start-1 col-start-1">
+          <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {SUB_RESUME.map((service, index) => (
               <GridItem
                 key={index}
                 url={service.url}
-                area={service.area}
                 title={service.title}
                 description={service.description}
                 skill={service.skill}
+                index={index}
               />
             ))}
           </ul>
