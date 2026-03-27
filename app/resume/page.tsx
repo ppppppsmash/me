@@ -45,15 +45,15 @@ export default function Resume() {
           <p className="text-[11px] uppercase tracking-widest dark:text-neutral-500 text-neutral-400 mb-4 ml-1">
             Works
           </p>
-          <ul className="grid md:grid-cols-6 gap-4 row-start-1 col-start-1">
+          <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {SUB_RESUME.map((service, index) => (
               <GridItem
                 key={index}
                 url={service.url}
-                area={service.area}
                 title={service.title}
                 description={service.description}
                 skill={service.skill}
+                index={index}
               />
             ))}
           </ul>
