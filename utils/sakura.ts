@@ -122,13 +122,14 @@ export function initSakura() {
   isInitialized = true;
 
   const scene = new THREE.Scene();
+  const isMobile = window.innerWidth < 768;
   const camera = new THREE.PerspectiveCamera(
-    60,
+    isMobile ? 80 : 60,
     window.innerWidth / window.innerHeight,
     0.1,
     100
   );
-  camera.position.z = 20;
+  camera.position.z = isMobile ? 16 : 20;
 
   const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
   renderer.setClearColor(0x000000, 0);
@@ -171,17 +172,19 @@ export function initSakura() {
   );
 
   const petalCount = 120;
+  const halfFov = (camera.fov * Math.PI) / 360;
+  const visibleHeight = camera.position.z * Math.tan(halfFov) * 2;
   const spawnArea = {
-    width: (camera.position.z * Math.tan((camera.fov * Math.PI) / 360)) * camera.aspect * 2.2,
-    height: camera.position.z * Math.tan((camera.fov * Math.PI) / 360) * 2,
+    width: visibleHeight * camera.aspect * 2.2,
+    height: visibleHeight,
   };
 
   const petals: Petal[] = [];
   for (let i = 0; i < petalCount; i++) {
     const material = materials[Math.floor(Math.random() * materials.length)];
     const petal = createPetal(petalGeometry, material, spawnArea);
-    // Stagger initial positions so they don't all appear at once
-    petal.mesh.position.y -= Math.random() * spawnArea.height * 1.5;
+    // Spread initial positions across the full visible area
+    petal.mesh.position.y = (Math.random() - 0.5) * spawnArea.height * 1.2;
     scene.add(petal.mesh);
     petals.push(petal);
   }
@@ -229,9 +232,9 @@ export function initSakura() {
 
       // Reset when out of bounds
       if (
-        petal.mesh.position.y < -spawnArea.height * 0.6 ||
-        petal.mesh.position.x > spawnArea.width * 0.6 ||
-        petal.mesh.position.x < -spawnArea.width * 0.6
+        petal.mesh.position.y < -spawnArea.height * 0.7 ||
+        petal.mesh.position.x > spawnArea.width * 0.7 ||
+        petal.mesh.position.x < -spawnArea.width * 0.7
       ) {
         resetPetal(petal, spawnArea);
       }

@@ -18,10 +18,17 @@ function formatAction(event: GitEvent): { action: string; body: string; branch: 
     case "PushEvent": {
       const commits = payload.commits || [];
       const branch = (payload.ref || "").replace("refs/heads/", "");
-      const messages = commits.map((c: any) => c.message.split("\n")[0]);
+      if (commits.length > 0) {
+        const messages = commits.map((c: any) => c.message.split("\n")[0]);
+        return {
+          action: `pushed ${commits.length} commit${commits.length > 1 ? "s" : ""}`,
+          body: messages.join("\n"),
+          branch,
+        };
+      }
       return {
-        action: `pushed ${commits.length} commit${commits.length > 1 ? "s" : ""}`,
-        body: messages.join("\n"),
+        action: "pushed to",
+        body: "",
         branch,
       };
     }
