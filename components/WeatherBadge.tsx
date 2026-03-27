@@ -24,7 +24,7 @@ export default function WeatherBadge({ weather }: { weather: string | null }) {
       initial={{ opacity: 0, y: -10 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: 1 }}
-      className="fixed bottom-[34px] left-4 sm:bottom-auto sm:left-1/2 sm:-translate-x-1/2 sm:top-3 z-[9999] flex items-center gap-1.5
+      className="fixed top-[17px] left-[68px] z-[9999] flex items-center gap-1.5
         px-2.5 py-1 rounded-full
         dark:bg-white/[0.06] bg-black/[0.04]
         border dark:border-white/[0.08] border-black/[0.06]
