@@ -48,7 +48,6 @@ export default function RootLayout({
           <link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet" />
           <link href="https://https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet" />
         </Head>
-        <Script src="https://my-comment-widget.vercel.app/widget.umd.js" />
         <body className={`${inter.className} bg-transparent`}>
           <Nav />
 
@@ -72,8 +71,6 @@ export default function RootLayout({
           <KonamiEasterEgg />
 
           <DiscordStatus />
-
-          <my-widget project-id="1" />
 
           {/* <BackgroundBeams /> */}
           {/* <StarBg /> */}
