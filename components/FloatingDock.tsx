@@ -11,7 +11,7 @@ import {
   useTransform,
 } from "framer-motion";
 import Link from "next/link";
-import { useRef, useState } from "react";
+import React, { useCallback, useRef, useState } from "react";
 
 export const FloatingDock = ({
   items,
@@ -38,6 +38,7 @@ const FloatingDockMobile = ({
   className?: string;
 }) => {
   const [open, setOpen] = useState(false);
+  const toggleOpen = useCallback(() => setOpen((prev) => !prev), []);
   return (
     <div className={cn("relative block md:hidden", className)}>
       <AnimatePresence>
@@ -76,7 +77,7 @@ const FloatingDockMobile = ({
         )}
       </AnimatePresence>
       <button
-        onClick={() => setOpen(!open)}
+        onClick={toggleOpen}
         className="h-10 w-10 rounded-full dark:bg-neutral-800 bg-white/80 flex items-center justify-center"
       >
         <IconLayoutNavbarCollapse className="h-5 w-5 dark:text-white text-neutral-700" />
@@ -161,14 +162,16 @@ function IconContainer({
   });
 
   const [hovered, setHovered] = useState(false);
+  const onEnter = useCallback(() => setHovered(true), []);
+  const onLeave = useCallback(() => setHovered(false), []);
 
   return (
     <Link href={href}>
       <motion.div
         ref={ref}
         style={{ width, height }}
-        onMouseEnter={() => setHovered(true)}
-        onMouseLeave={() => setHovered(false)}
+        onMouseEnter={onEnter}
+        onMouseLeave={onLeave}
         className="aspect-square rounded-full dark:bg-neutral-800 bg-neutral-200 flex items-center justify-center relative"
       >
         <AnimatePresence>

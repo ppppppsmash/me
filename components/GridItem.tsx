@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useCallback, useMemo } from "react";
 import { cn } from "@/utils/cn";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -15,7 +15,9 @@ interface GridItemProps {
 
 export const GridItem = ({ area, title, description, url, skill, index = 0 }: GridItemProps) => {
   const [open, setOpen] = useState(false);
-  const tags = skill.split("+").map((s) => s.trim()).filter(Boolean);
+  const openPanel = useCallback(() => setOpen(true), []);
+  const closePanel = useCallback(() => setOpen(false), []);
+  const tags = useMemo(() => skill.split("+").map((s) => s.trim()).filter(Boolean), [skill]);
 
   return (
     <>
@@ -24,7 +26,7 @@ export const GridItem = ({ area, title, description, url, skill, index = 0 }: Gr
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: index * 0.08 + 0.2, ease: [0.25, 0.1, 0.25, 1] }}
         className={cn("list-none cursor-pointer", area)}
-        onClick={() => setOpen(true)}
+        onClick={openPanel}
       >
         <div
           className="block h-full rounded-xl overflow-hidden
@@ -86,7 +88,7 @@ export const GridItem = ({ area, title, description, url, skill, index = 0 }: Gr
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
             className="fixed inset-0 z-[10000] flex items-center justify-center p-4 sm:p-8"
-            onClick={() => setOpen(false)}
+            onClick={closePanel}
           >
             {/* Backdrop */}
             <div className="absolute inset-0 dark:bg-black/70 bg-black/50 backdrop-blur-sm" />
@@ -127,7 +129,7 @@ export const GridItem = ({ area, title, description, url, skill, index = 0 }: Gr
                     Open
                   </a>
                   <button
-                    onClick={() => setOpen(false)}
+                    onClick={closePanel}
                     className="w-8 h-8 flex items-center justify-center rounded-lg
                       dark:hover:bg-white/[0.06] hover:bg-black/[0.04]
                       dark:text-neutral-400 text-neutral-500
