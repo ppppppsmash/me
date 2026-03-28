@@ -131,7 +131,7 @@ export default function DiscordStatus() {
   const customStatus = data.activities.find((a) => a.type === 4);
 
   return (
-    <div className="fixed top-[52px] left-[20px] z-[9998]">
+    <div className="fixed top-[68px] left-[20px] z-[9998]">
       {/* Collapsed: KUROSAWA is ... */}
       <motion.button
         onClick={toggle}
