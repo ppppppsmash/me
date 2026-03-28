@@ -31,17 +31,11 @@ const WeatherWrapper = () => {
       try {
         const lang = navigator.language || "en";
         const res = await fetch(
-          `https://nominatim.openstreetmap.org/reverse?lat=${lat}&lon=${lon}&format=json&accept-language=${lang}&zoom=14`
+          `https://nominatim.openstreetmap.org/reverse?lat=${lat}&lon=${lon}&format=json&accept-language=${lang}&zoom=3`
         );
         const data = await res.json();
         const addr = data.address || {};
-        const parts = [
-          addr.country,
-          addr.state || addr.province,
-          addr.city || addr.town || addr.village,
-          addr.suburb || addr.neighbourhood || addr.quarter,
-        ].filter(Boolean);
-        setLocation(parts.join(" "));
+        setLocation(addr.country || "");
       } catch {
         setLocation("");
       }
@@ -65,19 +59,22 @@ const WeatherWrapper = () => {
       }
     };
 
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(
-        (pos) => {
-          const { latitude, longitude } = pos.coords;
-          fetchWeather(latitude, longitude);
-          fetchLocation(latitude, longitude);
-        },
-        () => fetchWeather(),
-        { timeout: 5000 }
-      );
-    } else {
-      fetchWeather();
-    }
+    const fetchGeoByIP = async () => {
+      try {
+        const res = await fetch("https://ipapi.co/json/");
+        const data = await res.json();
+        if (data.latitude && data.longitude) {
+          fetchWeather(data.latitude, data.longitude);
+          fetchLocation(data.latitude, data.longitude);
+        } else {
+          fetchWeather();
+        }
+      } catch {
+        fetchWeather();
+      }
+    };
+
+    fetchGeoByIP();
   }, []);
 
   return (
