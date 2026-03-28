@@ -131,8 +131,8 @@ export default function DiscordStatus() {
   const customStatus = data.activities.find((a) => a.type === 4);
 
   return (
-    <div className="fixed bottom-20 sm:bottom-6 left-4 z-[9998]">
-      {/* Collapsed: small dot + name */}
+    <div className="fixed top-[52px] left-[20px] z-[9998]">
+      {/* Collapsed: KUROSAWA is ... */}
       <motion.button
         onClick={toggle}
         className="flex items-center gap-2 px-2.5 py-1.5 rounded-lg
@@ -151,17 +151,18 @@ export default function DiscordStatus() {
         />
 
         {data.listening_to_spotify && data.spotify ? (
-          <span className="text-[10px] dark:text-neutral-400 text-neutral-500 flex items-center gap-1.5 max-w-[180px]">
+          <span className="text-[10px] dark:text-neutral-400 text-neutral-500 flex items-center gap-1.5 max-w-[240px]">
+            <span className="dark:text-neutral-300 text-neutral-600 font-medium">KUROSAWA</span>
             <span className="text-[#1DB954]">♫</span>
             <span className="truncate">{data.spotify.artist} — {data.spotify.song}</span>
           </span>
         ) : activity ? (
-          <span className="text-[10px] dark:text-neutral-400 text-neutral-500 truncate max-w-[180px]">
-            {getActivityVerb(activity.type, activity.name)} {activity.name}
+          <span className="text-[10px] dark:text-neutral-400 text-neutral-500 truncate max-w-[240px]">
+            <span className="dark:text-neutral-300 text-neutral-600 font-medium">KUROSAWA</span> is {getActivityVerb(activity.type, activity.name).toLowerCase()} {activity.name}
           </span>
         ) : (
           <span className="text-[10px] dark:text-neutral-400 text-neutral-500">
-            {status.label}
+            <span className="dark:text-neutral-300 text-neutral-600 font-medium">KUROSAWA</span> is {status.label.toLowerCase()}
           </span>
         )}
       </motion.button>
@@ -170,11 +171,11 @@ export default function DiscordStatus() {
       <AnimatePresence>
         {expanded && (
           <motion.div
-            initial={{ opacity: 0, y: 10, scale: 0.95 }}
+            initial={{ opacity: 0, y: -10, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: 10, scale: 0.95 }}
+            exit={{ opacity: 0, y: -10, scale: 0.95 }}
             transition={{ duration: 0.2 }}
-            className="absolute bottom-full mb-2 left-0 w-[260px] rounded-xl overflow-hidden
+            className="absolute top-full mt-2 left-0 w-[260px] rounded-xl overflow-hidden
               dark:bg-neutral-900/95 bg-white/95
               border dark:border-white/[0.08] border-black/[0.06]
               backdrop-blur-md shadow-xl"

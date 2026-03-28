@@ -23,7 +23,7 @@ export default function Github() {
   return (
     <div id="github-page" className="w-full max-w-[800px] md:h-[100vh] z-50">
       <div className="p-4 pb-[170px] relative">
-        <h1 className="text-2xl sm:text-[2.5rem] opacity-0 translate-y-10 animate-slide-in flex sm:items-center sticky top-0 z-40 pt-14 pb-2 sm:pt-2">
+        <h1 className="text-2xl sm:text-[2.5rem] opacity-0 translate-y-10 animate-slide-in flex sm:items-center sticky top-0 z-40 pt-24 pb-2 sm:pt-2">
           <NeonText color="#10b981">Github</NeonText>
           {stats && (
             <span className="ml-4 flex gap-3 text-[11px] dark:text-neutral-500 text-neutral-400 self-end mb-1">

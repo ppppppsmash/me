@@ -51,7 +51,7 @@ export default function Relax() {
   return (
     <div className="w-full max-w-[800px] md:h-full">
       <div className="p-4 pb-[170px]">
-        <h1 className="text-2xl sm:text-[2.5rem] opacity-0 translate-y-10 animate-slide-in flex items-center sticky top-0 z-40 pt-14 pb-2 sm:pt-2">
+        <h1 className="text-2xl sm:text-[2.5rem] opacity-0 translate-y-10 animate-slide-in flex items-center sticky top-0 z-40 pt-24 pb-2 sm:pt-2">
           <NeonText color="#f59e0b">Comments</NeonText>
         </h1>
 
