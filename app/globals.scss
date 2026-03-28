@@ -500,12 +500,3 @@ article {
 }
 
 @keyframes dash{ from{stroke-dashoffset:814;} to {stroke-dashoffset:-814;}}
-
-// Comment widget button - always dark style
-my-widget {
-  button, [role="button"] {
-    background-color: #1a1a1a!important;
-    color: #fff!important;
-    border-color: #333!important;
-  }
-}
