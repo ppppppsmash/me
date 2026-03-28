@@ -9,6 +9,7 @@ import { AnimatedThemeToggler } from "@/components/Theme";
 import WeatherWrapper from "@/components/WeatherWrapper";
 
 import SquareBg from "@/components/SquareBg";
+import KonamiEasterEgg from "@/components/KonamiEasterEgg";
 
 import "./globals.scss";
 
@@ -66,6 +67,8 @@ export default function RootLayout({
           <HeaderStatus />
 
           <WeatherWrapper />
+
+          <KonamiEasterEgg />
 
           <my-widget project-id="1" />
 
