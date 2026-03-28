@@ -13,6 +13,8 @@ import {
 import Link from "next/link";
 import { cn } from "@/utils/cn";
 
+const springConfig = { stiffness: 100, damping: 15 };
+
 type LinkPreviewProps = {
   children: React.ReactNode;
   url: string;
@@ -63,7 +65,6 @@ export const LinkPreview = ({
     setIsMounted(true);
   }, []);
 
-  const springConfig = { stiffness: 100, damping: 15 };
   const x = useMotionValue(0);
 
   const translateX = useSpring(x, springConfig);

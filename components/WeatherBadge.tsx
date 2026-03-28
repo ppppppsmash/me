@@ -14,7 +14,7 @@ const weatherInfo: Record<string, { icon: string; label: string }> = {
   Clear: { icon: "☀", label: "Clear" },
 };
 
-export default function WeatherBadge({ weather }: { weather: string | null }) {
+export default function WeatherBadge({ weather, location }: { weather: string | null; location?: string }) {
   if (!weather) return null;
   const info = weatherInfo[weather];
   if (!info) return null;
@@ -34,6 +34,14 @@ export default function WeatherBadge({ weather }: { weather: string | null }) {
       <span className="text-[10px] tracking-wider uppercase dark:text-neutral-400 text-neutral-500 font-medium">
         {info.label}
       </span>
+      {location && (
+        <>
+          <span className="dark:text-neutral-600 text-neutral-300">|</span>
+          <span className="text-[10px] dark:text-neutral-500 text-neutral-400 max-w-[200px] truncate">
+            {location}
+          </span>
+        </>
+      )}
     </motion.div>
   );
 }

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 import { motion } from "framer-motion";
 
 interface GitEvent {
@@ -111,6 +111,8 @@ export default function GitActivityFeed({ username }: { username: string }) {
       .finally(() => setLoading(false));
   }, [username]);
 
+  const grouped = useMemo(() => groupByDate(events), [events]);
+
   if (loading) {
     return (
       <div className="py-6 space-y-3">
@@ -120,8 +122,6 @@ export default function GitActivityFeed({ username }: { username: string }) {
       </div>
     );
   }
-
-  const grouped = groupByDate(events);
 
   return (
     <div className="space-y-6">

@@ -46,7 +46,7 @@ export default function Relax() {
     }
 
     fetchData();
-  }, [data]);
+  }, []);
 
   return (
     <div className="w-full max-w-[800px] md:h-full">
