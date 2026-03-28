@@ -10,6 +10,7 @@ import WeatherWrapper from "@/components/WeatherWrapper";
 
 import SquareBg from "@/components/SquareBg";
 import KonamiEasterEgg from "@/components/KonamiEasterEgg";
+import DiscordStatus from "@/components/DiscordStatus";
 
 import "./globals.scss";
 
@@ -69,6 +70,8 @@ export default function RootLayout({
           <WeatherWrapper />
 
           <KonamiEasterEgg />
+
+          <DiscordStatus />
 
           <my-widget project-id="1" />
 
