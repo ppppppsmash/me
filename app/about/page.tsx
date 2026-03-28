@@ -103,6 +103,11 @@ export default function About() {
                 <p className="text-[13px] dark:text-neutral-200 text-neutral-700 leading-relaxed group-hover:translate-x-0.5 transition-transform">
                   {hobby.value}
                 </p>
+                {"hint" in hobby && (
+                  <p className="text-[9px] font-mono mt-2 dark:text-neutral-700 text-neutral-300 opacity-0 group-hover:opacity-100 transition-opacity duration-700 select-all">
+                    ↑↑↓↓←→←→BA — Try typing this on your keyboard anywhere on this site.
+                  </p>
+                )}
               </motion.div>
             ))}
           </div>

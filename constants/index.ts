@@ -38,7 +38,7 @@ export const INFO = [
 
 export const HOBBY = [
   { label: "映画", value: "七人の侍、キッズ・リターン、冷たい熱帯魚 etc." },
-  { label: "テレビゲーム", value: "ドラクエ、クロノトリガー、ダークソウル etc." },
+  { label: "テレビゲーム", value: "ドラクエ、クロノトリガー、ダークソウル etc.", hint: "KONAMI Commands" },
   { label: "おもちゃ", value: "ソフビ、トランスフォーマー、超合金魂 etc." },
   { label: "音楽", value: "Nina Simone / The Rolling Stones / Led Zepplin" },
 ];
