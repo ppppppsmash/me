@@ -4,6 +4,7 @@ import { HOBBY, INFO } from "@/constants";
 import { motion } from "framer-motion";
 import { CardBody, CardContainer, CardItem } from "@/components/3dCard";
 import NeonText from "@/components/NeonText";
+// import PhotoAlbum from "@/components/PhotoAlbum";
 
 const item = {
   hidden: { opacity: 0, y: 16 },
@@ -112,6 +113,10 @@ export default function About() {
             ))}
           </div>
         </div>
+
+        {/* <div className="mt-12">
+          <PhotoAlbum />
+        </div> */}
       </div>
     </div>
   );
