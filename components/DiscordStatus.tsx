@@ -2,6 +2,7 @@
 
 import { useEffect, useState, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { IoGameController } from "react-icons/io5";
 
 const DISCORD_ID = process.env.NEXT_PUBLIC_DISCORD_ID || "";
 
@@ -18,6 +19,7 @@ interface LanyardData {
     type: number;
     state?: string;
     details?: string;
+    platform?: string;
     assets?: {
       large_image?: string;
       large_text?: string;
@@ -25,6 +27,9 @@ interface LanyardData {
       small_text?: string;
     };
   }[];
+  active_on_discord_desktop: boolean;
+  active_on_discord_mobile: boolean;
+  active_on_discord_embedded: boolean;
   listening_to_spotify: boolean;
   spotify: {
     song: string;
@@ -127,7 +132,8 @@ export default function DiscordStatus() {
   if (!data) return null;
 
   const status = statusConfig[data.discord_status];
-  const activity = data.activities.find((a) => a.type !== 4); // Skip custom status
+  const ps5Activity = data.activities.find((a) => a.platform === "ps5");
+  const activity = data.activities.find((a) => a.type !== 4 && a.platform !== "ps5"); // Skip custom status & PS5
   const customStatus = data.activities.find((a) => a.type === 4);
 
   return (
@@ -150,21 +156,42 @@ export default function DiscordStatus() {
           style={{ backgroundColor: status.color, boxShadow: `0 0 6px ${status.color}` }}
         />
 
-        {data.listening_to_spotify && data.spotify ? (
-          <span className="text-[10px] dark:text-neutral-400 text-neutral-500 flex items-center gap-1.5 max-w-[240px]">
-            <span className="dark:text-neutral-300 text-neutral-600 font-medium">KUROSAWA</span>
-            <span className="text-[#1DB954]">♫</span>
-            <span className="truncate">{data.spotify.artist} — {data.spotify.song}</span>
-          </span>
-        ) : activity ? (
-          <span className="text-[10px] dark:text-neutral-400 text-neutral-500 truncate max-w-[240px]">
-            <span className="dark:text-neutral-300 text-neutral-600 font-medium">KUROSAWA</span> is {getActivityVerb(activity.type, activity.name).toLowerCase()} {activity.name}
-          </span>
-        ) : (
-          <span className="text-[10px] dark:text-neutral-400 text-neutral-500">
-            <span className="dark:text-neutral-300 text-neutral-600 font-medium">KUROSAWA</span> is {status.label.toLowerCase()}
-          </span>
-        )}
+        <div className="flex flex-col gap-0.5 max-w-[240px]">
+          {data.listening_to_spotify && data.spotify ? (
+            <span className="text-[10px] dark:text-neutral-400 text-neutral-500 flex items-center gap-1.5">
+              <span className="dark:text-neutral-300 text-neutral-600 font-medium">KUROSAWA</span>
+              <span className="text-[#1DB954]">♫</span>
+              <span className="truncate">{data.spotify.artist} — {data.spotify.song}</span>
+            </span>
+          ) : activity ? (
+            <span className="text-[10px] dark:text-neutral-400 text-neutral-500 truncate">
+              <span className="dark:text-neutral-300 text-neutral-600 font-medium">KUROSAWA</span> is {getActivityVerb(activity.type, activity.name).toLowerCase()} {activity.name}
+            </span>
+          ) : data.active_on_discord_embedded ? (
+            <span className="text-[10px] dark:text-neutral-400 text-neutral-500 flex items-center gap-1.5">
+              <span className="dark:text-neutral-300 text-neutral-600 font-medium">KUROSAWA</span>
+              <IoGameController className="text-[#006FCD] text-[11px]" />
+              <span className="truncate">on PlayStation</span>
+            </span>
+          ) : (
+            <span className="text-[10px] dark:text-neutral-400 text-neutral-500">
+              <span className="dark:text-neutral-300 text-neutral-600 font-medium">KUROSAWA</span> is {status.label.toLowerCase()}
+            </span>
+          )}
+
+          {/* PS5 second line */}
+          {ps5Activity ? (
+            <span className="text-[10px] text-[#006FCD] flex items-center gap-1 pl-0.5">
+              <IoGameController className="text-[11px]" />
+              <span className="truncate">Playing {ps5Activity.name}</span>
+            </span>
+          ) : data.active_on_discord_embedded && (activity || (data.listening_to_spotify && data.spotify)) ? (
+            <span className="text-[10px] text-[#006FCD] flex items-center gap-1 pl-0.5">
+              <IoGameController className="text-[11px]" />
+              <span>on PlayStation5</span>
+            </span>
+          ) : null}
+        </div>
       </motion.button>
 
       {/* Expanded card */}
@@ -242,6 +269,25 @@ export default function DiscordStatus() {
                 {activity.state && (
                   <p className="text-[11px] dark:text-neutral-400 text-neutral-500 truncate">
                     {activity.state}
+                  </p>
+                )}
+              </div>
+            )}
+
+            {/* Console / Embedded device */}
+            {(ps5Activity || data.active_on_discord_embedded) && (
+              <div className="p-3 border-t dark:border-white/[0.06] border-neutral-100">
+                <p className="text-[10px] uppercase tracking-wider text-[#006FCD] font-medium mb-1 flex items-center gap-1">
+                  <IoGameController className="text-[11px]" />
+                  {ps5Activity ? "Playing on PlayStation 5" : "On PlayStation 5"}
+                </p>
+                {ps5Activity ? (
+                  <p className="text-[12px] dark:text-neutral-200 text-neutral-700 font-medium truncate">
+                    {ps5Activity.name}
+                  </p>
+                ) : (
+                  <p className="text-[11px] dark:text-neutral-400 text-neutral-500">
+                    Online
                   </p>
                 )}
               </div>
