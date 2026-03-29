@@ -153,7 +153,7 @@ export default function DiscordStatus() {
       >
         {/* Status dot */}
         <span
-          className="w-2 h-2 rounded-full shrink-0 mt-[5px]"
+          className="w-2 h-2 rounded-full shrink-0 mt-[3px]"
           style={{ backgroundColor: status.color, boxShadow: `0 0 6px ${status.color}` }}
         />
 
@@ -221,13 +221,22 @@ export default function DiscordStatus() {
                   style={{ backgroundColor: status.color }}
                 />
               </div>
-              <div className="min-w-0">
+              <div className="min-w-0 flex-1">
                 <p className="text-sm font-medium dark:text-neutral-100 text-neutral-800 truncate">
                   {data.discord_user.display_name}
                 </p>
-                <p className="text-[11px] dark:text-neutral-500 text-neutral-400">
-                  {customStatus?.state || status.label}
+                <p className="text-[11px] dark:text-neutral-400 text-neutral-500 truncate">
+                  @{data.discord_user.username}
                 </p>
+                <div className="flex items-center gap-1.5 mt-1">
+                  <span
+                    className="w-1.5 h-1.5 rounded-full"
+                    style={{ backgroundColor: status.color }}
+                  />
+                  <span className="text-[10px] dark:text-neutral-500 text-neutral-400">
+                    {customStatus?.state || status.label}
+                  </span>
+                </div>
               </div>
             </div>
 
