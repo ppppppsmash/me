@@ -3,6 +3,7 @@
 import { useEffect, useState, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { IoGameController } from "react-icons/io5";
+import { FaDiscord } from "react-icons/fa";
 
 const DISCORD_ID = process.env.NEXT_PUBLIC_DISCORD_ID || "";
 
@@ -208,8 +209,14 @@ export default function DiscordStatus() {
               border dark:border-white/[0.08] border-black/[0.06]
               backdrop-blur-md shadow-xl"
           >
+            {/* Discord label */}
+            <div className="flex items-center gap-1.5 px-3 pt-2.5 pb-1">
+              <FaDiscord className="text-[#5865F2] text-xs" />
+              <span className="text-[10px] uppercase tracking-wider text-[#5865F2] font-medium">Discord</span>
+            </div>
+
             {/* Header */}
-            <div className="flex items-center gap-3 p-3 border-b dark:border-white/[0.06] border-neutral-100">
+            <div className="flex items-center gap-3 px-3 pb-3 border-b dark:border-white/[0.06] border-neutral-100">
               <div className="relative shrink-0">
                 <img
                   src={`https://cdn.discordapp.com/avatars/${data.discord_user.id}/${data.discord_user.avatar}.webp?size=64`}
