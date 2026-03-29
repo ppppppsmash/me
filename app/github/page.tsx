@@ -21,9 +21,10 @@ export default function Github() {
   }, []);
 
   return (
-    <div id="github-page" className="w-full max-w-[800px] md:h-[100vh] z-50">
-      <div className="p-4 pb-[170px] relative">
-        <h1 className="text-2xl sm:text-[2.5rem] opacity-0 translate-y-10 animate-slide-in flex sm:items-center sticky top-0 z-40 pt-24 pb-2 sm:pt-2">
+    <div id="github-page" className="w-full max-w-[800px] md:h-[100vh] z-50 flex flex-col">
+      {/* Fixed header area */}
+      <div className="p-4 pb-0 shrink-0">
+        <h1 className="text-2xl sm:text-[2.5rem] opacity-0 translate-y-10 animate-slide-in flex sm:items-center pt-24 pb-2 sm:pt-2">
           <NeonText color="#10b981">Github</NeonText>
           {stats && (
             <span className="ml-4 flex gap-3 text-[11px] dark:text-neutral-500 text-neutral-400 self-end mb-1">
@@ -44,10 +45,11 @@ export default function Github() {
             theme={explicitTheme}
           />
         </div>
+      </div>
 
-        <div className="mt-8">
-          <GitActivityFeed username="ppppppsmash" />
-        </div>
+      {/* Scrollable activity feed */}
+      <div className="flex-1 min-h-0 overflow-y-auto px-4 mt-8 pb-[170px]">
+        <GitActivityFeed username="ppppppsmash" />
       </div>
     </div>
   );
