@@ -60,6 +60,7 @@ const activityVerb: Record<number, string> = {
 const appVerb: Record<string, string> = {
   "YouTube": "Watching",
   "U-NEXT": "Watching",
+  "U-NEXT（ユーネクスト）": "Watching",
   "Prime Video": "Watching",
   "Google Chrome": "Browsing",
   "Microsoft Edge": "Browsing",
@@ -141,7 +142,7 @@ export default function DiscordStatus() {
       {/* Collapsed: KUROSAWA is ... */}
       <motion.button
         onClick={toggle}
-        className="flex items-center gap-2 px-2.5 py-1.5 rounded-lg
+        className="flex items-start gap-2 px-2.5 py-1.5 rounded-lg
           dark:bg-white/[0.06] bg-black/[0.04]
           border dark:border-white/[0.08] border-black/[0.06]
           backdrop-blur-sm cursor-pointer select-none
@@ -152,11 +153,11 @@ export default function DiscordStatus() {
       >
         {/* Status dot */}
         <span
-          className="w-2 h-2 rounded-full shrink-0"
+          className="w-2 h-2 rounded-full shrink-0 mt-[5px]"
           style={{ backgroundColor: status.color, boxShadow: `0 0 6px ${status.color}` }}
         />
 
-        <div className="flex flex-col gap-0.5 max-w-[240px]">
+        <div className="flex flex-col items-start gap-0.5 max-w-[240px]">
           {data.listening_to_spotify && data.spotify ? (
             <span className="text-[10px] dark:text-neutral-400 text-neutral-500 flex items-center gap-1.5">
               <span className="dark:text-neutral-300 text-neutral-600 font-medium">KUROSAWA</span>
@@ -183,7 +184,7 @@ export default function DiscordStatus() {
           {ps5Activity ? (
             <span className="text-[10px] text-[#006FCD] flex items-center gap-1 pl-0.5">
               <IoGameController className="text-[11px]" />
-              <span className="truncate">Playing {ps5Activity.name}</span>
+              <span className="truncate">{getActivityVerb(ps5Activity.type, ps5Activity.name)} {ps5Activity.name}</span>
             </span>
           ) : data.active_on_discord_embedded && (activity || (data.listening_to_spotify && data.spotify)) ? (
             <span className="text-[10px] text-[#006FCD] flex items-center gap-1 pl-0.5">
@@ -279,7 +280,7 @@ export default function DiscordStatus() {
               <div className="p-3 border-t dark:border-white/[0.06] border-neutral-100">
                 <p className="text-[10px] uppercase tracking-wider text-[#006FCD] font-medium mb-1 flex items-center gap-1">
                   <IoGameController className="text-[11px]" />
-                  {ps5Activity ? "Playing on PlayStation 5" : "On PlayStation 5"}
+                  {ps5Activity ? `${getActivityVerb(ps5Activity.type, ps5Activity.name)} on PlayStation 5` : "On PlayStation 5"}
                 </p>
                 {ps5Activity ? (
                   <p className="text-[12px] dark:text-neutral-200 text-neutral-700 font-medium truncate">
