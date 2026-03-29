@@ -66,13 +66,13 @@ export default function About() {
                       width="200"
                       className="relative w-full object-cover rounded-xl
                         dark:shadow-[0_0_30px_rgba(100,100,200,0.15)]
-                        shadow-[0_8px_30px_rgba(0,0,0,0.12)]
+                        shadow-[0_4px_20px_rgba(0,0,0,0.06)]
                             transition-all duration-500
                         group-hover:scale-[1.02]
                         group-hover:shadow-[0_0_40px_rgba(120,100,220,0.25)]"
                       alt="thumbnail"
                     />
-                    <div className="absolute inset-0 rounded-xl bg-gradient-to-t from-black/20 via-transparent to-white/5 pointer-events-none" />
+                    <div className="absolute inset-0 rounded-xl bg-gradient-to-t dark:from-black/20 from-black/5 via-transparent dark:to-white/5 to-transparent pointer-events-none" />
                   </div>
                 </CardItem>
               </CardBody>

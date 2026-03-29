@@ -1,17 +1,25 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/utils/cn";
 
 function SunParticles() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const isDarkRef = useRef(true);
 
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
     const ctx = canvas.getContext("2d")!;
     let animId: number;
+
+    const checkDark = () => {
+      isDarkRef.current = document.documentElement.classList.contains("dark");
+    };
+    checkDark();
+    const observer = new MutationObserver(checkDark);
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ["class"] });
 
     const resize = () => {
       canvas.width = window.innerWidth;
@@ -50,6 +58,7 @@ function SunParticles() {
       animId = requestAnimationFrame(animate);
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
+      const dark = isDarkRef.current;
       particles.forEach((p) => {
         p.phase += p.phaseSpeed;
         p.x += p.drift + Math.sin(p.phase) * 0.2;
@@ -63,9 +72,12 @@ function SunParticles() {
         if (p.x > canvas.width) p.x = 0;
 
         const flicker = 0.7 + Math.sin(p.phase * 2) * 0.3;
+        const alpha = dark ? p.opacity * flicker : p.opacity * flicker * 2;
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(255, 230, 160, ${p.opacity * flicker})`;
+        ctx.fillStyle = dark
+          ? `rgba(255, 230, 160, ${alpha})`
+          : `rgba(255, 180, 50, ${alpha})`;
         ctx.fill();
       });
     }
@@ -75,6 +87,7 @@ function SunParticles() {
     return () => {
       cancelAnimationFrame(animId);
       window.removeEventListener("resize", resize);
+      observer.disconnect();
     };
   }, []);
 
@@ -86,10 +99,19 @@ function SunParticles() {
   );
 }
 
+const darkGradients = {
+  first: "radial-gradient(68.54% 68.72% at 55.02% 31.46%, hsla(40, 100%, 85%, .10) 0, hsla(40, 100%, 65%, .04) 50%, hsla(40, 100%, 55%, 0) 80%)",
+  second: "radial-gradient(50% 50% at 50% 50%, hsla(40, 100%, 85%, .08) 0, hsla(40, 100%, 65%, .03) 80%, transparent 100%)",
+  third: "radial-gradient(50% 50% at 50% 50%, hsla(40, 100%, 85%, .06) 0, hsla(40, 100%, 55%, .02) 80%, transparent 100%)",
+};
+
+const lightGradients = {
+  first: "radial-gradient(68.54% 68.72% at 55.02% 31.46%, hsla(40, 100%, 60%, .25) 0, hsla(40, 100%, 50%, .12) 50%, hsla(40, 100%, 45%, 0) 80%)",
+  second: "radial-gradient(50% 50% at 50% 50%, hsla(40, 100%, 60%, .20) 0, hsla(40, 100%, 50%, .08) 80%, transparent 100%)",
+  third: "radial-gradient(50% 50% at 50% 50%, hsla(40, 100%, 60%, .15) 0, hsla(40, 100%, 45%, .06) 80%, transparent 100%)",
+};
+
 export default function Sunny({
-  gradientFirst = "radial-gradient(68.54% 68.72% at 55.02% 31.46%, hsla(40, 100%, 85%, .10) 0, hsla(40, 100%, 65%, .04) 50%, hsla(40, 100%, 55%, 0) 80%)",
-  gradientSecond = "radial-gradient(50% 50% at 50% 50%, hsla(40, 100%, 85%, .08) 0, hsla(40, 100%, 65%, .03) 80%, transparent 100%)",
-  gradientThird = "radial-gradient(50% 50% at 50% 50%, hsla(40, 100%, 85%, .06) 0, hsla(40, 100%, 55%, .02) 80%, transparent 100%)",
   translateY = -350,
   width = 560,
   height = 1380,
@@ -98,9 +120,6 @@ export default function Sunny({
   xOffset = 100,
   className,
 }: {
-  gradientFirst?: string;
-  gradientSecond?: string;
-  gradientThird?: string;
   translateY?: number;
   width?: number;
   height?: number;
@@ -109,6 +128,20 @@ export default function Sunny({
   xOffset?: number;
   className?: string;
 } = {}) {
+  const [isDark, setIsDark] = useState(true);
+
+  useEffect(() => {
+    const check = () => setIsDark(document.documentElement.classList.contains("dark"));
+    check();
+    const observer = new MutationObserver(check);
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ["class"] });
+    return () => observer.disconnect();
+  }, []);
+
+  const gradients = isDark ? darkGradients : lightGradients;
+  const gradientFirst = gradients.first;
+  const gradientSecond = gradients.second;
+  const gradientThird = gradients.third;
   return (
     <motion.div
       initial={{ opacity: 0 }}
